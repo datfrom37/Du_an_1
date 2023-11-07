@@ -40,3 +40,54 @@
     background-color: rgb(4, 148, 100);
 }
 
+
+
+
+.rounded-image {
+    border-radius: 50%;
+    width: 100px; /* Điều chỉnh kích thước của ảnh */
+    height: 100px; /* Điều chỉnh kích thước của ảnh */
+    object-fit: cover; /* Để ảnh không bị biến dạng */
+}
+
+
+
+
+
+
+
+
+
+
+/* Tùy chỉnh kiểu dáng CSS */
+
+.custom-media img {
+    max-width: 150px;
+    margin-right: 20px; /* Khoảng cách giữa ảnh và nội dung */
+}
+.custom-media {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Khoảng cách giữa các sản phẩm */
+    background-color: rgb(255, 254, 254);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px  gray;
+    padding: 10px; /* Khoảng cách bên trong sản phẩm */
+    height: 150px; /* Chiều cao cố định cho mỗi sản phẩm */
+    overflow: hidden; /* Ẩn nội dung vượt quá chiều cao */
+}
+.truncate-text {
+    width: 90%; /* Độ rộng của phần hiển thị văn bản */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Số dòng tối đa */
+    white-space: normal; /* Cho phép văn bản xuống dòng */
+    overflow: hidden; /* Ẩn phần văn bản vượt quá độ rộng */
+    text-overflow: ellipsis; /* Hiển thị "..." khi cần */
+  }
+  .truncate-text1 {
+    width: 60vw; /* Độ rộng của phần hiển thị văn bản */
+    white-space: nowrap; /* Ngăn văn bản xuống dòng */
+    overflow: hidden; /* Ẩn phần văn bản vượt quá độ rộng */
+    text-overflow: ellipsis; /* Hiển thị "..." khi văn bản bị ẩn */
+  }
