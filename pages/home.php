@@ -1,25 +1,157 @@
-<main>
-    <div class="container my-5">
-        <div class="bg-body-tertiary p-5 rounded">
-            <div class="col-sm-8 py-5 mx-auto">
-                <h1 class="display-5 fw-normal">Home Page</h1>
-                <p class="fs-5">This example shows how responsive
-                    offcanvas menus work within the navbar. For
-                    positioning of navbars, checkout the <a
-                        href="/docs/5.3/examples/navbar-static/">top</a>
-                    and <a href="/docs/5.3/examples/navbar-fixed/">fixed
-                        top</a> examples.</p>
-                <p>From the top down, you'll see a dark navbar, light
-                    navbar and a responsive navbar—each with offcanvases
-                    built in. Resize your browser window to the large
-                    breakpoint to see the toggle for the offcanvas.</p>
-                <p>
-                    <a class="btn btn-primary"
-                        href="/docs/5.3/components/navbar/#offcanvas"
-                        role="button">Learn more about offcanvas navbars
-                        »</a>
-                </p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pages/css/home.css">
+</head>
+
+<body>
+
+    <div class="banner">banner</div>
+
+    <div class="homnayangi container text-left mt-4">
+        <h2>Hôm nay ăn gì</h2>
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        
+        <div class="congthuc">
+            <img src="pages/imgweb/banhxeo.jpg" alt="">
+            <div class="tieude">Bánh xèo chiên giòn</div>
+            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+        </div>
+
+        <div style="clear: both;"></div>
+        
+    </div>
+
+
+
+    <br><br>
+
+    <div class="container text-left mt-4">
+        <h2>Ẩm thực</h2>
+    </div>
+
+    
+
+    <!-- Phần hiển thị hình ảnh -->
+    <div class="container-fluid bg-light">
+        <div class="row">
+            <div class="col-md-1">
             </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+            </div>
+            <div class="col-md-1">
+            </div>
+
         </div>
     </div>
-</main>
+
+
+    <br><br>
+    <div class="monanyeuthich container text-left mt-4">
+        <h2>Món ăn yêu thích</h2>
+
+        <div class="baiviet">
+            <img src="pages/imgweb/b2.png" alt="">
+            <div class="tieude">Tiêu đề</div>
+            <div class="mota">Mô tả</div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
