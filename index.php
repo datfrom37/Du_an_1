@@ -52,7 +52,7 @@
                 <div class="col-md-4 d-flex justify-content-end"> <!-- Sử dụng justify-content-end để căn phải -->
                     <!-- Phần tài khoản bên phải thanh menu -->
                     <a href="#" class="btn btn-light">
-                        Tài khoản
+                    <i class="fas fa-user" style="margin: 5px;"></i> ĐĂNG NHẬP
                     </a>
                     <a href="#" class="btn btn-light" style="margin-left: 10px;"> <!-- Thêm margin-left để tạo khoảng cách -->
                         <i class="fas fa-bars"></i>
@@ -62,11 +62,11 @@
             
         </div>
     </header>
-    <div class="banner">
-        <!-- Banner ở dưới -->
-        <h1 class="text-center text-black">Chào mừng đến với trang web của chúng tôi!</h1>
+    <div class="jumbotron text-white" style="height: 400px; overflow: hidden;">
+        <div class="container" style="max-width: 100%; max-height: 100%; overflow: hidden;">
+            <img src="./images/banner1.jpg" alt="Banner" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
     </div>
-
 
 
 
