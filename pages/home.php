@@ -153,7 +153,7 @@
         <h2>Món ăn yêu thích</h2>
 
         <div class="baiviet">
-            <!-- <img src="pages/imgweb/b2.png" alt=""> -->
+            <img src="pages/imgweb/b2.png" alt="">
             <div class="tieude">Tiêu đề</div>
             <div class="mota">Mô tả</div>
         </div>

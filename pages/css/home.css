@@ -29,7 +29,12 @@
     margin-bottom: 10px;
 }
 
- .baivet .tieude{
+.monanyeuthich .baiviet{
+    width: 100%;
+    background-color: aqua;
+}
+
+.monanyeuthich .baiviet img{
     width: 100px;
     height: 100px;
     background-color: rgb(4, 148, 100);
