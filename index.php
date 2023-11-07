@@ -20,15 +20,22 @@
         <div class="row">
             <div class="col-md-8">
                 <!-- Thanh menu -->
+                
+                <?php 
+                    $home = "index.php?tkh=home";
+                    $congthuc = "index.php?tkh=congthuc";
+                    $lienhe = "index.php?tkh=lienhe";
+                ?>
+
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Trang chủ</a>
+                        <a class="nav-link" href="<?php echo $home; ?>">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Công thức</a>
+                        <a class="nav-link" href="<?php echo $congthuc; ?>">Công thức</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Liên hệ</a>
+                        <a class="nav-link" href="<?php echo $lienhe; ?>">Liên hệ</a>
                     </li>
                 </ul>
             </div>
@@ -46,16 +53,13 @@
 
     </div>
 </header>
-<div class="banner">
-    <!-- Banner ở dưới -->
-    <h1 class="text-center text-black">Chào mừng đến với trang web của chúng tôi!</h1>
-</div>
+
 
 
 
 
 <?php
-include 'pages/website-index.php';
+    include 'pages/website-index.php';
 ?>
 
 
