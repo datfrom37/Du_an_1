@@ -7,5 +7,7 @@
         <link rel="stylesheet"
             href="./public/bootstrap-5.3.2/dist/css/bootstrap.css">
         <script src="./public/bootstrap-5.3.2/dist/js/bootstrap.js"></script>
+         <!-- Sử dụng thư viện Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
