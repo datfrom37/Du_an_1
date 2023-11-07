@@ -9,5 +9,6 @@
         <script src="./public/bootstrap-5.3.2/dist/js/bootstrap.js"></script>
          <!-- Sử dụng thư viện Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="../public/css/index.css">
     </head>
     <body>

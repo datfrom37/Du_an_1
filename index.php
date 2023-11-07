@@ -1,14 +1,5 @@
 <?php include './layouts/header.php'; ?>
 
-
-
-
-
-
-
-
-
-
 <header class="bg-dark text-white" style="padding-bottom: 20px;">
         <div class="container">
             <div class="row align-items-center">
@@ -27,20 +18,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8">
-                    <!-- Thanh menu -->
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Trang chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Công thức</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Liên hệ</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-md-8">
+                <!-- Thanh menu -->
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Công thức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
                 <div class="col-md-4 d-flex justify-content-end"> <!-- Sử dụng justify-content-end để căn phải -->
                     <!-- Phần tài khoản bên phải thanh menu -->
                     <a href="#" class="btn btn-light">
@@ -62,12 +53,67 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
     <?php
     include 'pages/website-index.php';
     ?>
 
 
 
+    
+        <div class="container text-left mt-4">
+            <h2>ẨM THỰC</h2>
+        </div>
+        
+        <!-- Phần hiển thị hình ảnh -->
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                    <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
+                </div>
+                <div class="col-md-1">
+                </div>
+                
+            </div>
+        </div>
 
 
 
