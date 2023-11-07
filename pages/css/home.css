@@ -29,7 +29,9 @@
     margin-bottom: 10px;
 }
 
-.monanyeuthich baivet{
-
+ .baivet .tieude{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(4, 148, 100);
 }
 

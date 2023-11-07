@@ -45,11 +45,7 @@
             
         </div>
     </header>
-    <div class="jumbotron text-white" style="height: 400px; overflow: hidden;">
-        <div class="container" style="max-width: 100%; max-height: 100%; overflow: hidden;">
-            <img src="./images/banner1.jpg" alt="Banner" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-    </div>
+    
 
 
 
