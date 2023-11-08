@@ -19,7 +19,7 @@
                 <div class="container">
                     <div class="main-header-two__top-inner">
                         <div class="main-header-two__logo">
-                            <a href="index.php"><img src="./images/logo1.jpg" alt="" width="80"></a>
+                            <a href="index.php"><img src="./images/logo2.jpg" alt="" width="120vw"></a>
                         </div>
                         <div class="main-header-two__right">
                             <ul class="list-unstyled main-header-two__contact-list">
