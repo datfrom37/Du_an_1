@@ -215,6 +215,7 @@ form {
 }
 a, a:hover, a:focus, a:visited {
     text-decoration: none;
+    color: #959F91;
 }
 .main-menu {
     display: block;
