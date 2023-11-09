@@ -13,163 +13,293 @@
     </div>
 
 
-    
-<!--Danh muc Start-->
-<section class="feature-two">
-            <div class="container">
-                <div class="row">
-                    <!--Danh muc Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="feature-two__single">
-                            <div class="feature-two__single-inner">
-                                <div class="feature-two__shape-1">
-                                    <img src="assets/images/shapes/feature-two-shape-1.png" alt="">
+
+    <!--Danh muc Start-->
+    <section class="feature-two">
+        <div class="container">
+            <div class="row">
+                <!--Danh muc Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="feature-two__single">
+                        <div class="feature-two__single-inner">
+                            <div class="feature-two__img-box">
+                                <div class="feature-two__img">
+                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
                                 </div>
-                                <div class="feature-two__img-box">
-                                    <div class="feature-two__img">
-                                        <img src="assets/images/resources/feature-two-img-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="feature-two__content">
-                                    <h3 class="feature-two__title"><a href="agriculture-services.html">Món ăn gia đình</a></h3>
-                                    <p class="feature-two__sub-title">Vegetables, fruits & berries</p>
-                                    <div class="feature-two__btn-box">
-                                        <a href="agriculture-services.html" class="thm-btn feature-two__btn">Shop</a>
-                                    </div>
+                            </div>
+                            <div class="feature-two__content">
+                                <h3 class="feature-two__title"><a href="agriculture-services.html">Món ăn gia đình</a>
+                                </h3>
+                                <p class="feature-two__sub-title">Các món ăn tên bàn ăn người Việt</p>
+                                <div class="feature-two__btn-box">
+                                    <a href="agriculture-services.html" class="thm-btn feature-two__btn">XEM THỬ</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Danh muc Single End-->
-                    <!--Danh muc Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="feature-two__single">
-                            <div class="feature-two__single-inner">
-                                <div class="feature-two__shape-1">
-                                    <img src="assets/images/shapes/feature-two-shape-1.png" alt="">
-                                </div>
-                                <div class="feature-two__img-box">
-                                    <div class="feature-two__img">
-                                        <img src="assets/images/resources/feature-two-img-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="feature-two__content">
-                                    <h3 class="feature-two__title"><a href="farming-products.html">Ẩm thực đường phố</a>
-                                    </h3>
-                                    <p class="feature-two__sub-title">Eggs, meat & milk</p>
-                                    <div class="feature-two__btn-box">
-                                        <a href="farming-products.html" class="thm-btn feature-two__btn">Shop</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Danh muc Single End-->
-                    <!--Danh muc Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="feature-two__single">
-                            <div class="feature-two__single-inner">
-                                <div class="feature-two__shape-1">
-                                    <img src="assets/images/shapes/feature-two-shape-1.png" alt="">
-                                </div>
-                                <div class="feature-two__img-box">
-                                    <div class="feature-two__img">
-                                        <img src="assets/images/resources/feature-two-img-3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="feature-two__content">
-                                    <h3 class="feature-two__title"><a href="organic-services.html">Dry fruits
-                                            products</a></h3>
-                                    <p class="feature-two__sub-title">Dry fruits, Nuts & product</p>
-                                    <div class="feature-two__btn-box">
-                                        <a href="organic-services.html" class="thm-btn feature-two__btn">Shop</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Danh muc Single End-->
                 </div>
+                <!--Danh muc Single End-->
+                <!--Danh muc Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="feature-two__single">
+                        <div class="feature-two__single-inner">
+                            <div class="feature-two__img-box">
+                                <div class="feature-two__img">
+                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="feature-two__content">
+                                <h3 class="feature-two__title"><a href="farming-products.html">Ẩm thực đường phố</a>
+                                </h3>
+                                <p class="feature-two__sub-title">Đồ ăn vỉa hè,...</p>
+                                <div class="feature-two__btn-box">
+                                    <a href="farming-products.html" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Danh muc Single End-->
+                <!--Danh muc Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="feature-two__single">
+                        <div class="feature-two__single-inner">
+                            <div class="feature-two__img-box">
+                                <div class="feature-two__img">
+                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="feature-two__content">
+                                <h3 class="feature-two__title"><a href="organic-services.html">Món tráng miệng</a></h3>
+                                <p class="feature-two__sub-title">Các loại đồ ăn nhẹ, ...</p>
+                                <div class="feature-two__btn-box">
+                                    <a href="organic-services.html" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Danh muc Single End-->
             </div>
-        </section>
-        <!--Danh muc End-->
+        </div>
+    </section>
+    <!--Danh muc End-->
 
     <!-- <div class="banner">banner</div> -->
 
-    <div class="homnayangi container text-left mt-4">
-        <h2>Hôm nay ăn gì</h2>
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
+
+
+
+    <!-- Hôm nay ăn gì -->
+    <div class="recipelisting">
+        <div class="cmp-recipe-listing-wrapper">
+            <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
+                <div class="main_header">
+                    <h2>Hôm nay ăn gì</h2>
+                </div>
+                <ul class="cmp-recipe-listing-items-container">
+                    <!-- 1 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>Cực Khó</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>20 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>4</p>
+                                    <p>Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 2 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>Cực Khó</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>20 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>4</p>
+                                    <p>Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>Cực Khó</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>20 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>4</p>
+                                    <p>Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>Cực Khó</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>20 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>4</p>
+                                    <p>Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>Cực Khó</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>20 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>4</p>
+                                    <p>Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>Cực Khó</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>20 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute">
+                                    <p>4</p>
+                                    <p>Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
         </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-
-        <div class="congthuc">
-            <img src="pages/imgweb/banhxeo.jpg" alt="">
-            <div class="tieude">Bánh xèo chiên giòn</div>
-            <div class="mota">Công thức nấu bánh xèo siêu ngon</div>
-        </div>
-
-        <div style="clear: both;"></div>
-
     </div>
+    <!--END hôm nay ăn gì -->
+
+
+
 
 
 
@@ -244,73 +374,145 @@
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
                 <div class="custom-media">
                     <img src="pages/imgweb/banhxeo.jpg" alt="Sản phẩm 1" class="img-thumbnail">
                     <div>
-                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn 3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3</h4>
-                        <p  class="truncate-text">Mô tả  món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô tả món ăn 1</p>
+                        <h4 class="mt-0 truncate-text1">Tên món ăn 1 Tên món ăn 3 Tên món ăn 3 Tên mómón ăn
+                            3 Tên món ăn 3 Tên mó món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn 3 Tên món ăn
+                            3</h4>
+                        <p class="truncate-text">Mô tả món ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả m món
+                            ăn 1 Mô tả món ăn 1 Mô tả m ón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món
+                            ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả
+                            món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón
+                            ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ănón ăn 1 Mô tả
+                            món ăn 1 Mô tả món ănón ăn 1 Mô tả món ăn 1 Mô tả món ăn n 1 Mô tả món ăn 1 Mô
+                            tả món ăn 1</p>
                     </div>
                 </div>
 
-             
-                
+
+
             </div>
         </div>
-        
-        
+
+
     </div>
 
 

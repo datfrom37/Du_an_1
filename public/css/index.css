@@ -5724,12 +5724,15 @@
   .feature-two__img {
     position: absolute;
     top: 2px;
-    left: -22px;
     mix-blend-mode: darken;
   }
   
   .feature-two__img img {
-    width: auto;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    object-fit: cover;
+    
   }
   
   .feature-two__content {
