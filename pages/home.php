@@ -177,7 +177,7 @@
     <!-- ẩm thực -->
 <div style="margin-bottom: 10vh; margin-top: 5vh;">
     <div class="container text-left mt-4">
-        <h2>Ẩm thực</h2>
+        <h2 style="margin-bottom: 2vh;">Ẩm thực</h2>
     </div>
 
 
