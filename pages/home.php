@@ -114,19 +114,10 @@
                                     tuần</a>
                             </h3>
                             <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>Cực Khó</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>20 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>4</p>
-                                    <p>Người</p>
-                                </li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
                             </ul>
                         </div>
                     </li>
@@ -146,19 +137,10 @@
                                     tuần</a>
                             </h3>
                             <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>Cực Khó</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>20 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>4</p>
-                                    <p>Người</p>
-                                </li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
                             </ul>
                         </div>
                     </li>
@@ -178,120 +160,13 @@
                                     tuần</a>
                             </h3>
                             <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>Cực Khó</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>20 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>4</p>
-                                    <p>Người</p>
-                                </li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
                             </ul>
                         </div>
                     </li>
-                    <!-- 3 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>Cực Khó</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>20 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>4</p>
-                                    <p>Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 3 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>Cực Khó</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>20 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>4</p>
-                                    <p>Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 3 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>Cực Khó</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>20 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute">
-                                    <p>4</p>
-                                    <p>Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-
                 </ul>
             </div>
         </div>
@@ -299,21 +174,17 @@
     <!--END hôm nay ăn gì -->
 
 
-
-
-
-
-    <br><br>
-
+    <!-- ẩm thực -->
+<div style="margin-bottom: 10vh; margin-top: 5vh;">
     <div class="container text-left mt-4">
         <h2>Ẩm thực</h2>
     </div>
 
 
     <!-- Phần hiển thị hình ảnh -->
-    <div class="container-fluid bg-light">
+    <div class="container-fluid bg-light" >
         <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-2">
             </div>
             <div class="col-md-1">
                 <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
@@ -339,17 +210,235 @@
             <div class="col-md-1">
                 <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
             </div>
-            <div class="col-md-1">
-                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
-            </div>
-            <div class="col-md-1">
-                <img src="./images/logo1.jpg" alt="Ảnh 1" class="rounded-image">
-            </div>
-            <div class="col-md-1">
+            <div class="col-md-2">
             </div>
         </div>
-
     </div>
+</div>
+    <!-- END ẩm thực -->
+
+
+
+    <!-- Món chay -->
+    <div class="recipelisting">
+        <div class="cmp-recipe-listing-wrapper">
+            <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
+                <div class="main_header">
+                    <h2>Món  chay thơm ngon</h2>
+                </div>
+                <ul class="cmp-recipe-listing-items-container">
+                    <!-- 1 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 2 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--END Món chay  -->
+
+
+
+    <!--Banner Two Start-->
+    <section class="banner-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="banner-two__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                            <div class="banner-two__inner">
+                                <div class="banner-two__img-1">
+                                    <img src="pages/imgweb/banner-two-img-1.png" alt="">
+                                </div>
+                                <div class="banner-two__shape-1">
+                                    <img src="pages/imgweb/banner-two-shape-1.png" alt="">
+                                </div>
+                                <p class="banner-two__tagline">10% <span>off</span></p>
+                                <h3 class="banner-two__title">Công thức từ
+                                    <br> Rau</h3>
+                                <div class="banner-two__btn-box">
+                                    <a href="product-details.html" class="banner-two__btn thm-btn">Xem danh sách</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="banner-two__right wow slideInRight" data-wow-delay="100ms"
+                            data-wow-duration="2500ms">
+                            <div class="banner-two__inner">
+                                <div class="banner-two__img-1">
+                                    <img src="pages/imgweb/banner-two-img-2.png" alt="">
+                                </div>
+                                <div class="banner-two__shape-1">
+                                    <img src="pages/imgweb/banner-two-shape-2.png" alt="">
+                                </div>
+                                <p class="banner-two__tagline">10% <span>off</span></p>
+                                <h3 class="banner-two__title">Công thức cho
+                                    <br> Bữa sáng</h3>
+                                <div class="banner-two__btn-box">
+                                    <a href="product-details.html" class="banner-two__btn thm-btn">Xem danh sách</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Banner Two End-->
+
+
+
+        <!-- Công thức đặc biệt trả phí -->
+    <div class="recipelisting">
+        <div class="cmp-recipe-listing-wrapper">
+            <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
+                <div class="main_header">
+                    <h2>Công thức đặc biệt trả phí</h2>
+                </div>
+                <ul class="cmp-recipe-listing-items-container">
+                    <!-- 1 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 2 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                    <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 300px; object-fit: cover;" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-star"></i> Dễ</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-clock"></i> 15 Phút</p></li>
+                                <li class="cmp-recipe-listing-attribute "><p><i class="fas fa-user"></i> 4 Người</p></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--END Công thức đặc biệt trả phí  -->
+
+
+
+
+
 
 
     <br><br>
