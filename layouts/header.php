@@ -96,7 +96,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">Pages</a>
+                                        <a href="#">DANH MỤC</a>
                                         <ul class="sub-menu">
                                             <li><a href="portfolio.html">Portfolio</a></li>
                                             <li><a href="portfolio-carousel.html">Portfolio Carousel</a>
@@ -112,7 +112,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">Shop</a>
+                                        <a href="#">BÀI VIẾT</a>
                                         <ul class="sub-menu">
                                             <li><a href="products.html">Products</a></li>
                                             <li><a href="product-list.html">Product List</a></li>
@@ -123,17 +123,9 @@
                                             <li><a href="my-account.html">My Account</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="#">News</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="news.html">News</a></li>
-                                            <li><a href="news-carousel.html">News Carousel</a></li>
-                                            <li><a href="news-sidebar.html">News Sidebar</a></li>
-                                            <li><a href="news-details.html">News Details</a></li>
-                                        </ul>
-                                    </li>
                                     <li>
-                                        <a href="contact.html">Contact</a>
+                                        <a href="#">LIÊN HỆ</a>
+                                        
                                     </li>
                                 </ul>
                             </div>
