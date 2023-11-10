@@ -105,7 +105,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -303,7 +303,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -326,7 +326,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -413,7 +413,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -436,7 +436,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -459,7 +459,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
@@ -482,7 +482,7 @@
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
                                         <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 300px; object-fit: cover;" />
+                                            style="height: 200px; width:100%; object-fit: cover;" />
                                     </picture>
                                 </div>
                             </div>
