@@ -1,6 +1,6 @@
 <?php 
-function getAllLoai() {
-    $sql = "SELECT * FROM Loai";
+function getAllCongThuc() {
+    $sql = "SELECT * FROM cong_thuc";
     $data = getData($sql);
     return $data;
 }
