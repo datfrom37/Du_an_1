@@ -27,15 +27,11 @@ function createBinhLuanBaiViet($noi_dung, $ma_bai_viet, $ma_kh) {
     ]);
     return $data;
 }
-function updateKhachHang($ma_kh, $ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro) {
-    $sql = "UPDATE khach_hang SET ten_kh=:ten_kh, email=:email, mat_khau=:mat_khau, so_dien_thoai=:so_dien_thoai, vai_tro=:vai_tro WHERE ma_kh=:ma_kh";
+function updateBinhLuanBaiViet($ma_binh_luan, $noi_dung) {
+    $sql = "UPDATE binh_luan_bai_viet SET noi_dung=:noi_dung WHERE ma_binh_luan=:ma_binh_luan";
     $data = executeCUD($sql, [
-        "ma_kh" => $ma_kh,
-        "ten_kh" => $ten_kh,
-        "email" => $email,
-        "mat_khau" => $mat_khau,
-        "so_dien_thoai" => $so_dien_thoai,
-        "vai_tro" => $vai_tro
+        "ma_binh_luan" => $ma_binh_luan,
+        "noi_dung" => $noi_dung
     ]);
     return $data; // Hoặc trả về thông tin khác nếu cần
 }
