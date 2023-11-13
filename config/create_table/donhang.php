@@ -4,10 +4,9 @@ try {
     $conn = connect_db();
     $sql = "CREATE TABLE don_hang (
         ma_don_hang INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        noi_dung VARCHAR(1000),
         ma_kh INT(8) REFERENCES khach_hang(ma_kh),,
-        ma_bai_viet INT(8) REFERENCES bai_viet(ma_bai_viet),
-        ngay_binh_luan TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ma_cong_thuc INT(8) REFERENCES cong_thuc(ma_cong_thuc),
+        ngay_mua TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
         )";
     $conn->exec($sql);
     echo "Table users created successfully";
