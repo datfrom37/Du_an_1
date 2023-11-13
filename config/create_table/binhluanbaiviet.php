@@ -2,7 +2,7 @@
 include '../connect.php';
 try {
     $conn = connect_db();
-    $sql = "CREATE TABLE binh_luan (
+    $sql = "CREATE TABLE binh_luan_bai_viet (
         ma_binh_luan INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         noi_dung VARCHAR(1000),
         ma_kh INT(8) REFERENCES khach_hang(ma_kh),

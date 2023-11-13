@@ -3,8 +3,8 @@ include '../connect.php';
 
 try {
     $conn = connect_db();
-    for ($i=1; $i <= 10; $i++) { 
-        $sql = "INSERT INTO users (firstname, lastname, email)
+    for ($i=1; $i <= 3; $i++) { 
+        $sql = "INSERT INTO khach_hang (firstname, lastname, email)
         VALUES ('John $i', 'Doe $i', 'john$i@example.com')";
         $conn->exec($sql);
     }
