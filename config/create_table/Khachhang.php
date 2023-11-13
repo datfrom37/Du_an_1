@@ -9,7 +9,7 @@ try {
         so_dien_thoai INT(10) NOT NULL,
         email VARCHAR(50),
         vai_tro BIT,
-        reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ngay_dang_ky TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
         )";
     $conn->exec($sql);
     echo "Table users created successfully";

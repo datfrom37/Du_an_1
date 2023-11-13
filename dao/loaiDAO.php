@@ -1,25 +1,25 @@
 <?php 
-function getAllUser() {
-    $sql = "SELECT * FROM users";
+function getAllLoai() {
+    $sql = "SELECT * FROM Loai";
     $data = getData($sql);
     return $data;
 }
 
-function getUserById($id) {
-    $sql = "SELECT * FROM users WHERE id=:id";
-    $data = getDataWidthParams($sql, ["id"=>$id]);
+function getLoaiByMaLoai($ma_loai) {
+    $sql = "SELECT * FROM Loai WHERE ma_loai=:ma_loai";
+    $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);
     return $data;
 }
 
-function getUserByName($name) {
-    $sql = "SELECT * FROM users WHERE name=:name";
-    $data = getDataWidthParams($sql, ["name"=>$name]);
+function getLoaiByName($ten_loai) {
+    $sql = "SELECT * FROM Loai WHERE ten_loai=:ten_loai";
+    $data = getDataWidthParams($sql, ["ten_loai"=>$ten_loai]);
     return $data;
 }
 
-function deleteUser($id) {
-    $sql = "DELETE FROM users WHERE id=:id";
-    $data = executeCUD($sql, ["id"=>$id]);
+function deleteLoai($ma_loai) {
+    $sql = "DELETE FROM Loai WHERE ma_loai=:ma_loai";
+    $data = executeCUD($sql, ["ma_loai"=>$ma_loai]);
     var_dump($data);
 }
 
