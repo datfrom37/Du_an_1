@@ -644,8 +644,7 @@
 <section class="news-two" id="news">
             <div class="container">
                 <div class="section-title text-center">
-                    <h2 class="section-title__title">Latest news updates
-                        <br> & articles</h2>
+                    <h2 class="section-title__title">TIN TỨC & BÀI VIẾT</h2>
                 </div>
                 <div class="row">
                     <!--News One Single Start-->
