@@ -12,8 +12,15 @@
     </div>
     <div class="mb10 frmdsloai">
         <table class="table table-bordered  colortable">
-            
-            
+            <?php
+                $listloai = getAllLoai();
+                foreach ($listloai as $loai) {
+                    extract($loai);
+                    echo $ma_loai;
+                    echo $ten_loai;
+                }
+                
+            ?>
         </table>
     </div>
 

@@ -1,6 +1,8 @@
 <?php
 include "dao/pdo.php";
-include "includes/connect.php";
+// include "includes/connect.php";
+include "config/connect.php";
+connect_db();
 ?>
 
 <!-- Header -->

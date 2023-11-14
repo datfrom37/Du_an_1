@@ -3,15 +3,9 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "xshop";
+$dbname = "duan1";
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Kiểm tra kết nối
-if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
-}else{
-    // echo "Thành Công!";
-}
-
+?>
 
