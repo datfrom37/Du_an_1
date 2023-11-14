@@ -22,6 +22,6 @@ if (isset($_GET['tkh'])) {
             break;
     }
 } else {
-    include "home.php";
+    include "chitietct.php";
 }
 ?>
