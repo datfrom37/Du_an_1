@@ -459,18 +459,18 @@
                 </div>
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
-                    <li class="cmp-recipe-listing-item hide">
+                   <li class="cmp-recipe-listing-item hide">
                         <div class="cmp-card-wrapper">
                             <div class="cmp-recipe-image-wrapper">
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
-                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" />
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
                                     </picture>
                                 </div>
                             </div>
                             <h3 class="cmp-recipe-listing-title">
-                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
                             <ul class='cmp-recipe-listing-attributes'>
@@ -490,18 +490,18 @@
                         </div>
                     </li>
                     <!-- 2 -->
-                    <li class="cmp-recipe-listing-item hide">
+                   <li class="cmp-recipe-listing-item hide">
                         <div class="cmp-card-wrapper">
                             <div class="cmp-recipe-image-wrapper">
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
-                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" />
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
                                     </picture>
                                 </div>
                             </div>
                             <h3 class="cmp-recipe-listing-title">
-                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
                             <ul class='cmp-recipe-listing-attributes'>
@@ -521,18 +521,18 @@
                         </div>
                     </li>
                     <!-- 3 -->
-                    <li class="cmp-recipe-listing-item hide">
+                   <li class="cmp-recipe-listing-item hide">
                         <div class="cmp-card-wrapper">
                             <div class="cmp-recipe-image-wrapper">
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
-                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" />
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
                                     </picture>
                                 </div>
                             </div>
                             <h3 class="cmp-recipe-listing-title">
-                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
                             <ul class='cmp-recipe-listing-attributes'>
@@ -552,18 +552,18 @@
                         </div>
                     </li>
                     <!-- 4 -->
-                    <li class="cmp-recipe-listing-item hide">
+                   <li class="cmp-recipe-listing-item hide">
                         <div class="cmp-card-wrapper">
                             <div class="cmp-recipe-image-wrapper">
                                 <div class="cmp-recipe-listing-image-container">
                                     <picture>
-                                        <img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" />
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
                                     </picture>
                                 </div>
                             </div>
                             <h3 class="cmp-recipe-listing-title">
-                                <a class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
                             <ul class='cmp-recipe-listing-attributes'>
