@@ -5,11 +5,11 @@ function getAllLoai() {
     return $data;
 }
 
-function getLoaiByMaLoai($ma_loai) {
-    $sql = "SELECT * FROM loai WHERE ma_loai=:ma_loai";
-    $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);
-    return $data;
-}
+    function getLoaiByMaLoai($ma_loai) {
+        $sql = "SELECT * FROM loai WHERE ma_loai=:ma_loai";
+        $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);
+        return $data;
+    }
 
 function getLoaiByName($ten_loai) {
     $sql = "SELECT * FROM loai WHERE ten_loai=:ten_loai";

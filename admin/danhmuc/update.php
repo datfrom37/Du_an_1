@@ -13,7 +13,7 @@ if (is_array($dm)) {
         <form action="index.php?act=adddm&danhmuc=updatedm" method="post" class="colortwo">
             <div class="form-group mb-3">
                 <label for="ma_loai">Mã loại</label>
-                <input type="text" id="ma_loai" name="ma_loai" value="<?php if (isset($ma_loai))
+                <input style="color: gray;" type="text" id="ma_loai" name="ma_loai" value="<?php if (isset($ma_loai))
                     echo $ma_loai; ?>"
                     class="form-control" disabled>
             </div>
