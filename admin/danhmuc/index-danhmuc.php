@@ -35,13 +35,22 @@
                     case 'sua':
                         if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
                             $dm = getLoaiByMaLoai($_GET['maloai']);
-                            print $dm['ma_loai'];
-                        }                     
+                            foreach ($dm as $loai) {
+                                extract($loai);
+                                include "update.php";
+                                echo $ten_loai;
+                            }   
+                            }                     
                         // include "update.php";
                         break;
 
 
                     case 'updatedm':
+                        if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                            $ten_loai = $_POST['ten_loai'];
+                            $ma_loai = $_POST['ma_loai'];
+                            updateLoai($ma_loai, $ten_loai);
+                        }
                         include "list.php";
                         break;
 

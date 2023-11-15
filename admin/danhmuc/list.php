@@ -19,14 +19,6 @@
                 <th class="vertical-center">HÀNH ĐỘNG</th>
             </tr>
             <?php
-<<<<<<< HEAD
-                $listloai = getAllLoai();
-                foreach ($listloai as $loai) {
-                    extract($loai);
-                    echo $ma_loai;
-                    echo $ten_loai;
-                }  
-=======
             $listloai = getAllLoai();
             foreach ($listloai as $loai) {
                 extract($loai);
@@ -45,7 +37,6 @@
                 ';
             }
 
->>>>>>> 7a14ea9ae02e9333ddc514b25872c84f05f7e354
             ?>
         </table>
     </div>
