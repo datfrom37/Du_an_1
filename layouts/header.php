@@ -12,6 +12,7 @@
          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
          crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="../public/css/index.css">
+        <link rel="stylesheet" href="../public/css/home.css">
     </head>
     <body>
     <header class="main-header-two">
