@@ -13,7 +13,9 @@
                 $danhmuc = $_GET['danhmuc'];
                 switch ($danhmuc) {
                     case 'themdm':
-                        if(isset($_POST['themmoi'])) {
+                        if (isset($_POST['themmoi'])) {
+                            $tenloai = $_POST['ten_loai'];
+                            createLoai($tenloai);
                         }
                         include "add.php";
                         break;
@@ -24,11 +26,18 @@
 
 
                     case 'xoa':
+                        if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
+                            deleteLoai($_GET['maloai']);
+                        }
                         include "list.php";
                         break;
 
                     case 'sua':
-                        include "update.php";
+                        if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
+                            $dm = getLoaiByMaLoai($_GET['maloai']);
+                            print $dm['ma_loai'];
+                        }                     
+                        // include "update.php";
                         break;
 
 
@@ -40,8 +49,8 @@
                     default:
                         include "list.php";
                         break;
-                    }
                 }
+            }
             ?>
 
         </div>
