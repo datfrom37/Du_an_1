@@ -18,8 +18,7 @@
                     extract($loai);
                     echo $ma_loai;
                     echo $ten_loai;
-                }
-                
+                }  
             ?>
         </table>
     </div>
