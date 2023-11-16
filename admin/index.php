@@ -24,8 +24,8 @@ connect_db();
                 include "danhmuc/index-danhmuc.php";
                 break;
 
-            case 'addhh':
-                include "sanpham/index-hanghoa.php";
+            case 'addct':
+                include "congthuc/index-congthuc.php";
                 break;
 
             case 'khachhang':
