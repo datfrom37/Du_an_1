@@ -34,7 +34,7 @@
             // Thực hiện truy vấn SQL để chèn dữ liệu;
             $sql = createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, $vai_tro);
             $thongbao = "Đăng ký thành công!";
-            echo '<script>window.location.href = "../index.php;</script>';
+            // echo '<script>window.location.href = "../index.php;</script>';
             exit; // Kết thúc việc thực hiện mã PHP
         }
     }
@@ -50,11 +50,11 @@
 <body>
     <div>
         <form action="dangky1.php" method="POST">
-            <input type="text" name="user" placeholder="Họ Tên" " >
-            <input type="text" name="number" placeholder="SĐT" ">
-            <input type="text" name="email" placeholder="Email" ">
-            <input type="text" name="pass" placeholder="Mật khẩu" ">
-            <input type="text" name="checkpass" placeholder="nhập lại mật khẩu"">
+            <input type="text" name="user" placeholder="Họ Tên"  >
+            <input type="text" name="number" placeholder="SĐT" >
+            <input type="text" name="email" placeholder="Email" >
+            <input type="text" name="pass" placeholder="Mật khẩu" >
+            <input type="text" name="checkpass" placeholder="nhập lại mật khẩu">
             <input type="submit" name="dangky" value="Đăng ký">
             <?php
                 if (isset($thongbao)) {

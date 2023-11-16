@@ -24,7 +24,7 @@ function deleteKhachHang($ma_kh) {
 }
 
 function createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, $vai_tro) {
-    $sql = "INSERT INTO loai (ten_kh, email, mat_khau, so_dien_thoai, vai_tro) VALUES (:ten_loai, :mat_khau, :so_dien_thoai, :email, :vai_tro)";
+    $sql = "INSERT INTO khach_hang (ten_kh, email, mat_khau, so_dien_thoai, vai_tro) VALUES (:ten_kh, :email, :mat_khau, :so_dien_thoai, :vai_tro)";
     $data = executeCUD($sql,[
         "ten_kh" => $ten_kh,
         "mat_khau" => $mat_khau,
