@@ -132,7 +132,7 @@
                     <div class="main_header col-10">
                         <h2>Hôm nay ăn gì</h2>
                     </div>
-                    <div class="col-2 xemthem-more">Xem thêm <i class="fa-solid fa-circle-arrow-right fa-xl"></i></div>
+                    <div class="col-2 xemthem-more"><a href="index.php?tkh=dscongthuc">Xem thêm <i class="fa-solid fa-circle-arrow-right fa-xl"></i></a> </div>
                 </div>
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->

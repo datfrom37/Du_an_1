@@ -20,6 +20,9 @@ if (isset($_GET['tkh'])) {
             include "lienhe.php";
             break;
 
+        case "dscongthuc":
+            include "dscongthuc.php";
+            break;
 
         default:   
             include "home.php";
