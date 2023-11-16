@@ -17,7 +17,7 @@ if (isset($_GET['tkh'])) {
             break;
 
 
-        default:   
+        default:
             include "home.php";
             break;
     }

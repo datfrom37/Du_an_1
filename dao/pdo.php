@@ -24,5 +24,4 @@ function executeCUD($sql, $params) {
 }
 
 
-
 ?>
