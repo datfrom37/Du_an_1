@@ -43,7 +43,10 @@
                 <a href="./index.php?act=adddm&danhmuc=home"> Danh Mục</a>
             </li>
             <li>
-                <a href="./index.php?act=addhh&hanghoa=home"> Hàng Hóa</a>
+                <a href="./index.php?act=addct&congthuc=home"> Công thức</a>
+            </li>
+            <li>
+                <a href="./index.php?act=addbv&hanghoa=home"> Bài viết</a>
             </li>
             <li>
                 <a href="./index.php?act=khachhang&khachhang=home"> Khách Hàng</a>

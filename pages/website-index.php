@@ -11,17 +11,24 @@ if (isset($_GET['tkh'])) {
         case 'congthuc':
             include "congthuc.php";
             break;
+        
+        case 'chitietcongthuc':
+            include "chitietct.php";
+            break;
 
         case 'lienhe':
             include "lienhe.php";
             break;
 
+        case "dscongthuc":
+            include "dscongthuc.php";
+            break;
 
         default:
             include "home.php";
             break;
     }
 } else {
-    include "chitietct.php";
+    include "home.php";
 }
 ?>

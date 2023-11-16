@@ -23,9 +23,9 @@ function deleteCongThuc($ma_cong_thuc) {
     var_dump($data);
 }
 
-function createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $ngay_dang) {
-    $sql = "INSERT INTO ten_bang (ten_cong_thuc, nguyen_lieu, thoi_gian_nau, thoi_gian_so_che, so_nguoi_an, gia, noi_dung, ma_kh, ma_loai, ngay_dang) 
-            VALUES (:ten_cong_thuc, :nguyen_lieu, :thoi_gian_nau, :thoi_gian_so_che, :so_nguoi_an, :gia, :noi_dung, :ma_kh, :ma_loai, :ngay_dang)";
+function createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh) {
+    $sql = "INSERT INTO cong_thuc (ten_cong_thuc, nguyen_lieu, thoi_gian_nau, thoi_gian_so_che, so_nguoi_an, gia, noi_dung, ma_kh, ma_loai, hinh_anh) 
+            VALUES (:ten_cong_thuc, :nguyen_lieu, :thoi_gian_nau, :thoi_gian_so_che, :so_nguoi_an, :gia, :noi_dung, :ma_kh, :ma_loai, :hinh_anh)";
             
     $data = executeCUD($sql, [
         "ten_cong_thuc" => $ten_cong_thuc,
@@ -37,14 +37,14 @@ function createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian
         "noi_dung" => $noi_dung,
         "ma_kh" => $ma_kh,
         "ma_loai" => $ma_loai,
-        "ngay_dang" => $ngay_dang
+        "hinh_anh" => $hinh_anh
     ]);
 
     return $data;
 }
 
 function updateCongThuc($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $ngay_dang) {
-    $sql = "UPDATE ten_bang 
+    $sql = "UPDATE cong_thuc 
             SET ten_cong_thuc=:ten_cong_thuc, nguyen_lieu=:nguyen_lieu, thoi_gian_nau=:thoi_gian_nau, thoi_gian_so_che=:thoi_gian_so_che, 
                 so_nguoi_an=:so_nguoi_an, gia=:gia, noi_dung=:noi_dung, ma_kh=:ma_kh, ma_loai=:ma_loai, ngay_dang=:ngay_dang 
             WHERE ma_cong_thuc=:ma_cong_thuc";

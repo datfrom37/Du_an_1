@@ -86,7 +86,7 @@
                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                 <ul class="main-menu__list">
                                     <li class="current megamenu">
-                                        <a href="index.html">TRANG CHỦ</a>
+                                        <a href="index.php">TRANG CHỦ</a>
                                     </li>
                                     <li class="dropdown">
                                         <a href="#">CÔNG THỨC</a>

@@ -4,6 +4,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/home.css">
     <style>
+        :root {
+            --white: rgba(255, 255, 255, 1);
+            --graydark: rgba(63, 66, 85, 1);
+            --brandyellow-bright: rgba(255, 225, 69, 1);
+            --brandyellow-dark: rgba(183, 156, 16, 1);
+        }
+
         .container {
             padding: 1vh 0 1vh 0;
         }
@@ -34,11 +41,11 @@
         }
 
         .p-mr {
-            margin-top: 2vh;
+            margin-top: 1vh;
         }
 
         .p-mrd {
-            margin-bottom: 1vh;
+            margin-bottom: 2vh;
         }
 
         .stars {
@@ -58,20 +65,151 @@
         /* Tùy chỉnh kiểu dáng */
         .custom-box {
             padding: 20px;
+            margin-bottom: 4vh;
         }
-        .custom-box h2{
+
+        .custom-box h2 {
             color: #D2B000;
             /* Title/2 */
             font-size: 24px;
             font-style: normal;
             font-weight: 600;
-            line-height: 32px; /* 133.333% */
+            line-height: 32px;
+            /* 133.333% */
             margin-bottom: 2vh;
         }
 
         h2 {
             margin-top: 0;
             /* Loại bỏ khoảng trống mặc định trên cùng của tiêu đề */
+        }
+
+
+
+
+
+        .line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.50);
+        }
+
+        .comm,
+        .ques {
+            height: 50px;
+            width: 130px;
+            bottom: 26.5px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .cq-active {
+            background: #FFE145;
+            color: var(--gray-dark, #3F4255);
+            font-weight: bold;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        .buttons {
+            background-color: #fff;
+            border-radius: 4px;
+        }
+
+        .img {
+            width: 80px;
+            height: 80px;
+            border-radius: 150px;
+        }
+
+        .comment-input {
+            width: calc(100% - 20px);
+            min-height: 20vh;
+            border: 1px solid #000;
+            padding: 10px;
+            resize: none;
+            margin-top: 2vh;
+            border-radius: 10px;
+        }
+
+        .div {
+            font-family: "Poppins-SemiBold", Helvetica;
+            font-weight: 600;
+            color: #3f4255;
+            font-size: 20px;
+            line-height: 32px;
+            white-space: nowrap;
+        }
+
+        .button {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #ffe145;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            padding: 2vh;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .primary {
+            font-family: "MartelSans-Bold", Helvetica;
+            font-weight: 700;
+            color: #000;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            line-height: 20px;
+            white-space: nowrap;
+        }
+
+        .cls {
+            color: #3F4255;
+        }
+
+        .binhl {
+            border-radius: 4px;
+            background: var(--White, #FFF);
+            box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+            padding: 4vh;
+            margin-top: 2vh;
+            margin-bottom: 5vh;
+        }
+
+        .star-wow {
+            margin: 0;
+        }
+
+        .titless {
+            color: var(--gray-dark, #3F4255);
+            font-size: 16px;
+            font-style: normal;
+            line-height: 32px;
+            /* 200% */
+            margin-top: 1vh;
+        }
+        .sua-xoabl{
+            padding-left: 10vh;
         }
     </style>
 </head>
@@ -100,17 +238,18 @@
                 <ul class='row'>
                     <l class="col-md-1 "></l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fa-solid fa-fire-burner"></i> </p>15 Phút <p class="p-mr">Thời gian
+                        <p class="p-mrd"><i class="fa-solid fa-fire-burner fa-xl"></i> </p>15 Phút <p class="p-mr">Thời
+                            gian
                             nấu</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-star"></i> </p>Dễ <p class="p-mr">Độ khó</p>
+                        <p class="p-mrd"><i class="fas fa-star fa-xl"></i> </p>Dễ <p class="p-mr">Độ khó</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-clock"></i> </p>15 Phút <p class="p-mr">Sơ chế</p>
+                        <p class="p-mrd"><i class="fas fa-clock fa-xl"></i> </p>15 Phút <p class="p-mr">Sơ chế</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-user"></i> </p>4 Người <p class="p-mr">Khẩu phần</p>
+                        <p class="p-mrd"><i class="fas fa-user fa-xl"></i> </p>4 Người <p class="p-mr">Khẩu phần</p>
                     </l>
                     <l class="col-md-1"></l>
                 </ul>
@@ -118,6 +257,9 @@
         </div>
     </div>
     <!-- END tong quan cong thuc -->
+
+
+    <!-- nguyên liệu, hướng dẫn -->
 
     <div class="container ">
         <div class="row">
@@ -139,4 +281,316 @@
             </div>
         </div>
     </div>
+    <!--EMD nguyên liệu, hướng dẫn -->
+
+
+    <!-- bình luận -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="line">
+                    <div class="comm cq-active">ĐÁNH GIÁ (0)</div>
+                    <div class="ques">CÂU HỎI (0)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container binhl">
+        <div class="row">
+            <div class="col-1">
+                <img class="img " src="pages/imgweb/banhxeo.jpg" />
+            </div>
+            <div class="col-11">
+                <form class="buttons " method="post">
+                    <div class="row">
+                        <div class="div col-12">Đạt Bờ Rồ</div>
+                        <div class="stars col-12 star-wow">
+                            <i class="fa-regular fa-star cls"></i>
+                            <i class="fa-regular fa-star cls"></i>
+                            <i class="fa-regular fa-star cls"></i>
+                            <i class="fa-regular fa-star cls"></i>
+                            <i class="fa-regular fa-star cls"></i>
+                            <xs> (0.0 / 5.0) </xs>
+                        </div>
+
+                        <div class="col-12">
+                            <textarea class="comment-input" placeholder="Nhập nội dung đánh giá"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10"></div>
+                        <div class="col-2">
+                            <button type="submit" class="button">
+                                <div class="primary">GỬI ĐÁNH GIÁ</div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END bình luận -->
+
+
+
+    <!-- danh sach binh luan -->
+    <div class="container binhl">
+        <div class="row">
+            <div class="col-1">
+                <img class="img " src="pages/imgweb/banhxeo.jpg" />
+            </div>
+            <div class="col-11">
+                <div class="buttons " method="post">
+                    <div class="row">
+                        <div class="div col-10">Đạt Bờ Rồ</div>
+                        <div class="col-2 sua-xoabl">
+                            <suax>SỬA</suax> |
+                            <suax>XÓA</suax>
+                        </div>
+                        <div class="stars col-12 star-wow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star cls"></i>
+                            <xs> (4.0 / 5.0) </xs>
+                        </div>
+                        <div class="col-12">15/11/2023 - 7:26pm</div>
+                        <div class="col-12">
+                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
+                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
+                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
+                                vừa ngon vừa khó làm nha mấy ní</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container binhl">
+        <div class="row">
+            <div class="col-1">
+                <img class="img " src="pages/imgweb/banhxeo.jpg" />
+            </div>
+            <div class="col-11">
+                <div class="buttons " method="post">
+                    <div class="row">
+                        <div class="div col-10">Đạt Bờ Rồ</div>
+                        <div class="col-2 sua-xoabl">
+                            <suax>SỬA</suax> |
+                            <suax>XÓA</suax>
+                        </div>
+                        <div class="stars col-12 star-wow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star cls"></i>
+                            <xs> (4.0 / 5.0) </xs>
+                        </div>
+                        <div class="col-12">15/11/2023 - 7:26pm</div>
+                        <div class="col-12">
+                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
+                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
+                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
+                                vừa ngon vừa khó làm nha mấy ní</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container binhl">
+        <div class="row">
+            <div class="col-1">
+                <img class="img " src="pages/imgweb/banhxeo.jpg" />
+            </div>
+            <div class="col-11">
+                <div class="buttons " method="post">
+                    <div class="row">
+                        <div class="div col-10">Đạt Bờ Rồ</div>
+                        <div class="col-2 sua-xoabl">
+                            <suax>SỬA</suax> |
+                            <suax>XÓA</suax>
+                        </div>
+                        <div class="stars col-12 star-wow">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fa-regular fa-star cls"></i>
+                            <xs> (4.0 / 5.0) </xs>
+                        </div>
+                        <div class="col-12">15/11/2023 - 7:26pm</div>
+                        <div class="col-12">
+                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
+                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
+                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
+                                vừa ngon vừa khó làm nha mấy ní</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- END danh sach binh luan -->
+
+        <br><br>
+
+
+
+
+    <!-- Công thức nấu ăn tương tự -->
+    <div class="recipelisting" >
+        <div class="cmp-recipe-listing-wrapper">
+            <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
+                <div class="main_header">
+                    <h2 class="section-title">Công thức nấu ăn tương tự</h2>
+                </div>
+                <ul class="cmp-recipe-listing-items-container">
+                    <!-- 1 -->
+                   <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-user"></i> 4 Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 2 -->
+                   <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-user"></i> 4 Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 3 -->
+                   <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-user"></i> 4 Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- 4 -->
+                   <li class="cmp-recipe-listing-item hide">
+                        <div class="cmp-card-wrapper">
+                            <div class="cmp-recipe-image-wrapper">
+                                <div class="cmp-recipe-listing-image-container">
+                                    <picture>
+                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
+                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
+                                    </picture>
+                                </div>
+                            </div>
+                            <h3 class="cmp-recipe-listing-title">
+                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
+                                    tuần</a>
+                            </h3>
+                            <ul class='cmp-recipe-listing-attributes'>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
+                                </li>
+                                <li class="cmp-recipe-listing-attribute ">
+                                    <p><i class="fas fa-user"></i> 4 Người</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-primary button">XEM THÊM</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END Công thức nấu ăn tương tự  -->
+
 </body>
