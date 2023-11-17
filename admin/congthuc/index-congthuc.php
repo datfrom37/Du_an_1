@@ -16,7 +16,7 @@
                     /* Quản trị sản phẩm */
                     case 'addct':
                         if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-                       
+                            $duyet = $_POST['duyet'];
                             $ten_cong_thuc = $_POST['ten_cong_thuc'];
                             $nguyen_lieu = $_POST['nguyen_lieu'];
                             $thoi_gian_nau = $_POST['thoi_gian_nau'];
@@ -35,7 +35,7 @@
                                 // echo "Sorry, there was an error uploading your file.";
                             }
 
-                            createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh);
+                            createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh, $duyet);
                         }
                         include "congthuc/add.php";
                         break;
@@ -82,6 +82,8 @@
                             $ma_loai = $_POST['ma_loai'];
                             $ma_kh = 2;
                             $noi_dung = $_POST['noi_dung'];
+                            $duyet = $_POST['duyet'];
+
 
                             $hinh_anh = $_FILES['hinh_anh']['name'];
                             $target_dir = dirname(__FILE__) . '/img/';
@@ -93,9 +95,9 @@
                             }
 
                             if ($hinh_anh != "") {
-                                updateCongThuc($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh);
+                                updateCongThuc($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh, $duyet);
                             } else {
-                                updateCongThucnoimg($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai);
+                                updateCongThucnoimg($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $duyet);
                             }
 
                         }

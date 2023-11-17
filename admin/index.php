@@ -28,6 +28,10 @@ connect_db();
                 include "congthuc/index-congthuc.php";
                 break;
 
+            case 'addbv':
+                include "baiviet/index-baiviet.php";
+                break;
+
             case 'khachhang':
                 include "khachhang/index-khachhang.php";
                 break;

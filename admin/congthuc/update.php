@@ -99,6 +99,11 @@
                 <?php if (isset($noi_dung)) echo $noi_dung; ?>
                 </textarea>
             </div>
+            <div class="mb-3">
+                <label for="duyet" class="form-label">Tình trạng</label>: <br>
+                <input type="radio" name="duyet" value="0" <?php if($duyet == 0) echo "checked" ?>> Chờ duyệt <br>
+                <input type="radio" name="duyet" value="1" <?php if($duyet == 1) echo "checked" ?>> Duyệt
+            </div>
 
 
        
