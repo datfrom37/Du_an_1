@@ -23,12 +23,13 @@ function deleteBaiViet($ma_bai_viet) {
     var_dump($data);
 }
 
-function createBaiViet($noi_dung, $ten_bai_viet, $ma_kh) {
-    $sql = "INSERT INTO bai_viet (noi_dung, ten_bai_viet, ma_kh) VALUES (:noi_dung, :ten_bai_viet, :ma_kh)";
+function createBaiViet($noi_dung, $ten_bai_viet, $ma_kh, $duyet) {
+    $sql = "INSERT INTO bai_viet (noi_dung, ten_bai_viet, ma_kh; duyet) VALUES (:noi_dung, :ten_bai_viet, :ma_kh, :duyet)";
     $data = executeCUD($sql, [
         "noi_dung" => $noi_dung,
         "ten_bai_viet" => $ten_bai_viet,
-        "ma_kh" => $ma_kh
+        "ma_kh" => $ma_kh,
+        "duyet" => $duyet
     ]);
     return $data;
 }

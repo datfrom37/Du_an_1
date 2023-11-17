@@ -23,7 +23,7 @@ function deleteCongThuc($ma_cong_thuc) {
     var_dump($data);
 }
 
-function createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh) {
+function createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh, $duyet) {
     $sql = "INSERT INTO cong_thuc (ten_cong_thuc, nguyen_lieu, thoi_gian_nau, thoi_gian_so_che, so_nguoi_an, gia, noi_dung, ma_kh, ma_loai, hinh_anh) 
             VALUES (:ten_cong_thuc, :nguyen_lieu, :thoi_gian_nau, :thoi_gian_so_che, :so_nguoi_an, :gia, :noi_dung, :ma_kh, :ma_loai, :hinh_anh)";
             
@@ -43,10 +43,10 @@ function createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian
     return $data;
 }
 
-function updateCongThuc($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh) {
+function updateCongThuc($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh, $duyet) {
     $sql = "UPDATE cong_thuc 
             SET ten_cong_thuc=:ten_cong_thuc, nguyen_lieu=:nguyen_lieu, thoi_gian_nau=:thoi_gian_nau, thoi_gian_so_che=:thoi_gian_so_che, 
-                so_nguoi_an=:so_nguoi_an, gia=:gia, noi_dung=:noi_dung, ma_kh=:ma_kh, ma_loai=:ma_loai, hinh_anh=:hinh_anh  
+                so_nguoi_an=:so_nguoi_an, gia=:gia, noi_dung=:noi_dung, ma_kh=:ma_kh, ma_loai=:ma_loai, hinh_anh=:hinh_anh, duyet=:duyet
             WHERE ma_cong_thuc=:ma_cong_thuc";
             
     $data = executeCUD($sql, [
@@ -60,16 +60,17 @@ function updateCongThuc($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_
         "noi_dung" => $noi_dung,
         "ma_kh" => $ma_kh,
         "ma_loai" => $ma_loai,
-        "hinh_anh" => $hinh_anh
+        "hinh_anh" => $hinh_anh,
+        "duyet" => $duyet
     ]);
 
     return $data;
 }
 
-function updateCongThucnoimg($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai) {
+function updateCongThucnoimg($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $duyet) {
     $sql = "UPDATE cong_thuc 
             SET ten_cong_thuc=:ten_cong_thuc, nguyen_lieu=:nguyen_lieu, thoi_gian_nau=:thoi_gian_nau, thoi_gian_so_che=:thoi_gian_so_che, 
-                so_nguoi_an=:so_nguoi_an, gia=:gia, noi_dung=:noi_dung, ma_kh=:ma_kh, ma_loai=:ma_loai
+                so_nguoi_an=:so_nguoi_an, gia=:gia, noi_dung=:noi_dung, ma_kh=:ma_kh, ma_loai=:ma_loai, duyet=:duyet
             WHERE ma_cong_thuc=:ma_cong_thuc";
             
     $data = executeCUD($sql, [
@@ -82,7 +83,8 @@ function updateCongThucnoimg($ma_cong_thuc, $ten_cong_thuc, $nguyen_lieu, $thoi_
         "gia" => $gia,
         "noi_dung" => $noi_dung,
         "ma_kh" => $ma_kh,
-        "ma_loai" => $ma_loai
+        "ma_loai" => $ma_loai,
+        "duyet" => $duyet
     ]);
 
     return $data;

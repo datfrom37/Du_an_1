@@ -16,15 +16,17 @@
         <table class="table table-bordered colortable">
         <tr>
                 <th rowspan="2"></th>
-                <th class="vertical-center" rowspan="2"> MÃ </th>
+                <th class="vertical-center" rowspan="2"> MÃ CT</th>
+                <th class="vertical-center" rowspan="2"> MÃ LOẠI</th>
                 <th class="vertical-center" rowspan="2"> TÊN CÔNG THỨC </th>
-                <th class="vertical-center" rowspan="2"> ẢNH </th>
+                <th class="vertical-center" rowspan="2"> HÌNH ẢNH </th>
                 <th class="vertical-center" rowspan="2"> NGUYÊN LIỆU </th>
                 <th class="vertical-center" colspan="2"> THỜI GIAN</th>
                 <th class="vertical-center" rowspan="2"> SỐ <br> NGƯỜI <br> ĂN</th>
                 <th class="vertical-center" rowspan="2"> ĐƠN GIÁ</th>
                 <th class="vertical-center" rowspan="2"> NỘI DUNG</th>
                 <th class="vertical-center" rowspan="2"> NGÀY ĐĂNG</th>
+                <th class="vertical-center" rowspan="2"> DUYỆT</th>
                 <th class="vertical-center" rowspan="2">HÀNH ĐỘNG</th>
         </tr>
         <tr>
@@ -45,6 +47,9 @@
                 } else {
                     $img = "no photo";
                 }
+                if($duyet == 1) $tinhtrang = '<td class="vertical-center" style="color:#00CC00;" >Đã duyệt</td>' ;
+                else $tinhtrang = '<td class="vertical-center" style="color:red;" >Chưa duyệt</td>';
+
 
                 echo '
                 <tr>
@@ -52,6 +57,7 @@
                     <input class="large-checkbox" type="checkbox" name="" id="" >
                 </td>
                 <td class="vertical-center" >'.$ma_cong_thuc.'</td>
+                <td class="vertical-center" >'.$ma_loai.'</td>
                 <td class="vertical-center" >'.$ten_cong_thuc.'</td>
                 <td class="vertical-center"  style="width: 200px;" >'.$img.'</td>
                 <td class="vertical-center" >'.$nguyen_lieu.'</td>
@@ -61,6 +67,7 @@
                 <td class="vertical-center" >'.$gia.'</td>
                 <td class="vertical-center" style="width: 200px; text-align: left;" >'.$noi_dung.'</td>
                 <td class="vertical-center" >'.$ngay_dang.'</td>
+                '.$tinhtrang.'
                 <td class="vertical-center" >
                     <a href="' . $suact . '"><button class="btn btn-primary">Sửa</button></a>
                     <br>-<br>

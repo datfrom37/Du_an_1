@@ -60,6 +60,11 @@ $listdanhmuc = getAllLoai();
                 <label for="noi_dung" class="form-label">Nội dung</label>
                 <textarea name="noi_dung" rows="10" cols="30" class="form-control"></textarea>
             </div>
+            <div class="mb-3">
+                <label for="duyet" class="form-label">Tình trạng</label>: <br>
+                <input type="radio" name="duyet" value="0" checked> Chờ duyệt <br>
+                <input type="radio" name="duyet" value="1"> Duyệt
+            </div>
 
             <div class="mb-3" style="margin-top: 20px;">
                 <input type="submit" value="THÊM MỚI" name="themmoi" class="btn btn-primary">
