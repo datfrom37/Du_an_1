@@ -17,6 +17,13 @@ function getCongThucByName($ten_cong_thuc) {
     return $data;
 }
 
+function getCongThucByLoai($ma_loai) {
+    $sql = "SELECT * FROM cong_thuc WHERE ma_loai=:ma_loai";
+    $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);
+    return $data;
+}
+
+
 function deleteCongThuc($ma_cong_thuc) {
     $sql = "DELETE FROM cong_thuc WHERE ma_cong_thuc=:ma_cong_thuc";
     $data = executeCUD($sql, ["ma_cong_thuc"=>$ma_cong_thuc]);

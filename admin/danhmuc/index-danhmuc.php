@@ -1,5 +1,6 @@
 <?php include "includes/connect.php"; ?>
 <?php include "dao/loaiDAO.php"; ?>
+<?php include "dao/congthucDAO.php"; ?>
 
 <div id="page-wrapper" class="full-height bg-white">
     <div class="container-fluid">
@@ -25,8 +26,13 @@
                         break;
 
 
-                    case 'xoa':
+                    case 'xoa':                       
                         if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
+                            $listct = getCongThucByLoai($_GET['maloai']);
+                            foreach ($listct as $ct) {
+                                extract($ct);
+                                deleteCongThuc($ma_cong_thuc);
+                            }
                             deleteLoai($_GET['maloai']);
                         }
                         include "list.php";

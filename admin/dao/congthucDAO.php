@@ -5,6 +5,13 @@ function getAllCongThuc() {
     return $data;
 }
 
+function getCongThucByLoai($ma_loai) {
+    $sql = "SELECT * FROM cong_thuc WHERE ma_loai=:ma_loai";
+    $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);
+    return $data;
+}
+
+
 function getCongThucByMaCongThuc($ma_cong_thuc) {
     $sql = "SELECT * FROM cong_thuc WHERE ma_cong_thuc=:ma_cong_thuc";
     $data = getDataWidthParams($sql, ["ma_cong_thuc"=>$ma_cong_thuc]);

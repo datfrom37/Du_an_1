@@ -48,7 +48,7 @@
                     $img = "no photo";
                 }
                 if($duyet == 1) $tinhtrang = '<td class="vertical-center" style="color:#00CC00;" >Đã duyệt</td>' ;
-                else $tinhtrang = '<td class="vertical-center" style="color:red;" >Chưa duyệt</td>';
+                else $tinhtrang = '<td class="vertical-center" style="color:#FFFF66;" >Chờ duyệt</td>';
 
 
                 echo '

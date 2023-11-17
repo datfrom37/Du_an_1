@@ -36,6 +36,8 @@
                 } else {
                     $img = "no photo";
                 }
+                if($vai_tro == 1) $vt = "Admin";
+                else $vt = "User";
 
                 echo '
                     <tr>
@@ -49,7 +51,7 @@
                     <td class="vertical-center">' . $so_dien_thoai . '</td>
                     <td class="vertical-center">' . $email . '</td>
                     <td class="vertical-center">' . $ngay_dang_ky . '</td>
-                    <td class="vertical-center">' . $vai_tro . '</td>
+                    <td class="vertical-center">' . $vt . '</td>
         
                     <td class="vertical-center" >
                         <a href="' . $suabv . '"><button class="btn btn-primary">Sửa</button></a>
