@@ -89,7 +89,7 @@
                                         <a href="index.php">TRANG CHỦ</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">CÔNG THỨC</a>
+                                        <a href="index.php?tkh=dscongthuc">CÔNG THỨC</a>
                                         <ul class="sub-menu">
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="team.html">Our Team</a></li>
