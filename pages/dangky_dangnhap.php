@@ -17,10 +17,13 @@
                     // header ('location: ../index.php');
                     echo '<script>window.location.href = "../index.php" </script>';
                     break;
-                }else{
-                    echo 'thông tin đăng nhập không chính xác';
+                }elseif(isset($_POST['email']) && $_POST['pass']){
+                    $thongbao1 =  'thông tin đăng nhập không chính xác';
                     break;
-                }      
+                }else{
+                    $thongbao1 = 'vui lòng nhập đầy đủ thông tin';
+                    break;
+                }  
         }
     }
     }else{
@@ -112,6 +115,11 @@
                     <input type="password" name="pass" placeholder="Password"  />
                     <a href="#">Forgot your password?</a>
                     <input type="submit" name="dangnhap" value="dangnhap">
+                    <?php
+                    if (isset($thongbao1)) {
+                        echo '<p style="color: red; ">' . $thongbao1 . '</p>';
+                    }
+                    ?>
 
                 </form>
             </div>
