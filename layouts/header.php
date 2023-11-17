@@ -86,10 +86,10 @@
                                 <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                 <ul class="main-menu__list">
                                     <li class="current megamenu">
-                                        <a href="index.html">TRANG CHỦ</a>
+                                        <a href="index.php">TRANG CHỦ</a>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#">CÔNG THỨC</a>
+                                        <a href="index.php?tkh=dscongthuc">CÔNG THỨC</a>
                                         <ul class="sub-menu">
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="team.html">Our Team</a></li>
@@ -132,9 +132,9 @@
                             </div>
                             <div class="main-menu-two__right">
                                 <ul class="list-unstyled main-menu-two__login">
-                                    <li class="active"><a href="./pages/dangnhap.php">Đăng Nhập</a></li>
+                                    <li class="active"><a href="./pages/dangky_dangnhap.php">Đăng Nhập</a></li>
                                     <li><span>/</span></li>
-                                    <li><a href="#">Đăng Ký</a></li>
+                                    <li><a href="./pages/dangky.php">Đăng Ký</a></li>
                                 </ul>
                             </div>
                         </div>
