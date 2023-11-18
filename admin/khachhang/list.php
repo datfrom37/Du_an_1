@@ -29,7 +29,7 @@
             $listkh = getAllKhachHang();
             foreach ($listkh as $kh) {
                 extract($kh);
-                $suabv = "index.php?act=addkh&khachhang=suakh&makh=" . $ma_kh;
+                $suakh = "index.php?act=khachhang&khachhang=suakh&ma_kh=" . $ma_kh;
                 $hinhpath = "../admin/khachhang/img/" . $hinh_anh;
                 if (is_file($hinhpath)) {
                     $img = "<img src='" . $hinhpath . "' >";
@@ -54,7 +54,7 @@
                     <td class="vertical-center">' . $vt . '</td>
         
                     <td class="vertical-center" >
-                        <a href="' . $suabv . '"><button class="btn btn-primary">Sửa</button></a>
+                        <a href="' . $suakh . '"><button class="btn btn-primary">Sửa</button></a>
                     </td>
                 </tr>
                     ';

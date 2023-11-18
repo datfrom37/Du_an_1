@@ -1,6 +1,6 @@
 <div class="col-md-6 offset-md-3">
     <div class="frmtitle colortwo">
-        <h1>THÊM MỚI LOẠI HÀNG HÓA</h1>
+        <h1>THÊM MỚI DANH MỤC</h1>
     </div>
     <div class="frmcontent">
         <form action="index.php?act=adddm&danhmuc=themdm" method="post" class="colortwo"  >

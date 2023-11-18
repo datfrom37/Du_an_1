@@ -41,15 +41,20 @@
 
 
             <div class="mb-3">
-                <label for="ma_hh" class="form-label">Mã công thức</label>
+                <label for="ma_cong_thuc" class="form-label">Mã công thức</label>
                 <input type="text" name="" class="form-control" disabled value="<?php if (isset($ma_cong_thuc)) echo $ma_cong_thuc; ?>" >
                 <input type="hidden" name="ma_cong_thuc" class="form-control" value="<?php if (isset($ma_cong_thuc)) echo $ma_cong_thuc; ?>" >
             </div>
 
-            <input type="hidden" name="ma_kh" class="form-control" value="1">
+            <div class="mb-3">
+                <label for="ma_kh" class="form-label">Mã khách hàng</label>
+                <input type="text" name="" class="form-control" disabled value="<?php if (isset($ma_kh)) echo $ma_kh; ?>" >
+                <input type="hidden" name="ma_kh" class="form-control" value="<?php if (isset($ma_kh)) echo $ma_kh; ?>" >
+            </div>
+
             <div class="mb-3">
                 <label for="ten_cong_thuc" class="form-label">Tên công thức</label>
-                <input type="text" name="ten_cong_thuc" class="form-control" value="<?php if (isset($ten_cong_thuc)) echo $ten_cong_thuc; ?>">
+                <input type="text" name="ten_cong_thuc" class="form-control" value="<?php if (isset($ten_cong_thuc)) echo $ten_cong_thuc; ?>" required>
             </div>
 
             <div class=" mb-3">
@@ -65,27 +70,27 @@
 
             <div class="mb-3">
                 <label for="nguyen_lieu" class="form-label">Nguyên liệu</label>
-                <input type="text" name="nguyen_lieu" class="form-control" value="<?php if (isset($nguyen_lieu)) echo $nguyen_lieu; ?>">
+                <input type="text" name="nguyen_lieu" class="form-control" value="<?php if (isset($nguyen_lieu)) echo $nguyen_lieu; ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="thoi_gian_nau" class="form-label">Thời gian nấu</label>
-                <input type="text" name="thoi_gian_nau" class="form-control" value="<?php if (isset($thoi_gian_nau)) echo $thoi_gian_nau; ?>">
+                <input type="text" name="thoi_gian_nau" class="form-control" value="<?php if (isset($thoi_gian_nau)) echo $thoi_gian_nau; ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="thoi_gian_so_che" class="form-label">Thời gian sơ chế</label>
-                <input type="text" name="thoi_gian_so_che" class="form-control" value="<?php if (isset($thoi_gian_so_che)) echo $thoi_gian_so_che; ?>">
+                <input type="text" name="thoi_gian_so_che" class="form-control" value="<?php if (isset($thoi_gian_so_che)) echo $thoi_gian_so_che; ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="so_nguoi_an" class="form-label">Số người ăn</label>
-                <input type="text" name="so_nguoi_an" class="form-control" value="<?php if (isset($so_nguoi_an)) echo $so_nguoi_an; ?>">
+                <input type="text" name="so_nguoi_an" class="form-control" value="<?php if (isset($so_nguoi_an)) echo $so_nguoi_an; ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="gia" class="form-label">Đơn giá</label>
-                <input type="text" name="gia" class="form-control" value="<?php if (isset($gia)) echo $gia; ?>">
+                <input type="text" name="gia" class="form-control" value="<?php if (isset($gia)) echo $gia; ?>" required>
             </div>
 
             <div class="mb-3">
@@ -95,7 +100,7 @@
 
             <div class="mb-3">
                 <label for="noi_dung" class="form-label">Nội dung</label>
-                <textarea name="noi_dung" rows="10" cols="30" class="form-control">
+                <textarea name="noi_dung" rows="10" cols="30" class="form-control" required>
                 <?php if (isset($noi_dung)) echo $noi_dung; ?>
                 </textarea>
             </div>

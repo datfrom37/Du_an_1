@@ -27,7 +27,7 @@ function getCongThucByName($ten_cong_thuc) {
 function deleteCongThuc($ma_cong_thuc) {
     $sql = "DELETE FROM cong_thuc WHERE ma_cong_thuc=:ma_cong_thuc";
     $data = executeCUD($sql, ["ma_cong_thuc"=>$ma_cong_thuc]);
-    var_dump($data);
+    // var_dump($data);
 }
 
 function createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh, $duyet) {

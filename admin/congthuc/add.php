@@ -4,7 +4,7 @@ $listdanhmuc = getAllLoai();
 
 <div class="col-md-6 offset-md-3">
     <div class="frmtitle colortwo ">
-        <h1>THÊM SẢN PHẨM</h1>
+        <h1>THÊM CÔNG THỨC</h1>
     </div>
     <div class="frmcontent">
         <form action="index.php?act=addct&congthuc=addct" method="post" enctype="multipart/form-data" class="colortwo">
@@ -26,7 +26,7 @@ $listdanhmuc = getAllLoai();
             <input type="hidden" name="ma_kh" class="form-control" value="1">
             <div class="mb-3">
                 <label for="ten_cong_thuc" class="form-label">Tên công thức</label>
-                <input type="text" name="ten_cong_thuc" class="form-control">
+                <input type="text" name="ten_cong_thuc" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="hinh_anh" class="form-label">Hình ảnh</label>
@@ -34,23 +34,23 @@ $listdanhmuc = getAllLoai();
             </div>
             <div class="mb-3">
                 <label for="nguyen_lieu" class="form-label">Nguyên liệu</label>
-                <input type="text" name="nguyen_lieu" class="form-control">
+                <input type="text" name="nguyen_lieu" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="thoi_gian_nau" class="form-label">Thời gian nấu</label>
-                <input type="text" name="thoi_gian_nau" class="form-control">
+                <input type="text" name="thoi_gian_nau" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="thoi_gian_so_che" class="form-label">Thời gian sơ chế</label>
-                <input type="text" name="thoi_gian_so_che" class="form-control">
+                <input type="text" name="thoi_gian_so_che" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="so_nguoi_an" class="form-label">Số người ăn</label>
-                <input type="text" name="so_nguoi_an" class="form-control">
+                <input type="text" name="so_nguoi_an" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="gia" class="form-label">Đơn giá</label>
-                <input type="text" name="gia" class="form-control">
+                <input type="text" name="gia" class="form-control" required>
             </div>
             <!-- <div class="mb-3">
                 <label for="ngay_nhap" class="form-label">Ngày nhập</label>
@@ -58,7 +58,7 @@ $listdanhmuc = getAllLoai();
             </div> -->
             <div class="mb-3">
                 <label for="noi_dung" class="form-label">Nội dung</label>
-                <textarea name="noi_dung" rows="10" cols="30" class="form-control"></textarea>
+                <textarea name="noi_dung" rows="10" cols="30" class="form-control" required></textarea>
             </div>
             <div class="mb-3">
                 <label for="duyet" class="form-label">Tình trạng</label>: <br>

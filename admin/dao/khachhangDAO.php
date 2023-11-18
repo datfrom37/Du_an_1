@@ -20,7 +20,7 @@ function getKhachHangByName($ten_kh) {
 function deleteKhachHang($ma_kh) {
     $sql = "DELETE FROM khach_hang WHERE ma_kh=:ma_kh";
     $data = executeCUD($sql, ["ma_kh"=>$ma_kh]);
-    var_dump($data);
+    // var_dump($data);
 }
 
 function createKhachHang($ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro) {
@@ -35,7 +35,21 @@ function createKhachHang($ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro) {
     return $data;
 }
 
-function updateKhachHang($ma_kh, $ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro) {
+function updateKhachHang($ma_kh, $ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro, $hinh_anh) {
+    $sql = "UPDATE khach_hang SET ten_kh=:ten_kh, email=:email, mat_khau=:mat_khau, so_dien_thoai=:so_dien_thoai, vai_tro=:vai_tro, hinh_anh=:hinh_anh WHERE ma_kh=:ma_kh";
+    $data = executeCUD($sql, [
+        "ma_kh" => $ma_kh,
+        "ten_kh" => $ten_kh,
+        "email" => $email,
+        "mat_khau" => $mat_khau,
+        "so_dien_thoai" => $so_dien_thoai,
+        "vai_tro" => $vai_tro,
+        "hinh_anh" => $hinh_anh
+    ]);
+    return $data; // Hoặc trả về thông tin khác nếu cần
+}
+
+function updateKhachHangnoimg($ma_kh, $ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro) {
     $sql = "UPDATE khach_hang SET ten_kh=:ten_kh, email=:email, mat_khau=:mat_khau, so_dien_thoai=:so_dien_thoai, vai_tro=:vai_tro WHERE ma_kh=:ma_kh";
     $data = executeCUD($sql, [
         "ma_kh" => $ma_kh,

@@ -1,6 +1,6 @@
 <div class="col-md-6 offset-md-3">
     <div class="frmtitle colortwo ">
-        <h1>THÊM SẢN PHẨM</h1>
+        <h1>CẬP NHẬT BÀI VIẾT</h1>
     </div>
     <div class="frmcontent">
         <form action="index.php?act=addbv&baiviet=updatebv" method="post" enctype="multipart/form-data" class="colortwo">
@@ -10,10 +10,19 @@
                 <input type="text" name="ma" class="form-control" disabled value="<?php if (isset($ma_bai_viet)) echo $ma_bai_viet; ?>">
                 <input type="hidden" name="ma_bai_viet" class="form-control" value="<?php if (isset($ma_bai_viet)) echo $ma_bai_viet; ?>" >
             </div>
-            <input type="hidden" name="ma_kh" class="form-control" value="1">
+
+            <div class="mb-3">
+                <label for="ma_1" class="form-label">Mã khách hàng</label>
+                <input type="text" name="ma1" class="form-control" value="<?php if (isset($ma_kh)) echo $ma_kh; ?>" disabled>
+                <input type="hidden" name="ma_kh" class="form-control" value="<?php if (isset($ma_kh)) echo $ma_kh; ?>" >
+            </div>
+            
+            
+            
+
             <div class="mb-3">
                 <label for="ten_bai_viet" class="form-label">Tên bài viết</label>
-                <input type="text" name="ten_bai_viet" class="form-control" value="<?php if (isset($ten_bai_viet)) echo $ten_bai_viet; ?>">
+                <input type="text" name="ten_bai_viet" class="form-control" value="<?php if (isset($ten_bai_viet)) echo $ten_bai_viet; ?>" required>
             </div>
 
             <?php

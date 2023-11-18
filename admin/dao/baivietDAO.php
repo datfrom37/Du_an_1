@@ -20,7 +20,7 @@ function getBaiVietByName($ten_bai_viet) {
 function deleteBaiViet($ma_bai_viet) {
     $sql = "DELETE FROM bai_viet WHERE ma_bai_viet=:ma_bai_viet";
     $data = executeCUD($sql, ["ma_bai_viet"=>$ma_bai_viet]);
-    var_dump($data);
+    // var_dump($data);
 }
 
 function createBaiViet($noi_dung, $ten_bai_viet, $ma_kh, $duyet, $hinh_anh) {
