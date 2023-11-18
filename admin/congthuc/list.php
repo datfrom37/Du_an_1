@@ -69,7 +69,7 @@
                 <td class="vertical-center" >'.$ngay_dang.'</td>
                 '.$tinhtrang.'
                 <td class="vertical-center" >
-                    <a href="' . $suact . '"><button class="btn btn-primary">Sửa</button></a>
+                    <a href="' . $suact . '"><button class="btn btn-primary">Xem</button></a>
                     <br>-<br>
                     <a href="' . $xoact .'"><button class="btn btn-danger">Xóa</button></a>
                 </td>

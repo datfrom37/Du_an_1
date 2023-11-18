@@ -18,10 +18,10 @@
                     echo '<script>window.location.href = "../index.php" </script>';
                     break;
                 }elseif(isset($_POST['email']) && $_POST['pass']){
-                    $thongbao1 =  'thông tin đăng nhập không chính xác';
+                    $thongbao1 =  'Thông tin đăng nhập không chính xác';
                     break;
                 }else{
-                    $thongbao1 = 'vui lòng nhập đầy đủ thông tin';
+                    $thongbao1 = 'Vui lòng nhập đầy đủ thông tin !';
                     break;
                 }  
         }
@@ -56,7 +56,7 @@
                 // Thực hiện truy vấn SQL để chèn dữ liệu;
                 $sql = createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, $vai_tro);
                 $thongbao = "Đăng ký thành công!";
-                echo '<script>window.location.href = "../index.php;</script>';
+                echo '<script>window.location.href = "./index.php;</script>';
                 exit; // Kết thúc việc thực hiện mã PHP
             }
         }
@@ -77,67 +77,72 @@
     </head>
 
     <body>
-        <div class="container" id="container">
-            <div class="form-container sign-up-container">
-                <!-- đăng ký; -->
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <h1>Create Account</h1>
-                    <!-- <div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div> -->
-                    <span>or use your email for registration</span>
-                    <input type="text" name="user" placeholder="Họ tên" />
-                    <input type="text" name="number" placeholder="Số điện thoại" />
-                    <input type="email" name="email" placeholder="Email" />
-                    <input type="password" name="pass" placeholder="Mật khẩu" />
-                    <input type="password" name="checkpass" placeholder="Nhập lại mật khẩu" />
-                    <?php
-                    if (isset($thongbao)) {
-                        echo '<p style="color: red; ">' . $thongbao . '</p>';
-                    }
-                    ?>
-                    <input type="submit" name="dangky" value="Đăng ký">
-                </form>
-            </div>
-            <div class="form-container sign-in-container">
-                <!-- đăng nhập -->
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                    <h1>Sign in</h1>
-                    <!-- <div class="social-container">
-                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                    </div> -->
-                    <span>or use your account</span>
-                    <input type="text" name="email" placeholder="Email"/>
-                    <input type="password" name="pass" placeholder="Password"  />
-                    <a href="#">Forgot your password?</a>
-                    <input type="submit" name="dangnhap" value="dangnhap">
-                    <?php
-                    if (isset($thongbao1)) {
-                        echo '<p style="color: red; ">' . $thongbao1 . '</p>';
-                    }
-                    ?>
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">
+                    <!-- đăng ký; -->
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                        <h1>Create Account</h1>
+                        <!-- <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div> -->
+                        <!-- <span>or use your email for registration</span> -->
+                        <div class="form-input">
+                            <input type="text" name="user" placeholder="Họ tên" />
+                            <input type="text" name="number" placeholder="Số điện thoại" />
+                            <input type="email" name="email" placeholder="Email" />
+                            <input type="password" name="pass" placeholder="Mật khẩu" />
+                            <input type="password" name="checkpass" placeholder="Nhập lại mật khẩu" />
+                        </div>
+                        <?php
+                        if (isset($thongbao)) {
+                            echo '<p style="color: red; ">' . $thongbao . '</p>';
+                        }
+                        ?>
+                        <input class="button1"  type="submit" name="dangky" value="Đăng ký">
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <!-- đăng nhập -->
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+                        <h1>Đăng nhập</h1>
+                        <!-- <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div> -->
+                        <div class="form-input">
+                            <input type="text" name="email" placeholder="Email"/>
+                            <input type="password" name="pass" placeholder="Mật khẩu"  />
+                        </div>
+                        <?php
+                        if (isset($thongbao1)) {
+                            echo '<p style="color: red; ">' . $thongbao1 . '</p>';
+                        }
+                        ?>
+                        <a href="#">Quên mật khẩu?</a>
+                        <input class="button1" type="submit" name="dangnhap" value="Đăng nhập">
 
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1>Welcome Back!</h1>
-                        <p>To keep connected with us please login with your personal info</p>
-                        <button class="ghost" id="signIn">Sign In</button>
-                    </div>
-                    <div class="overlay-panel overlay-right">
-                        <h1>Hello, Friend!</h1>
-                        <p>Enter your personal details and start journey with us</p>
-                        <button class="ghost" id="signUp">Sign Up</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Chào mừng trở lại!</h1>
+                            <!-- <p>To keep connected with us please login with your personal info</p> -->
+                            <p>Để duy trì kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+                            <button class="ghost" id="signIn">Đăng nhập</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Chào bạn!</h1>
+                            <!-- <p>Enter your personal details and start journey with us</p> -->
+                            <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+                            <button class="ghost" id="signUp">Đăng Ký</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </body>       
     <script>
         const $signUpButton = document.getElementById("signUp");
