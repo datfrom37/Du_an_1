@@ -20,7 +20,7 @@ function getLoaiByName($ten_loai) {
 function deleteLoai($ma_loai) {
     $sql = "DELETE FROM loai WHERE ma_loai=:ma_loai";
     $data = executeCUD($sql, ["ma_loai"=>$ma_loai]);
-    var_dump($data);
+    // var_dump($data);
 }
 
 function createLoai($ten_loai) {

@@ -7,10 +7,10 @@
 
     if((isset($_POST["dangky"]) && $_POST["dangky"])){
         $user = $_POST['user'];
-        $number = $_POST['number'];
-        $email_input = $_POST['email'];
         $pass = $_POST['pass'];
         $checkpass = $_POST['checkpass'];
+        $number = $_POST['number'];
+        $email_input = $_POST['email'];
         $vai_tro = 0;
 
         if (strlen($user) < 6 || strlen($user) > 20) {
@@ -50,6 +50,7 @@
 <body>
     <div>
         <form action="dangky1.php" method="POST">
+
             <input type="text" name="user" placeholder="Họ Tên"  >
             <input type="text" name="number" placeholder="SĐT" >
             <input type="text" name="email" placeholder="Email" >

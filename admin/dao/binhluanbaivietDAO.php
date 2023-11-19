@@ -15,7 +15,7 @@ function getBinhLuanBaiVietById($ma_binh_luan) {
 function deleteBinhLuanBaiViet($ma_binh_luan) {
     $sql = "DELETE FROM binh_luan_bai_viet WHERE ma_binh_luan=:ma_binh_luan";
     $data = executeCUD($sql, ["ma_binh_luan"=>$ma_binh_luan]);
-    var_dump($data);
+    // var_dump($data);
 }
 
 function createBinhLuanBaiViet($noi_dung, $ma_bai_viet, $ma_kh) {

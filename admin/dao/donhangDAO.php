@@ -20,7 +20,7 @@ function getDonHangByName($ten_don_hang) {
 function deleteDonHang($ma_don_hang) {
     $sql = "DELETE FROM don_hang WHERE ma_don_hang=:ma_don_hang";
     $data = executeCUD($sql, ["ma_don_hang"=>$ma_don_hang]);
-    var_dump($data);
+    // var_dump($data);
 }
 
 ?>

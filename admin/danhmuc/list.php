@@ -1,5 +1,5 @@
 <div class=" fratitle colortwo">
-    <h1> DANH SÁCH LOẠI HÀNG </h1>
+    <h1> DANH SÁCH DANH MỤC </h1>
 </div>
 <div class="fracontent">
     <div class="mb-3" style="margin-bottom: 20px;">

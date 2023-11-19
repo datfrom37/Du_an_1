@@ -63,15 +63,6 @@
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
-
             <nav class="main-menu main-menu-two">
                 <div class="main-menu-two__wrapper">
                     <div class="container">
@@ -132,7 +123,7 @@
                             </div>
                             <div class="main-menu-two__right">
                                 <ul class="list-unstyled main-menu-two__login">
-                                    <li class="active"><a href="./pages/dangnhap.php">Đăng Nhập</a></li>
+                                    <li class="active"><a href="./pages/dangky_dangnhap.php">Đăng Nhập</a></li>
                                     <li><span>/</span></li>
                                     <li><a href="./pages/dangky.php">Đăng Ký</a></li>
                                 </ul>
@@ -142,3 +133,6 @@
                 </div>
             </nav>
     </header>
+
+
+

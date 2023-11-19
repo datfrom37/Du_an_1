@@ -1,5 +1,6 @@
 <?php include "includes/connect.php"; ?>
 <?php include "dao/loaiDAO.php"; ?>
+<?php include "dao/congthucDAO.php"; ?>
 
 <div id="page-wrapper" class="full-height bg-white">
     <div class="container-fluid">
@@ -16,6 +17,7 @@
                         if (isset($_POST['themmoi'])) {
                             $tenloai = $_POST['ten_loai'];
                             createLoai($tenloai);
+                            echo "<div style='color:#00FF00'>Thêm thành công</div>";
                         }
                         include "add.php";
                         break;
@@ -25,8 +27,14 @@
                         break;
 
 
-                    case 'xoa':
+                    case 'xoa':                       
                         if (isset($_GET['maloai']) && ($_GET['maloai'] > 0)) {
+                            $listct = getCongThucByLoai($_GET['maloai']);
+                            foreach ($listct as $ct) {
+                                extract($ct);
+                                deleteCongThuc($ma_cong_thuc);
+                            }
+                            echo "<div style='color:#00FF00'>Xoá thành công</div>";
                             deleteLoai($_GET['maloai']);
                         }
                         include "list.php";
@@ -38,10 +46,8 @@
                             foreach ($dm as $loai) {
                                 extract($loai);
                                 include "update.php";
-                                echo $ten_loai;
                             }   
-                            }                     
-                        // include "update.php";
+                        }                     
                         break;
 
 
@@ -50,6 +56,7 @@
                             $ten_loai = $_POST['ten_loai'];
                             $ma_loai = $_POST['ma_loai'];
                             updateLoai($ma_loai, $ten_loai);
+                            echo "<div style='color:#00FF00'>Cập nhật thành công</div>";
                         }
                         include "list.php";
                         break;
