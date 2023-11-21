@@ -1,3 +1,3 @@
 <?php
-    include "../admin/dao/loaiDAO.php"
+    include "./admin/dao/loaiDAO.php"
 ?>
