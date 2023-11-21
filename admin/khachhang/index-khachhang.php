@@ -34,7 +34,7 @@
                             $email = $_POST['email'];
                             $so_dien_thoai = $_POST['so_dien_thoai'];
                             $vai_tro = $_POST['vai_tro'];
-                            
+                            // echo $vai_tro;
                             $hinh_anh = $_FILES['hinh_anh']['name'];
                             $target_dir = dirname(__FILE__) . '/img/';
                             $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);

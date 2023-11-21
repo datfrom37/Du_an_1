@@ -36,8 +36,8 @@
                 } else {
                     $img = "no photo";
                 }
-                if($vai_tro == 1) $vt = "Admin";
-                else $vt = "User";
+                if($vai_tro == 0) $vt = "User";
+                else $vt = "Admin";
 
                 echo '
                     <tr>
