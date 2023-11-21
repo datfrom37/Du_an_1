@@ -1,3 +1,10 @@
+<?php include './config/connect.php';
+      include './dao/congthucDAO.php';
+      include './dao/loaiDAO.php';
+      include "dao/pdo.php";
+?>
+
+
 <!-- header -->
 <?php include './layouts/header.php'; ?>
 <!-- end header  -->

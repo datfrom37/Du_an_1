@@ -3,6 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+         crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -16,7 +19,7 @@
             <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
             <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-        </div>      
+        </div>
         <!-- Slides -->
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -125,140 +128,68 @@
 
 
     <!-- Hôm nay ăn gì -->
+    <?php
+        $loai1= getLoaiByMaLoai(6);
+    ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
                 <div class="row">
                     <div class="main_header col-10">
-                        <h2>Hôm nay ăn gì</h2>
+                        <h2>Hôm nay nấu gì</h2>
                     </div>
-                    <div class="col-2 xemthem-more"><a href="index.php?tkh=dscongthuc">Xem thêm <i class="fa-solid fa-circle-arrow-right fa-xl"></i></a> </div>
+                    <div class="col-2 xemthem-more"><a href="index.php?tkh=dscongthuc">Xem thêm <i
+                                class="fa-solid fa-circle-arrow-right fa-xl"></i></a> </div>
                 </div>
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
+                    <?php
+                    $listct = getCongThucByLoai(6);
+                    $i = 0;
+                    foreach ($listct as $ct) {
+                        extract($ct);
+                        if ($i < 4) {
+                            echo '<li class="cmp-recipe-listing-item hide">
+                                <div class="cmp-card-wrapper">
+                                    <div class="cmp-recipe-image-wrapper">
+                                        <div class="cmp-recipe-listing-image-container">
+                                        <picture>';
+
+                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+
+                            if (is_file($hinhpath)) {
+                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
+                            } else {
+                                echo "no photo";
+                            }
+                            echo '</picture>
+                                    </div>
                                 </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 2 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
+                                <h3 class="cmp-recipe-listing-title">';
+                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                                </h3>';
+
+
+                            echo '<ul class="cmp-recipe-listing-attributes">
+                                <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
+                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                                <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                        </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 3 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 4 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                                </li>';
+                            $i++;
+                        }
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -312,140 +243,68 @@
 
 
     <!-- Món chay -->
+    <?php
+        $loai1= getLoaiByMaLoai(6);
+    ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
-            <div class="row">
+                <div class="row">
                     <div class="main_header col-10">
-                        <h2>Hôm nay ăn gì</h2>
+                        <h2>Hôm nay nấu gì</h2>
                     </div>
-                    <div class="col-2 xemthem-more">Xem thêm <i class="fa-solid fa-circle-arrow-right fa-xl"></i></div>
+                    <div class="col-2 xemthem-more"><a href="index.php?tkh=dscongthuc">Xem thêm <i
+                                class="fa-solid fa-circle-arrow-right fa-xl"></i></a> </div>
                 </div>
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
+                    <?php
+                    $listct = getCongThucByLoai(6);
+                    $i = 0;
+                    foreach ($listct as $ct) {
+                        extract($ct);
+                        if ($i < 4) {
+                            echo '<li class="cmp-recipe-listing-item hide">
+                                <div class="cmp-card-wrapper">
+                                    <div class="cmp-recipe-image-wrapper">
+                                        <div class="cmp-recipe-listing-image-container">
+                                        <picture>';
+
+                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+
+                            if (is_file($hinhpath)) {
+                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
+                            } else {
+                                echo "no photo";
+                            }
+                            echo '</picture>
+                                    </div>
                                 </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 2 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
+                                <h3 class="cmp-recipe-listing-title">';
+                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                                </h3>';
+
+
+                            echo '<ul class="cmp-recipe-listing-attributes">
+                                <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
+                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                                <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                        </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 3 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 4 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                                </li>';
+                            $i++;
+                        }
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -504,140 +363,68 @@
 
 
     <!-- Công thức đặc biệt trả phí -->
+    <?php
+        $loai1= getLoaiByMaLoai(6);
+    ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
-            <div class="row">
+                <div class="row">
                     <div class="main_header col-10">
-                        <h2>Hôm nay ăn gì</h2>
+                        <h2>Hôm nay nấu gì</h2>
                     </div>
-                    <div class="col-2 xemthem-more">Xem thêm <i class="fa-solid fa-circle-arrow-right fa-xl"></i></div>
+                    <div class="col-2 xemthem-more"><a href="index.php?tkh=dscongthuc">Xem thêm <i
+                                class="fa-solid fa-circle-arrow-right fa-xl"></i></a> </div>
                 </div>
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
+                    <?php
+                    $listct = getCongThucByLoai(6);
+                    $i = 0;
+                    foreach ($listct as $ct) {
+                        extract($ct);
+                        if ($i < 4) {
+                            echo '<li class="cmp-recipe-listing-item hide">
+                                <div class="cmp-card-wrapper">
+                                    <div class="cmp-recipe-image-wrapper">
+                                        <div class="cmp-recipe-listing-image-container">
+                                        <picture>';
+
+                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+
+                            if (is_file($hinhpath)) {
+                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
+                            } else {
+                                echo "no photo";
+                            }
+                            echo '</picture>
+                                    </div>
                                 </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 2 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
+                                <h3 class="cmp-recipe-listing-title">';
+                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                                </h3>';
+
+
+                            echo '<ul class="cmp-recipe-listing-attributes">
+                                <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
+                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                                <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                        </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 3 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- 4 -->
-                    <li class="cmp-recipe-listing-item hide">
-                        <div class="cmp-card-wrapper">
-                            <div class="cmp-recipe-image-wrapper">
-                                <div class="cmp-recipe-listing-image-container">
-                                    <picture>
-                                    <a href="index.php?tkh=chitietcongthuc"><img src="pages/imgweb/banhxeo.jpg" class="cmp-recipe-listing-image"
-                                            style="height: 200px; width:100%; object-fit: cover;" /></a>
-                                    </picture>
-                                </div>
-                            </div>
-                            <h3 class="cmp-recipe-listing-title">
-                                <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
-                                    tuần</a>
-                            </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-clock"></i> 15 Phút</p>
-                                </li>
-                                <li class="cmp-recipe-listing-attribute ">
-                                    <p><i class="fas fa-user"></i> 4 Người</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                                </li>';
+                            $i++;
+                        }
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -649,125 +436,124 @@
 
 
 
-<!--News One Start-->
-<section class="news-two" id="news">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2 class="section-title__title">TIN TỨC & BÀI VIẾT</h2>
-                </div>
-                <div class="row">
-                    <!--News One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="news-one__single">
-                            <div class="news-one__img-box">
-                                <div class="news-one__img">
-                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="news-one__content-box">
-                                <ul class="news-one__meta list-unstyled">
-                                    <li>
-                                        <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
-                                    </li>
-                                    <li>
-                                        <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                                    </li>
-                                </ul>
-                                <h3 class="news-one__title"><a href="news-details.html">Which healthy food growth
-                                        strategies required</a></h3>
-                                <div class="news-one__bottom">
-                                    <div class="news-one__read-more">
-                                        <a href="news-details.html">Read More</a>
-                                    </div>
-                                    <div class="news-one__comment">
-                                        <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
-                                    </div>
-                                </div>
-                                <div class="news-one__date">
-                                    <p>20 Sep</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--News One Single End-->
-                    <!--News One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="news-one__single">
-                            <div class="news-one__img-box">
-                                <div class="news-one__img">
-                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="news-one__content-box">
-                                <ul class="news-one__meta list-unstyled">
-                                    <li>
-                                        <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
-                                    </li>
-                                    <li>
-                                        <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                                    </li>
-                                </ul>
-                                <h3 class="news-one__title"><a href="news-details.html">Donec aliquet blandit enim
-                                        feugiat Suspendisse</a></h3>
-                                <div class="news-one__bottom">
-                                    <div class="news-one__read-more">
-                                        <a href="news-details.html">Read More</a>
-                                    </div>
-                                    <div class="news-one__comment">
-                                        <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
-                                    </div>
-                                </div>
-                                <div class="news-one__date">
-                                    <p>20 Sep</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--News One Single End-->
-                    <!--News One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="news-one__single">
-                            <div class="news-one__img-box">
-                                <div class="news-one__img">
-                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="news-one__content-box">
-                                <ul class="news-one__meta list-unstyled">
-                                    <li>
-                                        <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
-                                    </li>
-                                    <li>
-                                        <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                                    </li>
-                                </ul>
-                                <h3 class="news-one__title"><a href="news-details.html">luctus sit amet eu nibh tempus
-                                        turpis.</a></h3>
-                                <div class="news-one__bottom">
-                                    <div class="news-one__read-more">
-                                        <a href="news-details.html">Read More</a>
-                                    </div>
-                                    <div class="news-one__comment">
-                                        <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
-                                    </div>
-                                </div>
-                                <div class="news-one__date">
-                                    <p>20 Sep</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--News One Single End-->
-                </div>
+    <!--News One Start-->
+    <section class="news-two" id="news">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2 class="section-title__title">TIN TỨC & BÀI VIẾT</h2>
             </div>
-        </section>
-        <!--Blog One End-->
+            <div class="row">
+                <!--News One Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="news-one__single">
+                        <div class="news-one__img-box">
+                            <div class="news-one__img">
+                                <img src="pages/imgweb/banhxeo.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="news-one__content-box">
+                            <ul class="news-one__meta list-unstyled">
+                                <li>
+                                    <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
+                                </li>
+                                <li>
+                                    <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
+                                </li>
+                            </ul>
+                            <h3 class="news-one__title"><a href="news-details.html">Which healthy food growth
+                                    strategies required</a></h3>
+                            <div class="news-one__bottom">
+                                <div class="news-one__read-more">
+                                    <a href="news-details.html">Read More</a>
+                                </div>
+                                <div class="news-one__comment">
+                                    <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
+                                </div>
+                            </div>
+                            <div class="news-one__date">
+                                <p>20 Sep</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--News One Single End-->
+                <!--News One Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                    <div class="news-one__single">
+                        <div class="news-one__img-box">
+                            <div class="news-one__img">
+                                <img src="pages/imgweb/banhxeo.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="news-one__content-box">
+                            <ul class="news-one__meta list-unstyled">
+                                <li>
+                                    <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
+                                </li>
+                                <li>
+                                    <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
+                                </li>
+                            </ul>
+                            <h3 class="news-one__title"><a href="news-details.html">Donec aliquet blandit enim
+                                    feugiat Suspendisse</a></h3>
+                            <div class="news-one__bottom">
+                                <div class="news-one__read-more">
+                                    <a href="news-details.html">Read More</a>
+                                </div>
+                                <div class="news-one__comment">
+                                    <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
+                                </div>
+                            </div>
+                            <div class="news-one__date">
+                                <p>20 Sep</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--News One Single End-->
+                <!--News One Single Start-->
+                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="news-one__single">
+                        <div class="news-one__img-box">
+                            <div class="news-one__img">
+                                <img src="pages/imgweb/banhxeo.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="news-one__content-box">
+                            <ul class="news-one__meta list-unstyled">
+                                <li>
+                                    <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
+                                </li>
+                                <li>
+                                    <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
+                                </li>
+                            </ul>
+                            <h3 class="news-one__title"><a href="news-details.html">luctus sit amet eu nibh tempus
+                                    turpis.</a></h3>
+                            <div class="news-one__bottom">
+                                <div class="news-one__read-more">
+                                    <a href="news-details.html">Read More</a>
+                                </div>
+                                <div class="news-one__comment">
+                                    <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
+                                </div>
+                            </div>
+                            <div class="news-one__date">
+                                <p>20 Sep</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--News One Single End-->
+            </div>
+        </div>
+    </section>
+    <!--Blog One End-->
 
 
 
-    
+
 
 
 
 </body>
-

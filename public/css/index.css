@@ -11346,7 +11346,7 @@
   .product__price-ranger-filter {
     position: relative;
     display: inline-block;
-    padding: 5px 30px 5px;
+    padding: 5px 25px 5px;
     border-radius: 20px;
     background-color: var(--ogenix-base);
     overflow: hidden;
@@ -11496,8 +11496,8 @@
     position: absolute;
     left: 20px;
     top: 7px;
-    font-family: 'icomoon' !important;
-    content: "\e925";
+    font-family: 'fontawesome' !important;
+    content: "\f178";
     opacity: 1;
     font-size: 15px;
     color: var(--ogenix-primary);
