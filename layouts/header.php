@@ -124,8 +124,6 @@
                             <div class="main-menu-two__right">
                                 <ul class="list-unstyled main-menu-two__login">
                                     <li class="active"><a href="./pages/dangky_dangnhap.php">Đăng Nhập</a></li>
-                                    <li><span>/</span></li>
-                                    <li><a href="./pages/dangky.php">Đăng Ký</a></li>
                                 </ul>
                             </div>
                         </div>

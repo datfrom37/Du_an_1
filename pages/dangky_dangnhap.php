@@ -4,16 +4,19 @@
     include "../config/connect.php";
     include "../dao/khachhangDAO.php";
     include "../dao/pdo.php";
+ 
 
     if(isset($_POST["dangnhap"])){
         if((isset($_POST["dangnhap"]) && $_POST["dangnhap"])){
             $user = $_POST['email'];
             $pass = $_POST['pass'];
+            $thongtin = "";
     
             $list_kh = getAllKhachHang();
             foreach($list_kh as $kh){
                 extract($kh);
                 if($user == $email && $pass == $mat_khau){
+                    $thongtin = $email;
                     // header ('location: ../index.php');
                     echo '<script>window.location.href = "../index.php" </script>';
                     break;
@@ -34,36 +37,34 @@
             $number = $_POST['number'];
             $email_input = $_POST['email'];
             $vai_tro = 0;
-    
-            if (strlen($user) < 6 || strlen($user) > 20) {
-                $thongbao = "Tên đăng nhập phải có từ 6 đến 20 ký tự.";
-            }elseif(strlen($number) < 10){
-                $thongbao = "SĐT không đúng.";
-            // } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            //     $thongbao = "Email không hợp lệ.";
-            } elseif ($pass !== $checkpass) {
-                $thongbao = "Mật khẩu và xác nhận mật khẩu không khớp!";
-            } elseif (strlen($pass) < 6) {
-                $thongbao = "Mật khẩu phải chứa ít nhất 6 ký tự.";
-            } elseif (!preg_match('/[A-Za-z]/', $pass)) {
-                $thongbao = "Mật khẩu phải chứa ít nhất một chữ cái.";
-            } else {
-                $ten_kh = $user;
-                $mat_khau = $pass;
-                $so_dien_thoai = $number;
-                $email = $email_input;           
-                $vai_tro = 0;
-                // Thực hiện truy vấn SQL để chèn dữ liệu;
-                $sql = createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, $vai_tro);
-                $thongbao = "Đăng ký thành công!";
-                echo '<script>window.location.href = "./index.php;</script>';
-                exit; // Kết thúc việc thực hiện mã PHP
+            if(isset($_POST['user']) && $_POST['pass'] && $_POST['checkpass'] && $_POST['number'] && $_POST['email']){
+
+                if(strlen($number) < 10){
+                    $thongbao = "SĐT không đúng.";
+                } elseif (!filter_var($email_input, FILTER_VALIDATE_EMAIL)) {
+                    $thongbao = "Email không hợp lệ.";
+                } elseif ($pass !== $checkpass) {
+                    $thongbao = "Mật khẩu và xác nhận mật khẩu không khớp!";
+                } elseif (strlen($pass) < 6) {
+                    $thongbao = "Mật khẩu phải chứa ít nhất 6 ký tự.";
+                } else {
+                    $ten_kh = $user;
+                    $mat_khau = $pass;
+                    $so_dien_thoai = $number;
+                    $email = $email_input;           
+                    $vai_tro = 0;
+                    // Thực hiện truy vấn SQL để chèn dữ liệu;
+                    $sql = createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, $vai_tro);
+                    $thongbao = "Đăng ký thành công!";
+                    echo '<script>window.location.href = "dangky_dangnhap.php" </script>';
+                }
+            }else{
+                $thongbao = 'Vui lòng nhập đầy đủ thông tin !';
             }
+            
         }
     }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +74,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="../public/css/dangnhap.css/">
+        
 
     </head>
 
@@ -81,7 +83,7 @@
                 <div class="form-container sign-up-container">
                     <!-- đăng ký; -->
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                        <h1>Create Account</h1>
+                        <h1>Đăng ký</h1>
                         <!-- <div class="social-container">
                             <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
