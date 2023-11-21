@@ -36,20 +36,23 @@ connect_db();
                 include "khachhang/index-khachhang.php";
                 break;
 
-            case 'binhluan':
-                include "binhluan/index-binhluan.php";
+            case 'binhluanct':
+                include "binhluanct/index-binhluan.php";
                 break;
+            case 'binhluanbv':
+                include "binhluanbv/index-binhluan.php";
+                break;                
 
             case 'thongke':
                 include "thongke/index-thongke.php";
                 break;
 
             default:
-                include "includes/admin_home.php";
+                include "donhang/index-donhang.php";
                 break;
         }
     } else {
-        include "includes/admin_home.php";
+        include "donhang/index-donhang.php";
     }
 
     ?>

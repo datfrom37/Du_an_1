@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -37,7 +36,7 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse colorone">
         <ul class="nav navbar-nav side-nav">
             <li>
-                <a href="./index.php"> Trang Chủ</a>
+                <a href="./index.php?act=donhang"> Đơn hàng</a>
             </li>
             <li>
                 <a href="./index.php?act=adddm&danhmuc=home"> Danh Mục</a>
@@ -51,12 +50,14 @@
             <li>
                 <a href="./index.php?act=khachhang&khachhang=home"> Khách Hàng</a>
             </li>
-            <li>
-                <a href="./index.php?act=binhluan&binhluan=home"> Bình Luận</a>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="">Bình luận &nbsp;<span class="caret"></span></a>
+                <ul class="dropdown-menu" style="color: #9d9d9d; background-color: #252736; width: 100%; ">
+                    <li><a href="./index.php?act=binhluanct&binhluanct=home">Công thức</a></li>
+                    <li><a href="./index.php?act=binhluanbv&binhluanbv=home">Bài viết</a></li>
+                </ul>
             </li>
-            <li>
-                <a href="./index.php?act=thongke&thongke=home"> Thống Kê</a>
-            </li>
+
 
 
 
