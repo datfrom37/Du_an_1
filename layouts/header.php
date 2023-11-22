@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -123,7 +124,21 @@
                             </div>
                             <div class="main-menu-two__right">
                                 <ul class="list-unstyled main-menu-two__login">
-                                    <li class="active"><a href="./pages/dangky_dangnhap.php">Đăng Nhập</a></li>
+                                    <?php 
+                                    
+                                        if(!isset($_SESSION['user'])){
+                                            echo '<li class="active"><a href="./pages/dangky_dangnhap.php">Đăng Nhập</a></li>';
+                                        }else{
+                                            $makh = $_SESSION['user'];
+                                            $list_kh = getKhachHangById($makh);
+                                            foreach ($list_kh as $kh) {
+                                                extract($kh);
+                                                echo $ten_kh;
+                                            }
+
+                                        }
+                                    ?>
+                                    
                                 </ul>
                             </div>
                         </div>

@@ -10,14 +10,12 @@
         if((isset($_POST["dangnhap"]) && $_POST["dangnhap"])){
             $user = $_POST['email'];
             $pass = $_POST['pass'];
-            $thongtin = "";
     
             $list_kh = getAllKhachHang();
             foreach($list_kh as $kh){
                 extract($kh);
                 if($user == $email && $pass == $mat_khau){
-                    $thongtin = $email;
-                    // header ('location: ../index.php');
+                    $_SESSION['user'] = $ma_kh;
                     echo '<script>window.location.href = "../index.php" </script>';
                     break;
                 }elseif(isset($_POST['email']) && $_POST['pass']){

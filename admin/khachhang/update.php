@@ -63,7 +63,7 @@
             <div class="mb-3" style="margin-top: 20px;">
                 <input type="submit" value="CẬP NHẬT" name="capnhat" class="btn btn-primary">
                 <input type="reset" value="NHẬP LẠI" class="btn btn-secondary">
-                <a href="index.php?act=adddm&danhmuc=list" class="btn btn-primary">DANH SÁCH</a>
+                <a href="index.php?act=khachhang&khachhang=list" class="btn btn-primary">DANH SÁCH</a>
             </div>
         </form>
     </div>
