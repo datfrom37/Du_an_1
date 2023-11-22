@@ -1,5 +1,7 @@
 <?php 
+
       session_start();
+
       include './config/connect.php';
       include './dao/congthucDAO.php';
       include './dao/loaiDAO.php';

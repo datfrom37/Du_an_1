@@ -42,6 +42,9 @@
     --bs-gutter-y: 30px;
   }
   
+
+
+
   body {
     /* font-family: var(--ogenix-font); */
     color: var(--ogenix-gray);
@@ -1663,7 +1666,7 @@
   
   .main-header-two__cart {
     position: relative;
-    display: flex;
+    display: flex !important;
     align-items: center;
     font-size: 24px;
     color: var(--ogenix-white);
@@ -11496,7 +11499,7 @@
     position: absolute;
     left: 20px;
     top: 7px;
-    font-family: 'fontawesome' !important;
+    font-family: 'fontawesome';
     content: "\f178";
     opacity: 1;
     font-size: 15px;
