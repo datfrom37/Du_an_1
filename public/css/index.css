@@ -23,6 +23,7 @@
     --ogenix-white: #ffffff;
     --ogenix-white-rgb: 255, 255, 255;
     --ogenix-base: #50a72c;
+    --ogenix-baseew: #FFF7CC;
     --ogenix-base-rgb: 80, 167, 44;
     --ogenix-black: #2a491d; 
     --ogenix-black-rgb: 42, 73, 29;
@@ -242,7 +243,6 @@
     display: inline-block;
     vertical-align: middle;
     outline: none;
-    background-color: var(--ogenix-primary);
     color: var(--ogenix-white);
     font-size: 14px;
     font-weight: 800;
@@ -11351,7 +11351,7 @@
     display: inline-block;
     padding: 5px 25px 5px;
     border-radius: 20px;
-    background-color: var(--ogenix-base);
+    background-color: var(--ogenix-baseew);
     overflow: hidden;
     cursor: pointer;
     z-index: 1;
@@ -11364,7 +11364,8 @@
     right: 0;
     bottom: 0;
     width: 50px;
-    background-color: #4a9e27;
+    /* background-color: #4a9e27; */
+    background-color: #FFE145;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -11381,7 +11382,7 @@
     display: block;
     text-align: center;
     border: none;
-    color: #ffffff;
+    color: #B79C10;
     font-size: 14px;
     font-weight: 700;
     margin-top: 0;
