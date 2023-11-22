@@ -71,7 +71,7 @@
                 <td class="vertical-center" >
                     <a href="' . $suact . '"><button class="btn btn-primary">Xem</button></a>
                     <br>-<br>
-                    <a href="' . $xoact .'"><button class="btn btn-danger">Xóa</button></a>
+                    <a href="' . $xoact .'" onclick="return confirm(\'Bạn có chắc muốn xóa công thức này không?\')"><button class="btn btn-danger">Xóa</button></a>
                 </td>
                 </tr>
                 ';

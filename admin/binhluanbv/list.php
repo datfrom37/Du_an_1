@@ -47,7 +47,7 @@
                 
     
                 <td class="vertical-center" >
-                    <a href="' . $xoabl .'"><button class="btn btn-danger">Xóa</button></a>
+                    <a href="' . $xoabl .'"><button class="btn btn-danger" onclick="return confirm(\'Bạn có chắc muốn xóa bình luận này không?\')">Xóa</button></a>
                 </td>
                 </tr>
                 ';

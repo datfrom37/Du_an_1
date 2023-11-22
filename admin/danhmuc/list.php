@@ -32,7 +32,7 @@
                 <td>' . $ten_loai . '</td> 
                 <td class="small-cell-15 center-checkbox">
                     <a href="' . $suadm . '"><button class="btn btn-primary">Sửa</button></a>
-                    <a href="' . $xoadm . '"><button class="btn btn-danger">Xóa</button></a>
+                    <a href="' . $xoadm . '" onclick="return confirm(\'Bạn có chắc muốn xóa danh mục này không?\')"><button class="btn btn-danger">Xóa</button></a>
                 </td>
                 </tr>
                 ';

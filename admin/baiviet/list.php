@@ -60,7 +60,7 @@
                 <td class="vertical-center" >
                     <a href="' . $suabv . '"><button class="btn btn-primary">Sửa</button></a>
              
-                    <a href="' . $xoabv .'"><button class="btn btn-danger">Xóa</button></a>
+                    <a href="' . $xoabv .'" onclick="return confirm(\'Bạn có chắc muốn xóa bài viết này không?\')"><button class="btn btn-danger">Xóa</button></a>
                 </td>
                 </tr>
                 ';
