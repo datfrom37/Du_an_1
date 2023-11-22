@@ -1,3 +1,3 @@
 <?php
-    include "../admin/dao/khachhangDAO.php"
+    include "./admin/dao/khachhangDAO.php"
 ?>

@@ -34,7 +34,7 @@
             // Thực hiện truy vấn SQL để chèn dữ liệu;
             $sql = createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, $vai_tro);
             $thongbao = "Đăng ký thành công!";
-            echo '<script>window.location.href = "../index.php;</script>';
+            // echo '<script>window.location.href = "../index.php;</script>';
             exit; // Kết thúc việc thực hiện mã PHP
         }
     }

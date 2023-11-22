@@ -56,7 +56,7 @@
                     // Thực hiện truy vấn SQL để chèn dữ liệu;
                     $sql = createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, $vai_tro);
                     $thongbao = "Đăng ký thành công!";
-                    echo '<script>window.location.href = "dangky_dangnhap.php" </script>';
+                    //echo '<script>window.location.href = "dangky_dangnhap.php" </script>';
                 }
             }else{
                 $thongbao = 'Vui lòng nhập đầy đủ thông tin !';
