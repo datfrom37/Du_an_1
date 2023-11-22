@@ -35,13 +35,21 @@
             $number = $_POST['number'];
             $email_input = $_POST['email'];
             $vai_tro = 0;
+            $flag = 0;
+            $list_kh = getAllKhachHang();
+            foreach ($list_kh as $kh) {
+                extract($kh);
+                if($email_input == $email) $flag = 1;
+            }
             if(isset($_POST['user']) && $_POST['pass'] && $_POST['checkpass'] && $_POST['number'] && $_POST['email']){
 
                 if(strlen($number) < 10){
                     $thongbao = "SĐT không đúng.";
                 } elseif (!filter_var($email_input, FILTER_VALIDATE_EMAIL)) {
                     $thongbao = "Email không hợp lệ.";
-                } elseif ($pass !== $checkpass) {
+                }elseif($flag == 1){
+                    $thongbao = 'Email đã tồn tại';
+                }elseif ($pass !== $checkpass) {
                     $thongbao = "Mật khẩu và xác nhận mật khẩu không khớp!";
                 } elseif (strlen($pass) < 6) {
                     $thongbao = "Mật khẩu phải chứa ít nhất 6 ký tự.";
