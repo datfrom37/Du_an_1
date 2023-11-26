@@ -138,12 +138,14 @@
                                     $list_kh = getKhachHangById($makh);
                                     foreach ($list_kh as $kh) {
                                         extract($kh);
+                                        $hinhpath = "./admin/khachhang/img/" . $hinh_anh;
+                                        echo '<img src="'. $hinhpath .'" alt="" style="width:35px; height:35px; object-fit: cover; border-radius: 20px; margin-right: 5px;"  >';
                                         echo $ten_kh;
                                     }
 
                                 }
                                 ?>
-
+                                
                             </ul>
                         </div>
                     </div>
