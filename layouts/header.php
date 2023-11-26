@@ -161,9 +161,8 @@
 
     <!-- đăng nhập -->
     <?php
-
     if(isset($_POST["dangnhap"])){
-        if((isset($_POST["dangnhap"]) && $_POST["dangnhap"])){
+        if((isset($_POST["dangnhap"]) && $_POST["dangnhap"]>0)){
             $user = $_POST['email'];
             $pass = $_POST['pass'];
     
@@ -184,7 +183,7 @@
         }
     }
     }else{
-        if((isset($_POST["dangky"]) && $_POST["dangky"])){
+        if((isset($_POST["dangky"]) && $_POST["dangky"]>0)){
             $user = $_POST['user'];
             $pass = $_POST['pass'];
             $checkpass = $_POST['checkpass'];
@@ -253,7 +252,7 @@
                         echo '<p style="color: red; ">' . $thongbao . '</p>';
                     }
                     ?>
-                    <input class="button1" type="submit" name="dangky" value="Đăng ký">
+                    <input class="button1" type="submit" name="dangky" value="Đăng ký" >
                 </form>
             </div>
             <div class="form-containerlogin sign-in-containerlogin">
@@ -300,46 +299,10 @@
 
 
     
-    
+    <script src="/public/js/dangnhap.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const openPopupButton = document.getElementById('openPopupButton');
-            const popupContainer = document.getElementById('containerlogin');
-            const ctlogin = document.getElementById('ctlogin');
-
-            openPopupButton.addEventListener('click', function (event) {
-                event.stopPropagation();
-                $('#containerlogin').fadeIn();
-                // popupContainer.style.display = 'block';
-            });
-
-            window.addEventListener('click', function (event) {
-                if (event.target === popupContainer) {
-                    // popupContainer.style.display = 'none';
-                    $('#containerlogin').fadeOut();
-
-                }
-            });
-
-            const $signUpButton = document.getElementById("signUp");
-            const $signInButton = document.getElementById("signIn");
-
-            $signUpButton.addEventListener("click", () => {
-                ctlogin.classList.add("right-panel-active");
-            });
-
-            $signInButton.addEventListener("click", () => {
-                ctlogin.classList.remove("right-panel-active");
-            });
-
-            function openLoginPopup() {
-            }
-
-        });
-
-
-
-      
-    </script>
+ 
 <!-- END đăng nhập -->
+
+
+
