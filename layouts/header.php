@@ -130,8 +130,7 @@
                                 <?php
 
                                 if (!isset($_SESSION['user'])) {
-                                    echo '<li class="active"><a href="./pages/dangky_dangnhap.php">Đăng Nhập</a></li>';
-                                    echo '   <li class="active" id="openPopupButton">
+                                    echo '   <li class="active" id="openPopupButton" onclick="openLoginPopup()">
                                             <a >Đăng nhập</a>
                                                     </li> ';
                                 } else {
@@ -310,14 +309,16 @@
             const ctlogin = document.getElementById('ctlogin');
 
             openPopupButton.addEventListener('click', function (event) {
-                event.stopPropagation(); // Ngăn sự kiện click lan sang phần container
-                popupContainer.style.display = 'block';
-                
+                event.stopPropagation();
+                $('#containerlogin').fadeIn();
+                // popupContainer.style.display = 'block';
             });
 
             window.addEventListener('click', function (event) {
                 if (event.target === popupContainer) {
-                    popupContainer.style.display = 'none';
+                    // popupContainer.style.display = 'none';
+                    $('#containerlogin').fadeOut();
+
                 }
             });
 
@@ -331,6 +332,14 @@
             $signInButton.addEventListener("click", () => {
                 ctlogin.classList.remove("right-panel-active");
             });
+
+            function openLoginPopup() {
+            }
+
         });
+
+
+
+      
     </script>
 <!-- END đăng nhập -->

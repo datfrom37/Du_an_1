@@ -1,6 +1,7 @@
 <?php 
       session_start();
-    ob_start();
+      ob_start();
+
       include './config/connect.php';
       include './dao/congthucDAO.php';
       include './dao/loaiDAO.php';

@@ -11,7 +11,6 @@
     margin: 15px;
   }
 
-
  
 
   .containerlogin  p {
@@ -19,7 +18,7 @@
     font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px;
-    margin: 20px 0 30px;
+    /* margin: 20px 0 30px; */
   }
   
   .containerlogin  span {
@@ -57,7 +56,7 @@
     width: 768px;
     max-width: 100%;
     min-height: 530px;
-    
+    animation: slideDown 0.5s ease;
     /* Để căn giữa ngang và dọc */
     top: 50%;
     left: 50%;
@@ -90,21 +89,24 @@
     height: 40px;
     width: 40px;
   }
-  
+
   .form-containerlogin input {
     font-family: "Montserrat", sans-serif;
-    /* background: #eee; */
-    border: none;
-    /* padding: 12px 15px; */
-    margin: 8px 0;
-    width: 100%;
-  }
-.form-input-login input{
     background: #eee;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+.form-input-login input{
+    background: #eee;
+    border: none;
+    padding: 9px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .containerlogin  .button1{
@@ -145,6 +147,7 @@
   .containerlogin  button.ghost {
     background: transparent;
     border-color: #fff;
+    margin-top: 20px;
   }
   
   .form-containerlogin {
@@ -245,3 +248,12 @@
   .containerlogin.right-panel-active .overlay-right {
     transform: translateY(20%);
   }
+  @keyframes slideDown {
+    from {
+      top: -100%;
+    }
+    to {
+      top: 50%;
+    }
+  }
+  
