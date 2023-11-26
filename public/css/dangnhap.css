@@ -3,24 +3,18 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: "Montserrat", sans-serif;
-    background: #f6f5f7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: -20px 0 50px;
-    margin-top: 20px;
-  }
   
-  h1 {
+  .containerlogin h1 {
+    font-family: "Montserrat", sans-serif;
+    color: black;
     font-weight: bold;
     margin: 15px;
   }
-  
-  p {
+
+
+ 
+
+  .containerlogin  p {
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
@@ -28,29 +22,50 @@
     margin: 20px 0 30px;
   }
   
-  span {
+  .containerlogin  span {
     font-size: 12px;
   }
   
-  a {
+  .containerlogin a {
     color: #333;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
   }
+
+
+  .containerloginpro{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Màu nền tối */
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  }
   
-  .container {
+  .containerlogin {
+    font-family: "Montserrat", sans-serif;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
+    position: absolute;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 530px;
+    
+    /* Để căn giữa ngang và dọc */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
   }
   
-  .form-container form {
+  .form-containerlogin form {
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -61,11 +76,11 @@
     text-align: center;
   }
   
-  .social-container {
+  .social-containerlogin {
     margin: 20px 0;
   }
   
-  .social-container a {
+  .social-containerlogin a {
     border: 1px solid #ddd;
     border-radius: 50%;
     display: inline-flex;
@@ -76,14 +91,15 @@
     width: 40px;
   }
   
-  .form-container input {
+  .form-containerlogin input {
+    font-family: "Montserrat", sans-serif;
     /* background: #eee; */
     border: none;
-    padding: 12px 15px;
+    /* padding: 12px 15px; */
     margin: 8px 0;
     width: 100%;
   }
-.form-input input{
+.form-input-login input{
     background: #eee;
     border: none;
     padding: 12px 15px;
@@ -91,8 +107,8 @@
     width: 100%;
 }
 
-  .button1{
-    background: #ff445c;
+.containerlogin  .button1{
+    background: #FFBE1C;
     border-radius: 20px;
     border: 1px solid #ff4b2b;
     color: #fff;
@@ -105,7 +121,7 @@
     
   }
 
-  button {
+  .containerlogin button {
     border-radius: 20px;
     border: 1px solid #ff4b2b;
     background: #ff445c;
@@ -118,40 +134,40 @@
     transition: transform 80ms ease-in;
   }
   
-  button:active {
+  .containerlogin  button:active {
     transform: scale(0.95);
   }
   
-  button:focus {
+  .containerlogin button:focus {
     outline: none;
   }
   
-  button.ghost {
+  .containerlogin  button.ghost {
     background: transparent;
     border-color: #fff;
   }
   
-  .form-container {
+  .form-containerlogin {
     position: absolute;
     top: 0;
     height: 100%;
     transition: all 0.6s ease-in-out;
   }
   
-  .sign-in-container {
+  .sign-in-containerlogin {
     left: 0;
     width: 50%;
     z-index: 2;
   }
   
-  .sign-up-container {
+  .sign-up-containerlogin {
     left: 0;
     width: 50%;
     z-index: 1;
     opacity: 0;
   }
   
-  .overlay-container {
+  .overlay-containerlogin {
     position: absolute;
     top: 0;
     left: 50%;
@@ -163,8 +179,8 @@
   }
   
   .overlay {
-    background: #ff416c;
-    background: linear-gradient(to right, #ff4b2b, #ff416c) no-repeat 0 0 / cover;
+    background: #FFBE1C;
+    background: linear-gradient(to right, #FFA31C, #FF7D1C) no-repeat 0 0 / cover;
     color: #fff;
     position: relative;
     left: -100%;
@@ -199,33 +215,33 @@
   }
   
   /* Move signin to right */
-  .container.right-panel-active .sign-in-container {
+  .containerlogin.right-panel-active .sign-in-containerlogin {
     transform: translateY(100%);
   }
   
   /* Move overlay to left */
-  .container.right-panel-active .overlay-container {
+  .containerlogin.right-panel-active .overlay-containerlogin {
     transform: translateX(-100%);
   }
   
   /* Bring signup over signin */
-  .container.right-panel-active .sign-up-container {
+  .containerlogin.right-panel-active .sign-up-containerlogin {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
   }
   
   /* Move overlay back to right */
-  .container.right-panel-active .overlay {
+  .containerlogin.right-panel-active .overlay {
     transform: translateX(50%);
   }
   
   /* Bring back the text to center */
-  .container.right-panel-active .overlay-left {
+  .containerlogin.right-panel-active .overlay-left {
     transform: translateY(0);
   }
   
   /* Same effect for right */
-  .container.right-panel-active .overlay-right {
+  .containerlogin.right-panel-active .overlay-right {
     transform: translateY(20%);
   }
