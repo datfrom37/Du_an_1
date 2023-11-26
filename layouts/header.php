@@ -162,28 +162,31 @@
     <!-- đăng nhập -->
     <?php
     if(isset($_POST["dangnhap"])){
-        if((isset($_POST["dangnhap"]) && $_POST["dangnhap"]>0)){
+        if((isset($_POST["email"]) && $_POST["pass"])){
             $user = $_POST['email'];
             $pass = $_POST['pass'];
     
             $list_kh = getAllKhachHang();
-            foreach($list_kh as $kh){
+            $loginSuccessful = false;
+            
+            foreach($list_kh as $kh) {
                 extract($kh);
-                if($user == $email && $pass == $mat_khau){
+                if($user == $email && $pass == $mat_khau) {
                     $_SESSION['user'] = $ma_kh;
+                    $loginSuccessful = true;
                     echo '<script>window.location.href = "../index.php" </script>';
                     break;
-                }elseif(isset($_POST['email']) && $_POST['pass']){
-                    $thongbao1 =  'Thông tin đăng nhập không chính xác';
-                    break;
-                }else{
-                    $thongbao1 = 'Vui lòng nhập đầy đủ thông tin !';
-                    break;
-                }  
+                }
+            }
+            if(!$loginSuccessful) {
+                $thongbao1 = 'Thông tin đăng nhập không chính xác';
+            }
+        } else {
+            $thongbao1 = 'Vui lòng nhập đầy đủ thông tin !';
         }
     }
-    }else{
-        if((isset($_POST["dangky"]) && $_POST["dangky"]>0)){
+    else{
+        if((isset($_POST["dangky"]) && $_POST["dangky"])){
             $user = $_POST['user'];
             $pass = $_POST['pass'];
             $checkpass = $_POST['checkpass'];
