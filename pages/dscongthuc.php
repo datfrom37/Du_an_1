@@ -166,7 +166,7 @@
                                                                 <i class="fa fa-star"></i>
                                                                 <i class="fa fa-star"></i>
                                                                 <i class="fa fa-star"></i>
-                                                                <i>- 19/11/2023</i>
+                                                                <i>- '.$ngay_dang.'</i>
                                                             </div>
                                                             <h4 class="cmp-recipe-listing-link mr-bot"><a
                                                                     href="product-details.html">' . $ten_cong_thuc . '</a>
@@ -177,8 +177,7 @@
                                                                     <div class="col-md-6">
                                                                         <l
                                                                             class="cmp-recipe-listing-attribute justify-content-center d-flex ">
-                                                                            <p><i class="fa-solid fa-fire-burner"></i> 15
-                                                                                Phút</p>
+                                                                            <p><i class="fa-solid fa-fire-burner"></i> '.$thoi_gian_nau.' </p>
                                                                         </l>
                                                                     </div>
                                                                     <div class="col-md-6">
@@ -190,13 +189,13 @@
                                                                     <div class="col-md-6">
                                                                         <l
                                                                             class="cmp-recipe-listing-attribute justify-content-center d-flex">
-                                                                            <p><i class="fas fa-clock"></i> 15 Phút</p>
+                                                                            <p><i class="fas fa-clock"></i> '.$thoi_gian_so_che.'</p>
                                                                         </l>
                                                                     </div>
                                                                     <div class="col-md-6">
                                                                         <l
                                                                             class="cmp-recipe-listing-attribute justify-content-center d-flex">
-                                                                            <p><i class="fas fa-user"></i> 4 Người</p>
+                                                                            <p><i class="fas fa-user"></i> '.$so_nguoi_an.' nguời</p>
                                                                         </l>
     
                                                                     </div>
