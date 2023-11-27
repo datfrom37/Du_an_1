@@ -1,6 +1,7 @@
 <?php include "includes/connect.php"; ?>
 <?php include "dao/loaiDAO.php"; ?>
 <?php include "dao/congthucDAO.php"; ?>
+<?php include "dao/binhluancongthucDAO.php"; ?>
 
 <div id="page-wrapper" class="full-height bg-white">
     <div class="container-fluid">
@@ -32,7 +33,14 @@
                             $listct = getCongThucByLoai($_GET['maloai']);
                             foreach ($listct as $ct) {
                                 extract($ct);
-                                deleteCongThuc($ma_cong_thuc);
+                                $ma_ct = $ma_cong_thuc;
+                                $listblct = getAllBinhLuanCongThuc();
+                                foreach ($listblct as $blct) {
+                                    extract($blct);
+                                    if($ma_cong_thuc == $ma_ct) deleteBinhLuanCongThuc($ma_binh_luan);
+                                }
+
+                                deleteCongThuc($ma_ct);
                             }
                             echo "<div style='color:#00FF00'>Xoá thành công</div>";
                             deleteLoai($_GET['maloai']);

@@ -1,6 +1,7 @@
 <?php include "includes/connect.php"; ?>
 <?php include "dao/loaiDAO.php"; ?>
 <?php include "dao/congthucDAO.php"; ?>
+<?php include "dao/binhluancongthucDAO.php"; ?>
 
 
 <div id="page-wrapper" class="full-height bg-white">
@@ -47,8 +48,13 @@
 
                     case 'xoact':
                         if (isset($_GET['mact']) && ($_GET['mact'] > 0)) {
-                            $ma_cong_thuc = $_GET['mact'];
-                            deleteCongThuc($ma_cong_thuc);
+                            $ma_ct = $_GET['mact'];
+                            $listblct = getAllBinhLuanCongThuc();
+                            foreach ($listblct as $blct) {
+                                extract($blct);
+                                if($ma_cong_thuc == $ma_ct) deleteBinhLuanCongThuc($ma_binh_luan);
+                            }
+                            deleteCongThuc($ma_ct);
                         }
                         echo "<div style='color:#00FF00'>Xoá thành công</div>";
                         include "congthuc/list.php";

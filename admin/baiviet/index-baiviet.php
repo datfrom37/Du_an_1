@@ -1,6 +1,7 @@
 <?php include "includes/connect.php"; ?>
 <?php include "dao/loaiDAO.php"; ?>
 <?php include "dao/baivietDAO.php"; ?>
+<?php include "dao/binhluanbaivietDAO.php"; ?>
 
 
 <div id="page-wrapper" class="full-height bg-white">
@@ -38,8 +39,13 @@
 
                     case 'xoabv':
                         if (isset($_GET['mabv']) && ($_GET['mabv'] > 0)) {
-                            $ma_bai_viet = $_GET['mabv'];
-                            deletebaiviet($ma_bai_viet);
+                            $ma_bv = $_GET['mabv'];
+                            $listblbv = getAllBinhLuanBaiViet();
+                            foreach ($listblbv as $blbv) {
+                                extract($blbv);
+                                if($ma_bai_viet == $ma_bv) deleteBinhLuanBaiViet($ma_binh_luan);
+                            }
+                            deletebaiviet($ma_bv);
                             echo "<div style='color:#00FF00'>Xóa thành công</div>";
                         }
                         include "baiviet/list.php";

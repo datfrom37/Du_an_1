@@ -224,7 +224,7 @@
             </div>
             <div class="col-md-7">
                 <!-- Tiêu đề -->
-                <h2 style="width: 95%;">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối tuần</h2>
+                <h2 style="width: 95%;">Bánh xèo</h2>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
