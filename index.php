@@ -5,6 +5,7 @@
 
       include './config/connect.php';
       include './dao/congthucDAO.php';
+      include './dao/binhluancongthucDAO.php';
       include './dao/loaiDAO.php';
       include "dao/pdo.php";
       include './dao/khachhangDAO.php';

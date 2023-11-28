@@ -1,3 +1,4 @@
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -215,7 +216,18 @@
 </head>
 
 <body>
+    <?php
+        if (isset($_POST['GuiBinhLuan']) && ($_POST['GuiBinhLuan'])){
+            $noi_dung_binh_luan = $_POST['NoiDungBinhLuan'];
+            createBinhLuanCongThuc($noi_dung_binh_luan, $_GET['ct_id'], $_SESSION['user']);
+            
+        } 
+        if (isset($_GET['ma_bl_xoa']) && ($_GET['ma_bl_xoa'])){
+            deleteBinhLuanCongThuc($_GET['ma_bl_xoa']);
+        } 
+    ?>
     <?php 
+    
         $list_ct = getCongThucByMaCongThuc($_GET['ct_id']);
         foreach ($list_ct as $ct) {
             extract($ct);
@@ -307,157 +319,140 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>';
 
 
-
-
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <form class="buttons " method="post">
+    if(isset($_SESSION['user'])){
+        $nguoidung = getKhachHangById($_SESSION['user']);
+        foreach ($nguoidung as $chitietnguoidung) {
+            extract($chitietnguoidung);
+            $hinhpath = "admin/khachhang/img/" . $hinh_anh;
+            if (is_file($hinhpath)) {
+                $img = "<img class='img' src='" . $hinhpath . "' >";
+            } else {
+                $img = "no photo";
+            }
+            echo'
+                <div class="container binhl">
                     <div class="row">
-                        <div class="div col-12">Đạt Bờ Rồ</div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (0.0 / 5.0) </xs>
+                        <div class="col-1">
+                            '.$img.'
                         </div>
+                        <div class="col-11">
+                            <form class="buttons " method="post" action"index.php?tkh=chitietcongthuc">
+                                <div class="row">
+                                    <div class="div col-12">'.$ten_kh.'</div>
+                                    <div class="stars col-12 star-wow">
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <xs> (0.0 / 5.0) </xs>
+                                    </div>
 
-                        <div class="col-12">
-                            <textarea class="comment-input" placeholder="Nhập nội dung đánh giá"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-10"></div>
-                        <div class="col-2">
-                            <button type="submit" class="button">
-                                <div class="primary">GỬI ĐÁNH GIÁ</div>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- END bình luận -->
-
-
-
-    <!-- danh sach binh luan -->
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <div class="buttons " method="post">
-                    <div class="row">
-                        <div class="div col-10">Đạt Bờ Rồ</div>
-                        <div class="col-2 sua-xoabl">
-                            <suax>SỬA</suax> |
-                            <suax>XÓA</suax>
-                        </div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (4.0 / 5.0) </xs>
-                        </div>
-                        <div class="col-12">15/11/2023 - 7:26pm</div>
-                        <div class="col-12">
-                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
-                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
-                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
-                                vừa ngon vừa khó làm nha mấy ní</p>
+                                    <div class="col-12">
+                                        <textarea class="comment-input" name="NoiDungBinhLuan" placeholder="Nhập nội dung đánh giá"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10"></div>
+                                    <div class="col-2">
+                                        <input type="submit" class="button" name="GuiBinhLuan" value="Gửi đánh giá" style="padding-top:10px">                                   
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <div class="buttons " method="post">
-                    <div class="row">
-                        <div class="div col-10">Đạt Bờ Rồ</div>
-                        <div class="col-2 sua-xoabl">
-                            <suax>SỬA</suax> |
-                            <suax>XÓA</suax>
+                <!-- END bình luận -->
+            ';
+        }
+    }else{
+        echo '
+            <div class="container binhl">
+            <div class="row">
+                
+                <div class="col-11">
+                    <form class="buttons " method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea class="comment-input" placeholder="Đăng nhập để bình luận" style="width: 109%;" disabled></textarea>
+                            </div>
                         </div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (4.0 / 5.0) </xs>
+                        <div class="row">
+                            <div class="col-10"></div>
+                            
                         </div>
-                        <div class="col-12">15/11/2023 - 7:26pm</div>
-                        <div class="col-12">
-                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
-                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
-                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
-                                vừa ngon vừa khó làm nha mấy ní</p>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
-
-
-
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <div class="buttons " method="post">
-                    <div class="row">
-                        <div class="div col-10">Đạt Bờ Rồ</div>
-                        <div class="col-2 sua-xoabl">
-                            <suax>SỬA</suax> |
-                            <suax>XÓA</suax>
-                        </div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (4.0 / 5.0) </xs>
-                        </div>
-                        <div class="col-12">15/11/2023 - 7:26pm</div>
-                        <div class="col-12">
-                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
-                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
-                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
-                                vừa ngon vừa khó làm nha mấy ní</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        ';
+    }
     
-    <!-- END danh sach binh luan -->
+    
+    $list_bl = getBinhLuanCongThucByMaCongThuc($ma_cong_thuc);
+    foreach (array_reverse($list_bl) as $bl) {
+        extract($bl);
+        $khachhang = getKhachHangById($ma_kh);
+        foreach ($khachhang as $kh) {
+            extract($kh);
+            $hinhpath = "admin/khachhang/img/" . $hinh_anh;
+            if (is_file($hinhpath)) {
+                $img = "<img class='img' src='" . $hinhpath . "' >";
+            } else {
+                $img = "no photo";
+            }
+            echo'
+                <!-- danh sach binh luan -->
+                <div class="container binhl">
+                    <div class="row">
+                        <div class="col-1">
+                            '.$img.'
+                        </div>
+                        <div class="col-11">
+                            <div class="buttons " method="post">
+                                <div class="row">
+                                    <div class="div col-10">'.$ten_kh.'</div>
+                                    <div class="col-2 sua-xoabl">';
+                                    if(isset($_SESSION['user'])&&$_SESSION['user'] == $ma_kh){
+                                        $xoabl = "index.php?tkh=chitietcongthuc&ma_bl_xoa=".$ma_binh_luan."&ct_id=".$ma_cong_thuc;
+                                        echo'
+                                        <suax><a href="">SỬA</a></suax> |
+                                        <suax><a href="'.$xoabl.'">XÓA</a></suax>
+                                        ';  
+                                    }
+                                echo'    
+                                    </div>
+                                    <div class="stars col-12 star-wow">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <xs> (4.0 / 5.0) </xs>
+                                    </div>
+                                    <div class="col-12">'.$ngay_binh_luan.'</div>
+                                    <div class="col-12">
+                                        <p class="titless">'.$noi_dung.'</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END danh sach binh luan -->
+    
+                ';
+        }
+    }
+    
+            
 
+
+
+
+    echo'
         <br><br>
 
 

@@ -18,6 +18,13 @@ function deleteBinhLuanCongThuc($ma_binh_luan) {
     // var_dump($data);
 }
 
+function getBinhLuanCongThucByMaCongThuc($ma_cong_thuc) {
+    $sql = "SELECT * FROM binh_luan_cong_thuc WHERE ma_cong_thuc=:ma_cong_thuc";
+    $data = getDataWidthParams($sql, ["ma_cong_thuc"=>$ma_cong_thuc]);
+    return $data;
+}
+
+
 function createBinhLuanCongThuc($noi_dung, $ma_cong_thuc, $ma_kh) {
     $sql = "INSERT INTO binh_luan_cong_thuc (noi_dung, ma_cong_thuc, ma_kh) VALUES (:noi_dung, :ma_cong_thuc, :ma_kh)";
     $data = executeCUD($sql, [

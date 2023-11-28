@@ -11,6 +11,11 @@ function getBinhLuanCongThucById($ma_binh_luan) {
     return $data;
 }
 
+function getBinhLuanCongThucByMaCongThuc($ma_cong_thuc) {
+    $sql = "SELECT * FROM binh_luan_cong_thuc WHERE ma_cong_thuc=:ma_cong_thuc";
+    $data = getDataWidthParams($sql, ["ma_cong_thuc"=>$ma_cong_thuc]);
+    return $data;
+}
 
 function deleteBinhLuanCongThuc($ma_binh_luan) {
     $sql = "DELETE FROM binh_luan_cong_thuc WHERE ma_binh_luan=:ma_binh_luan";
