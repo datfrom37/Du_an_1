@@ -397,6 +397,7 @@
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
                     <?php
+                    $popup= 1;
                     $listct = getCongThucByLoai(6);
                     $i = 0;
                     $mo_khoa = false;
@@ -458,7 +459,7 @@
                             $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
                             if (is_file($hinhpath)) {
-                                echo "<div id='openthanhtoanButton' onclick='openthanhtoanPopup()'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></div>";
+                                echo "<div id='openthanhtoanButton". $popup ."' onclick='openthanhtoanPopup()'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></div>";
                             } else {
                                 echo "no photo";
                             }
@@ -487,6 +488,7 @@
                                 </div>
                                 </li>';
                             $i++;
+                            $popup++;
                         }
                     }
                 }
