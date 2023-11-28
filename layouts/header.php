@@ -131,7 +131,7 @@
 
                                 if (!isset($_SESSION['user'])) {
                                     echo '   <li class="active" id="openPopupButton" onclick="openLoginPopup()">
-                                            <a >Đăng nhập</a>
+                                            <a>Đăng nhập</a>
                                                     </li> ';
                                 } else {
                                     $makh = $_SESSION['user'];
