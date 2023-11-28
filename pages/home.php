@@ -144,11 +144,12 @@
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
                     <?php
-                    $listct = getAllCongThuc();
+                    $listct = getCongThucByLoai(6);
                     $i = 0;
                     foreach ($listct as $ct) {
                         extract($ct);
                         if ($i < 4) {
+                            if($duyet==1){
                             echo '<li class="cmp-recipe-listing-item hide">
                                 <div class="cmp-card-wrapper">
                                     <div class="cmp-recipe-image-wrapper">
@@ -187,6 +188,7 @@
                                 </div>
                                 </li>';
                             $i++;
+                        }
                         }
                     }
                     ?>
