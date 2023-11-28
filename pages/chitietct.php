@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/home.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../public/css/chitietct.css">
+=======
     <style>
         :root {
             --white: rgba(255, 255, 255, 1);
@@ -117,18 +120,6 @@
             color: var(--gray-dark, #3F4255);
             font-weight: bold;
         }
-
-
-
-
-
-
-
-
-
-
-
-
         .buttons {
             background-color: #fff;
             border-radius: 4px;
@@ -213,6 +204,7 @@
             padding-left: 10vh;
         }
     </style>
+>>>>>>> 0dccca3271eb9682b8553299496b783f6ef67265
 </head>
 
 <body>
@@ -389,8 +381,6 @@
             </div>
         ';
     }
-    
-    
     $list_bl = getBinhLuanCongThucByMaCongThuc($ma_cong_thuc);
     foreach (array_reverse($list_bl) as $bl) {
         extract($bl);
@@ -422,7 +412,7 @@
                                         <suax><a href="'.$xoabl.'">XÓA</a></suax>
                                         ';  
                                     }
-                                echo'    
+                                echo'
                                     </div>
                                     <div class="stars col-12 star-wow">
                                         <i class="fas fa-star"></i>
