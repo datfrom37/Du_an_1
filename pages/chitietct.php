@@ -117,18 +117,6 @@
             color: var(--gray-dark, #3F4255);
             font-weight: bold;
         }
-
-
-
-
-
-
-
-
-
-
-
-
         .buttons {
             background-color: #fff;
             border-radius: 4px;
@@ -389,8 +377,6 @@
             </div>
         ';
     }
-    
-    
     $list_bl = getBinhLuanCongThucByMaCongThuc($ma_cong_thuc);
     foreach (array_reverse($list_bl) as $bl) {
         extract($bl);
@@ -422,7 +408,7 @@
                                         <suax><a href="'.$xoabl.'">XÓA</a></suax>
                                         ';  
                                     }
-                                echo'    
+                                echo'
                                     </div>
                                     <div class="stars col-12 star-wow">
                                         <i class="fas fa-star"></i>
