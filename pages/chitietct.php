@@ -215,16 +215,32 @@
 </head>
 
 <body>
+    <?php 
+        $list_ct = getCongThucByMaCongThuc($_GET['ct_id']);
+        foreach ($list_ct as $ct) {
+            extract($ct);
+            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+            if (is_file($hinhpath)) {
+                $img = "<img src='" . $hinhpath . "'  alt='Hình ảnh' width='100%' height='100%' class='image'>";
+            } else {
+                $img = "no photo";
+            }
+            echo '
+            
+            
+            
+            
+            
     <!-- tong quan cong thuc -->
     <div class="container boxmain">
         <div class="row">
             <div class="col-md-5">
                 <!-- Hình ảnh -->
-                <img src="pages/imgweb/banhxeo.jpg" alt="Hình ảnh" class="image">
+                '.$img.'
             </div>
             <div class="col-md-7">
                 <!-- Tiêu đề -->
-                <h2 style="width: 95%;">Bánh xèo</h2>
+                <h2 style="width: 95%; ">'.$ten_cong_thuc.'</h2> 
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -233,23 +249,24 @@
                     <i class="fas fa-star"></i>
                     <xs> (5.0 / 999) </xs>
                 </div>
+                </br>
 
 
-                <ul class='row'>
+                <ul class="row">
                     <l class="col-md-1 "></l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fa-solid fa-fire-burner fa-xl"></i> </p>15 Phút <p class="p-mr">Thời
+                        <p class="p-mrd"><i class="fa-solid fa-fire-burner fa-xl"></i> </p>'.$thoi_gian_nau.'<p class="p-mr">Thời
                             gian
                             nấu</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-star fa-xl"></i> </p>Dễ <p class="p-mr">Độ khó</p>
+                        <p class="p-mrd"><i class="fas fa-star fa-xl"></i> </p>Dễ <p class="p-mr">Độ khó</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-clock fa-xl"></i> </p>15 Phút <p class="p-mr">Sơ chế</p>
+                        <p class="p-mrd"><i class="fas fa-clock fa-xl"></i> </p>'.$thoi_gian_so_che.'<p class="p-mr">Sơ chế</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-user fa-xl"></i> </p>4 Người <p class="p-mr">Khẩu phần</p>
+                        <p class="p-mrd"><i class="fas fa-user fa-xl"></i> </p>'.$so_nguoi_an.' người<p class="p-mr">Khẩu phần</p>
                     </l>
                     <l class="col-md-1"></l>
                 </ul>
@@ -266,17 +283,13 @@
             <div class="col-md-6 ">
                 <div class="custom-box boxmain">
                     <h2>Nguyên liệu</h2>
-                    <p>Nội dung của Box 1. Dòng 1.</p>
-                    <p>Nội dung của Box 1. Dòng 2.</p>
-                    <p>Nội dung của Box 1. Dòng 3.</p>
+                    <p>'.$nguyen_lieu.'</p>
                 </div>
             </div>
             <div class="col-md-6 ">
                 <div class="custom-box boxmain">
                     <h2>Hướng dấn nấu ăn</h2>
-                    <p>Nội dung của Box 2. Dòng 1.</p>
-                    <p>Nội dung của Box 2. Dòng 2.</p>
-                    <p>Nội dung của Box 2. Dòng 3.</p>
+                    <p>'.$noi_dung.'</p>
                 </div>
             </div>
         </div>
@@ -473,7 +486,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -504,7 +517,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -535,7 +548,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -566,7 +579,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -592,5 +605,7 @@
         </div>
     </div>
     <!--END Công thức nấu ăn tương tự  -->
-
+    ';
+}
+?>
 </body>

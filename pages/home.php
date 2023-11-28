@@ -144,7 +144,7 @@
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
                     <?php
-                    $listct = getCongThucByLoai(6);
+                    $listct = getAllCongThuc();
                     $i = 0;
                     foreach ($listct as $ct) {
                         extract($ct);
@@ -166,7 +166,7 @@
                                     </div>
                                 </div>
                                 <h3 class="cmp-recipe-listing-title">';
-                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id='.$ma_cong_thuc.'" class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
                                 </h3>';
 
 
