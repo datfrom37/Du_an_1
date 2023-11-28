@@ -173,7 +173,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <l
-                                                                        class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                        class="cmp-recipe-listing-attribute ">
                                                                         <p><i class="fas fa-star"></i> Dễ</p>
                                                                     </l>
                                                                 </div>
@@ -185,7 +185,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <l
-                                                                        class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                        class="cmp-recipe-listing-attribute">
                                                                         <p><i class="fas fa-user"></i> 4 Người</p>
                                                                     </l>
 
@@ -239,7 +239,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <l
-                                                                        class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                        class="cmp-recipe-listing-attribute ">
                                                                         <p><i class="fas fa-star"></i> Dễ</p>
                                                                     </l>
                                                                 </div>
@@ -251,7 +251,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <l
-                                                                        class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                        class="cmp-recipe-listing-attribute">
                                                                         <p><i class="fas fa-user"></i> 4 Người</p>
                                                                     </l>
 
@@ -305,7 +305,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <l
-                                                                        class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                        class="cmp-recipe-listing-attribute ">
                                                                         <p><i class="fas fa-star"></i> Dễ</p>
                                                                     </l>
                                                                 </div>
@@ -317,7 +317,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <l
-                                                                        class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                        class="cmp-recipe-listing-attribute ">
                                                                         <p><i class="fas fa-user"></i> 4 Người</p>
                                                                     </l>
 

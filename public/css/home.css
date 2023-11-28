@@ -726,3 +726,84 @@
     padding-left: 4.6vw;
     padding-top: 2vh;
 }
+
+
+
+
+
+
+/* Tùy chỉnh kiểu dáng cho box thanh toán */
+
+.check-yellow{
+    display: flex;
+    align-items: center;
+    background-color: #FFBD3C;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    padding: 0 5vh 0 7vh;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+.check-white{
+    padding: 5vh ;
+    color: black;
+}
+.boxmain {
+    border-radius: 5px;
+    background: var(--White, #FFF);
+    /* Base shadow */
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+    margin-top: 5vh;
+    padding: 0;
+}
+
+.tieude-small{
+    font-size: 18px;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    font-weight: bold;
+}
+.big-cash{
+    font-size: 32px;
+    color: #e5a82d;
+}
+.tieude-small-2{
+    font-size: 16px;
+    margin-bottom: 1vh;
+    font-weight: bold;
+}
+.button {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #FFBD3C;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    padding: 2vh;
+    font-weight: bold;
+    color: #000;
+}
+.containerThanhtoanpro{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Màu nền tối */
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  }
+  .popupthanhtoan{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }

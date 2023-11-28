@@ -3,9 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -122,14 +122,23 @@
     </section>
     <!--Danh muc End-->
 
-    <!-- <div class="banner">banner</div> -->
+
+
+
+
+
+
+
+
+
+
 
 
 
 
     <!-- Hôm nay ăn gì -->
     <?php
-        $loai1= getLoaiByMaLoai(6);
+    $loai1 = getLoaiByMaLoai(6);
     ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
@@ -149,8 +158,9 @@
                     foreach ($listct as $ct) {
                         extract($ct);
                         if ($i < 4) {
-                            echo '<li class="cmp-recipe-listing-item hide">
-                                <div class="cmp-card-wrapper">
+
+                            echo '<li class="cmp-recipe-listing-item hide id="openPopupButton" onclick="openLoginPopup()"">
+                                <div class="cmp-card-wrapper ">
                                     <div class="cmp-recipe-image-wrapper">
                                         <div class="cmp-recipe-listing-image-container">
                                         <picture>';
@@ -184,6 +194,7 @@
                                 <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
                                         </li>
                                     </ul>
+                                   
                                 </div>
                                 </li>';
                             $i++;
@@ -195,6 +206,12 @@
         </div>
     </div>
     <!--END hôm nay ăn gì -->
+
+
+
+   
+
+
 
 
     <!-- ẩm thực -->
@@ -244,7 +261,7 @@
 
     <!-- Món chay -->
     <?php
-        $loai1= getLoaiByMaLoai(6);
+    $loai1 = getLoaiByMaLoai(6);
     ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
@@ -364,7 +381,7 @@
 
     <!-- Công thức đặc biệt trả phí -->
     <?php
-        $loai1= getLoaiByMaLoai(6);
+    $loai1 = getLoaiByMaLoai(6);
     ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
@@ -381,6 +398,8 @@
                     <?php
                     $listct = getCongThucByLoai(6);
                     $i = 0;
+                    $mo_khoa = false;
+                    if($mo_khoa == true){
                     foreach ($listct as $ct) {
                         extract($ct);
                         if ($i < 4) {
@@ -424,6 +443,52 @@
                             $i++;
                         }
                     }
+                }
+                else{
+                    foreach ($listct as $ct) {
+                        extract($ct);
+                        if ($i < 4) {
+                            echo '<li class="cmp-recipe-listing-item hide">
+                                <div class="cmp-card-wrapper">
+                                    <div class="cmp-recipe-image-wrapper">
+                                        <div class="cmp-recipe-listing-image-container">
+                                        <picture >';
+
+                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+
+                            if (is_file($hinhpath)) {
+                                echo "<div id='openthanhtoanButton' onclick='openthanhtoanPopup()'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></div>";
+                            } else {
+                                echo "no photo";
+                            }
+                            echo '</picture>
+                                    </div>
+                                </div>
+                                <h3 class="cmp-recipe-listing-title">';
+                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                                </h3>';
+
+
+                            echo '<ul class="cmp-recipe-listing-attributes">
+                                <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
+                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-star"></i> Dễ</p>
+                                </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                                <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                        </li>';
+                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </li>';
+                            $i++;
+                        }
+                    }
+                }
                     ?>
                 </ul>
             </div>
@@ -551,7 +616,69 @@
     <!--Blog One End-->
 
 
+ <!-- popup thanh toan -->
+ <div class="containerThanhtoanpro" id="popupthanhtoan" >
+ <div class="container popupthanhtoan">
+        <div class=" boxmain">
+            <div class="row">
+                <div class="col-5 ">
+                    <div class="check-yellow">
+                        <p>Úi chà! Có vẻ như bạn chưa sở hữu công thức này ??:D??</p>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="row">
+                        <div class="check-white">
 
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4 tieude-small">Sở hữu ngay chỉ với:  </div>
+                                    <div class="col-8 big-cash">100.000 ₫</div>
+                                </div>
+                            </div>
+                            <div class="col-12 tieude-small-2">Phương thức thanh toán:</div>
+                            <div class="col-12">
+                                <form>
+                                    <div class="mb-3 form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="option1"
+                                            value="option1">
+                                        <label class="form-check-label" for="option1">
+                                        <img src="../images/bank.png" alt="" height="25px" style="margin-right: 48px;"> Chuyển khoản qua tài khoản ngân hàng 
+                                        </label>
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="option2"
+                                            value="option2">
+                                        <label class="form-check-label" for="option2">
+                                        <img src="../images/momo.png" alt="" height="20px" style="margin-right: 19px;"> Chuyển khoản qua tài khoản Momo
+                                        </label>
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+                                        <input class="form-check-input" type="radio" name="option" id="option3"
+                                            value="option3">
+                                        <label class="form-check-label" for="option3">
+                                        <img src="../images/zalo.png" alt="" height="15px" style="margin-right: 20px;"> Chuyển khoản qua tài khoản ZaloPay
+                                        </label>
+                                    </div>
+                                    <!-- Thêm các radio button khác nếu cần -->
+                                    <div class="row">
+                                        <div class="col-8"></div>
+                                        <div class="col-4">
+                                        <button type="submit" class="btn btn-primary button">Mở khóa ngay</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--END popup thanh toan -->
 
 
 
