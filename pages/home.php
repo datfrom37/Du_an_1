@@ -489,9 +489,80 @@
                                     </ul>
                                 </div>
                                 </li>';
-                            $i++;
-                            $popup++;
-                        }
+
+
+
+
+
+
+echo '
+                            <!-- popup thanh toan -->
+                            <div class="containerThanhtoanpro" id="popupthanhtoan'.$popup.'" >
+                            <div class="container popupthanhtoan">
+                                   <div class=" boxmain">
+                                       <div class="row">
+                                           <div class="col-5 ">
+                                               <div class="check-yellow">
+                                                   <p>Úi chà! Có vẻ như bạn chưa sở hữu công thức này ??:D??</p>
+                                               </div>
+                                           </div>
+                                           <div class="col-7">
+                                               <div class="row">
+                                                   <div class="check-white">
+                           
+                                                       <div class="col-12">
+                                                           <div class="row">
+                                                               <div class="col-12 tieude-medium"> '.$ten_cong_thuc.'  </div>
+                                                               <div class="col-4 tieude-small">Sở hữu ngay chỉ với:  </div>
+                                                               <div class="col-8 big-cash">'. number_format($gia, 0, ',', '.') .' ₫</div>
+                                                           </div>
+                                                       </div>
+                                                       <div class="col-12 tieude-small-2">Phương thức thanh toán:</div>
+                                                       <div class="col-12">
+                                                           <form>
+                                                               <div class="mb-3 form-check">
+                                                                   <input class="form-check-input" type="radio" name="option" id="option1"
+                                                                       value="option1">
+                                                                   <label class="form-check-label" for="option1">
+                                                                   <img src="../images/bank.png" alt="" height="25px" style="margin-right: 48px;"> Chuyển khoản qua tài khoản ngân hàng 
+                                                                   </label>
+                                                               </div>
+                           
+                                                               <div class="mb-3 form-check">
+                                                                   <input class="form-check-input" type="radio" name="option" id="option2"
+                                                                       value="option2">
+                                                                   <label class="form-check-label" for="option2">
+                                                                   <img src="../images/momo.png" alt="" height="20px" style="margin-right: 19px;"> Chuyển khoản qua tài khoản Momo
+                                                                   </label>
+                                                               </div>
+                           
+                                                               <div class="mb-3 form-check">
+                                                                   <input class="form-check-input" type="radio" name="option" id="option3"
+                                                                       value="option3">
+                                                                   <label class="form-check-label" for="option3">
+                                                                   <img src="../images/zalo.png" alt="" height="15px" style="margin-right: 20px;"> Chuyển khoản qua tài khoản ZaloPay
+                                                                   </label>
+                                                               </div>
+                                                               <!-- Thêm các radio button khác nếu cần -->
+                                                               <div class="row">
+                                                                   <div class="col-8"></div>
+                                                                   <div class="col-4">
+                                                                   <button type="submit" class="btn btn-primary button">Mở khóa ngay</button>
+                                                                   </div>
+                                                               </div>
+                                                           </form>
+                                                       </div>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               </div>
+                               <!--END popup thanh toan -->';
+                               $popup++;
+                               $i++;
+                            }
                     }
                 }
                     ?>
@@ -621,69 +692,6 @@
     <!--Blog One End-->
 
 
- <!-- popup thanh toan -->
- <div class="containerThanhtoanpro" id="popupthanhtoan" >
- <div class="container popupthanhtoan">
-        <div class=" boxmain">
-            <div class="row">
-                <div class="col-5 ">
-                    <div class="check-yellow">
-                        <p>Úi chà! Có vẻ như bạn chưa sở hữu công thức này ??:D??</p>
-                    </div>
-                </div>
-                <div class="col-7">
-                    <div class="row">
-                        <div class="check-white">
-
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-4 tieude-small">Sở hữu ngay chỉ với:  </div>
-                                    <div class="col-8 big-cash">100.000 ₫</div>
-                                </div>
-                            </div>
-                            <div class="col-12 tieude-small-2">Phương thức thanh toán:</div>
-                            <div class="col-12">
-                                <form>
-                                    <div class="mb-3 form-check">
-                                        <input class="form-check-input" type="radio" name="option" id="option1"
-                                            value="option1">
-                                        <label class="form-check-label" for="option1">
-                                        <img src="../images/bank.png" alt="" height="25px" style="margin-right: 48px;"> Chuyển khoản qua tài khoản ngân hàng 
-                                        </label>
-                                    </div>
-
-                                    <div class="mb-3 form-check">
-                                        <input class="form-check-input" type="radio" name="option" id="option2"
-                                            value="option2">
-                                        <label class="form-check-label" for="option2">
-                                        <img src="../images/momo.png" alt="" height="20px" style="margin-right: 19px;"> Chuyển khoản qua tài khoản Momo
-                                        </label>
-                                    </div>
-
-                                    <div class="mb-3 form-check">
-                                        <input class="form-check-input" type="radio" name="option" id="option3"
-                                            value="option3">
-                                        <label class="form-check-label" for="option3">
-                                        <img src="../images/zalo.png" alt="" height="15px" style="margin-right: 20px;"> Chuyển khoản qua tài khoản ZaloPay
-                                        </label>
-                                    </div>
-                                    <!-- Thêm các radio button khác nếu cần -->
-                                    <div class="row">
-                                        <div class="col-8"></div>
-                                        <div class="col-4">
-                                        <button type="submit" class="btn btn-primary button">Mở khóa ngay</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!--END popup thanh toan -->
 
 
 

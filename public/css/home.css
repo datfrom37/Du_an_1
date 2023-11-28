@@ -807,3 +807,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .tieude-medium{
+    font-size: 32px;
+    margin-bottom: 1vh;
+  }
