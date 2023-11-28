@@ -158,9 +158,9 @@
                     foreach ($listct as $ct) {
                         extract($ct);
                         if ($i < 4) {
-
-                            echo '<li class="cmp-recipe-listing-item hide id="openPopupButton" onclick="openLoginPopup()"">
-                                <div class="cmp-card-wrapper ">
+                            if($duyet==1){
+                            echo '<li class="cmp-recipe-listing-item hide">
+                                <div class="cmp-card-wrapper">
                                     <div class="cmp-recipe-image-wrapper">
                                         <div class="cmp-recipe-listing-image-container">
                                         <picture>';
@@ -176,7 +176,7 @@
                                     </div>
                                 </div>
                                 <h3 class="cmp-recipe-listing-title">';
-                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id='.$ma_cong_thuc.'" class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
                                 </h3>';
 
 
@@ -198,6 +198,7 @@
                                 </div>
                                 </li>';
                             $i++;
+                        }
                         }
                     }
                     ?>

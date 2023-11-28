@@ -1,22 +1,250 @@
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../public/css/home.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../public/css/chitietct.css">
+=======
+    <style>
+        :root {
+            --white: rgba(255, 255, 255, 1);
+            --graydark: rgba(63, 66, 85, 1);
+            --brandyellow-bright: rgba(255, 225, 69, 1);
+            --brandyellow-dark: rgba(183, 156, 16, 1);
+        }
+
+        .container {
+            padding: 1vh 0 1vh 0;
+        }
+
+        .box-container {
+            padding: 10px 0 10px 0;
+            text-align: center;
+            /* Căn giữa nội dung */
+            margin: 3vh 0 10px 2vh;
+            border-radius: 15px;
+            background: rgba(255, 225, 69, 0.51);
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+
+        }
+
+        .boxmain {
+            border-radius: 5px;
+            background: var(--White, #FFF);
+            /* Base shadow */
+            box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+            margin-top: 5vh;
+        }
+
+        .p-mr {
+            margin-top: 1vh;
+        }
+
+        .p-mrd {
+            margin-bottom: 2vh;
+        }
+
+        .stars {
+            color: #ffd700;
+            /* Màu của sao */
+            font-size: 24px;
+            /* Kích thước của sao */
+            margin-top: 2vh;
+        }
+
+        .stars xs {
+            color: black;
+            margin-left: 3vh;
+            font-size: 18px;
+        }
+
+        /* Tùy chỉnh kiểu dáng */
+        .custom-box {
+            padding: 20px;
+            margin-bottom: 4vh;
+        }
+
+        .custom-box h2 {
+            color: #D2B000;
+            /* Title/2 */
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 32px;
+            /* 133.333% */
+            margin-bottom: 2vh;
+        }
+
+        h2 {
+            margin-top: 0;
+            /* Loại bỏ khoảng trống mặc định trên cùng của tiêu đề */
+        }
+
+
+
+
+
+        .line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.50);
+        }
+
+        .comm,
+        .ques {
+            height: 50px;
+            width: 130px;
+            bottom: 26.5px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .cq-active {
+            background: #FFE145;
+            color: var(--gray-dark, #3F4255);
+            font-weight: bold;
+        }
+        .buttons {
+            background-color: #fff;
+            border-radius: 4px;
+        }
+
+        .img {
+            width: 80px;
+            height: 80px;
+            border-radius: 150px;
+        }
+
+        .comment-input {
+            width: calc(100% - 20px);
+            min-height: 20vh;
+            border: 1px solid #000;
+            padding: 10px;
+            resize: none;
+            margin-top: 2vh;
+            border-radius: 10px;
+        }
+
+        .div {
+            font-family: "Poppins-SemiBold", Helvetica;
+            font-weight: 600;
+            color: #3f4255;
+            font-size: 20px;
+            line-height: 32px;
+            white-space: nowrap;
+        }
+
+        .button {
+            display: flex;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background-color: #ffe145;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            padding: 2vh;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .primary {
+            font-family: "MartelSans-Bold", Helvetica;
+            font-weight: 700;
+            color: #000;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            line-height: 20px;
+            white-space: nowrap;
+        }
+
+        .cls {
+            color: #3F4255;
+        }
+
+        .binhl {
+            border-radius: 4px;
+            background: var(--White, #FFF);
+            box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+            padding: 4vh;
+            margin-top: 2vh;
+            margin-bottom: 5vh;
+        }
+
+        .star-wow {
+            margin: 0;
+        }
+
+        .titless {
+            color: var(--gray-dark, #3F4255);
+            font-size: 16px;
+            font-style: normal;
+            line-height: 32px;
+            /* 200% */
+            margin-top: 1vh;
+        }
+        .sua-xoabl{
+            padding-left: 10vh;
+        }
+    </style>
+>>>>>>> 0dccca3271eb9682b8553299496b783f6ef67265
 </head>
 
 <body>
+    <?php
+        if (isset($_POST['GuiBinhLuan']) && ($_POST['GuiBinhLuan'])){
+            $noi_dung_binh_luan = $_POST['NoiDungBinhLuan'];
+            createBinhLuanCongThuc($noi_dung_binh_luan, $_GET['ct_id'], $_SESSION['user']);
+            
+        } 
+        if (isset($_GET['ma_bl_xoa']) && ($_GET['ma_bl_xoa'])){
+            deleteBinhLuanCongThuc($_GET['ma_bl_xoa']);
+        } 
+    ?>
+    <?php 
+    
+        $list_ct = getCongThucByMaCongThuc($_GET['ct_id']);
+        foreach ($list_ct as $ct) {
+            extract($ct);
+            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+            if (is_file($hinhpath)) {
+                $img = "<img src='" . $hinhpath . "'  alt='Hình ảnh' width='100%' height='100%' class='image'>";
+            } else {
+                $img = "no photo";
+            }
+            echo '
+            
+            
+            
+            
+            
     <!-- tong quan cong thuc -->
     <div class="container boxmain">
         <div class="row">
             <div class="col-md-5">
                 <!-- Hình ảnh -->
-                <img src="pages/imgweb/banhxeo.jpg" alt="Hình ảnh" class="image">
+                '.$img.'
             </div>
             <div class="col-md-7">
                 <!-- Tiêu đề -->
-                <h2 style="width: 95%;">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối tuần</h2>
+                <h2 style="width: 95%; ">'.$ten_cong_thuc.'</h2> 
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -25,23 +253,24 @@
                     <i class="fas fa-star"></i>
                     <xs> (5.0 / 999) </xs>
                 </div>
+                </br>
 
 
-                <ul class='row'>
+                <ul class="row">
                     <l class="col-md-1 "></l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fa-solid fa-fire-burner fa-xl"></i> </p>15 Phút <p class="p-mr">Thời
+                        <p class="p-mrd"><i class="fa-solid fa-fire-burner fa-xl"></i> </p>'.$thoi_gian_nau.'<p class="p-mr">Thời
                             gian
                             nấu</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-star fa-xl"></i> </p>Dễ <p class="p-mr">Độ khó</p>
+                        <p class="p-mrd"><i class="fas fa-star fa-xl"></i> </p>Dễ <p class="p-mr">Độ khó</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-clock fa-xl"></i> </p>15 Phút <p class="p-mr">Sơ chế</p>
+                        <p class="p-mrd"><i class="fas fa-clock fa-xl"></i> </p>'.$thoi_gian_so_che.'<p class="p-mr">Sơ chế</p>
                     </l>
                     <l class="col-md-2 box-container">
-                        <p class="p-mrd"><i class="fas fa-user fa-xl"></i> </p>4 Người <p class="p-mr">Khẩu phần</p>
+                        <p class="p-mrd"><i class="fas fa-user fa-xl"></i> </p>'.$so_nguoi_an.' người<p class="p-mr">Khẩu phần</p>
                     </l>
                     <l class="col-md-1"></l>
                 </ul>
@@ -58,17 +287,13 @@
             <div class="col-md-6 ">
                 <div class="custom-box boxmain">
                     <h2>Nguyên liệu</h2>
-                    <p>Nội dung của Box 1. Dòng 1.</p>
-                    <p>Nội dung của Box 1. Dòng 2.</p>
-                    <p>Nội dung của Box 1. Dòng 3.</p>
+                    <p>'.$nguyen_lieu.'</p>
                 </div>
             </div>
             <div class="col-md-6 ">
                 <div class="custom-box boxmain">
                     <h2>Hướng dấn nấu ăn</h2>
-                    <p>Nội dung của Box 2. Dòng 1.</p>
-                    <p>Nội dung của Box 2. Dòng 2.</p>
-                    <p>Nội dung của Box 2. Dòng 3.</p>
+                    <p>'.$noi_dung.'</p>
                 </div>
             </div>
         </div>
@@ -86,157 +311,138 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>';
 
 
-
-
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <form class="buttons " method="post">
+    if(isset($_SESSION['user'])){
+        $nguoidung = getKhachHangById($_SESSION['user']);
+        foreach ($nguoidung as $chitietnguoidung) {
+            extract($chitietnguoidung);
+            $hinhpath = "admin/khachhang/img/" . $hinh_anh;
+            if (is_file($hinhpath)) {
+                $img = "<img class='img' src='" . $hinhpath . "' >";
+            } else {
+                $img = "no photo";
+            }
+            echo'
+                <div class="container binhl">
                     <div class="row">
-                        <div class="div col-12">Đạt Bờ Rồ</div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (0.0 / 5.0) </xs>
+                        <div class="col-1">
+                            '.$img.'
                         </div>
+                        <div class="col-11">
+                            <form class="buttons " method="post" action"index.php?tkh=chitietcongthuc">
+                                <div class="row">
+                                    <div class="div col-12">'.$ten_kh.'</div>
+                                    <div class="stars col-12 star-wow">
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <xs> (0.0 / 5.0) </xs>
+                                    </div>
 
-                        <div class="col-12">
-                            <textarea class="comment-input" placeholder="Nhập nội dung đánh giá"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-10"></div>
-                        <div class="col-2">
-                            <button type="submit" class="button">
-                                <div class="primary">GỬI ĐÁNH GIÁ</div>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- END bình luận -->
-
-
-
-    <!-- danh sach binh luan -->
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <div class="buttons " method="post">
-                    <div class="row">
-                        <div class="div col-10">Đạt Bờ Rồ</div>
-                        <div class="col-2 sua-xoabl">
-                            <suax>SỬA</suax> |
-                            <suax>XÓA</suax>
-                        </div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (4.0 / 5.0) </xs>
-                        </div>
-                        <div class="col-12">15/11/2023 - 7:26pm</div>
-                        <div class="col-12">
-                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
-                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
-                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
-                                vừa ngon vừa khó làm nha mấy ní</p>
+                                    <div class="col-12">
+                                        <textarea class="comment-input" name="NoiDungBinhLuan" placeholder="Nhập nội dung đánh giá"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10"></div>
+                                    <div class="col-2">
+                                        <input type="submit" class="button" name="GuiBinhLuan" value="Gửi đánh giá" style="padding-top:10px">                                   
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <!-- END bình luận -->
+            ';
+        }
+    }else{
+        echo '
+            <div class="container binhl">
+            <div class="row">
+                
+                <div class="col-11">
+                    <form class="buttons " method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <textarea class="comment-input" placeholder="Đăng nhập để bình luận" style="width: 109%;" disabled></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10"></div>
+                            
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-    </div>
-
-
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <div class="buttons " method="post">
+        ';
+    }
+    $list_bl = getBinhLuanCongThucByMaCongThuc($ma_cong_thuc);
+    foreach (array_reverse($list_bl) as $bl) {
+        extract($bl);
+        $khachhang = getKhachHangById($ma_kh);
+        foreach ($khachhang as $kh) {
+            extract($kh);
+            $hinhpath = "admin/khachhang/img/" . $hinh_anh;
+            if (is_file($hinhpath)) {
+                $img = "<img class='img' src='" . $hinhpath . "' >";
+            } else {
+                $img = "no photo";
+            }
+            echo'
+                <!-- danh sach binh luan -->
+                <div class="container binhl">
                     <div class="row">
-                        <div class="div col-10">Đạt Bờ Rồ</div>
-                        <div class="col-2 sua-xoabl">
-                            <suax>SỬA</suax> |
-                            <suax>XÓA</suax>
+                        <div class="col-1">
+                            '.$img.'
                         </div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (4.0 / 5.0) </xs>
-                        </div>
-                        <div class="col-12">15/11/2023 - 7:26pm</div>
-                        <div class="col-12">
-                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
-                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
-                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
-                                vừa ngon vừa khó làm nha mấy ní</p>
+                        <div class="col-11">
+                            <div class="buttons " method="post">
+                                <div class="row">
+                                    <div class="div col-10">'.$ten_kh.'</div>
+                                    <div class="col-2 sua-xoabl">';
+                                    if(isset($_SESSION['user'])&&$_SESSION['user'] == $ma_kh){
+                                        $xoabl = "index.php?tkh=chitietcongthuc&ma_bl_xoa=".$ma_binh_luan."&ct_id=".$ma_cong_thuc;
+                                        echo'
+                                        <suax><a href="">SỬA</a></suax> |
+                                        <suax><a href="'.$xoabl.'">XÓA</a></suax>
+                                        ';  
+                                    }
+                                echo'
+                                    </div>
+                                    <div class="stars col-12 star-wow">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fa-regular fa-star cls"></i>
+                                        <xs> (4.0 / 5.0) </xs>
+                                    </div>
+                                    <div class="col-12">'.$ngay_binh_luan.'</div>
+                                    <div class="col-12">
+                                        <p class="titless">'.$noi_dung.'</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container binhl">
-        <div class="row">
-            <div class="col-1">
-                <img class="img " src="pages/imgweb/banhxeo.jpg" />
-            </div>
-            <div class="col-11">
-                <div class="buttons " method="post">
-                    <div class="row">
-                        <div class="div col-10">Đạt Bờ Rồ</div>
-                        <div class="col-2 sua-xoabl">
-                            <suax>SỬA</suax> |
-                            <suax>XÓA</suax>
-                        </div>
-                        <div class="stars col-12 star-wow">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fa-regular fa-star cls"></i>
-                            <xs> (4.0 / 5.0) </xs>
-                        </div>
-                        <div class="col-12">15/11/2023 - 7:26pm</div>
-                        <div class="col-12">
-                            <p class="titless">Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha
-                                mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní
-                                Món này vừa ngon vừa khó làm nha mấy ní Món này vừa ngon vừa khó làm nha mấy ní Món này
-                                vừa ngon vừa khó làm nha mấy ní</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                <!-- END danh sach binh luan -->
     
-    <!-- END danh sach binh luan -->
+                ';
+        }
+    }
+    
+            
 
+
+
+
+    echo'
         <br><br>
 
 
@@ -265,7 +471,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -296,7 +502,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -327,7 +533,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -358,7 +564,7 @@
                                 <a href="index.php?tkh=chitietcongthuc" class="cmp-recipe-listing-link">Lẩu bắp bò nhúng hành răm - Món ngon bổ dưỡng cuối
                                     tuần</a>
                             </h3>
-                            <ul class='cmp-recipe-listing-attributes'>
+                            <ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute ">
                                     <p><i class="fa-solid fa-fire-burner"></i> 15 Phút</p>
                                 </li>
@@ -384,5 +590,7 @@
         </div>
     </div>
     <!--END Công thức nấu ăn tương tự  -->
-
+    ';
+}
+?>
 </body>
