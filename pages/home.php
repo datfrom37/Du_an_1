@@ -262,7 +262,9 @@
 
     <!-- Món chay -->
     <?php
-    $loai1 = getLoaiByMaLoai(6);
+
+        $loai1= getLoaiByMaLoai(6); //ma loai can hien thi
+
     ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
@@ -389,7 +391,7 @@
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
                 <div class="row">
                     <div class="main_header col-10">
-                        <h2>Hôm nay nấu gì</h2>
+                        <h2>Công thức có phí</h2>
                     </div>
                     <div class="col-2 xemthem-more"><a href="index.php?tkh=dscongthuc">Xem thêm <i
                                 class="fa-solid fa-circle-arrow-right fa-xl"></i></a> </div>
