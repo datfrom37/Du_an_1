@@ -54,6 +54,11 @@
                                 extract($blct);
                                 if($ma_cong_thuc == $ma_ct) deleteBinhLuanCongThuc($ma_binh_luan);
                             }
+                            foreach ($listdh as $dh) {
+                                extract($dh);
+                                if($ma_cong_thuc == $ma_ct) deleteDonHang($ma_don_hang);
+                            }
+
                             deleteCongThuc($ma_ct);
                         }
                         echo "<div style='color:#00FF00'>Xoá thành công</div>";

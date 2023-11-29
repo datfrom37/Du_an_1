@@ -2,6 +2,7 @@
 <?php include "dao/loaiDAO.php"; ?>
 <?php include "dao/congthucDAO.php"; ?>
 <?php include "dao/binhluancongthucDAO.php"; ?>
+<?php include "dao/donhangDAO.php"; ?>
 
 <div id="page-wrapper" class="full-height bg-white">
     <div class="container-fluid">
@@ -35,9 +36,16 @@
                                 extract($ct);
                                 $ma_ct = $ma_cong_thuc;
                                 $listblct = getAllBinhLuanCongThuc();
+
                                 foreach ($listblct as $blct) {
                                     extract($blct);
+                                    $listdh = getAllDonHang();
                                     if($ma_cong_thuc == $ma_ct) deleteBinhLuanCongThuc($ma_binh_luan);
+                                }
+
+                                foreach ($listdh as $dh) {
+                                    extract($dh);
+                                    if($ma_cong_thuc == $ma_ct) deleteDonHang($ma_don_hang);
                                 }
 
                                 deleteCongThuc($ma_ct);

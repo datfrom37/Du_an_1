@@ -142,10 +142,8 @@
 
 
 
-    <!-- Hôm nay ăn gì -->
-    <?php
-    $loai1 = getLoaiByMaLoai(6);
-    ?>
+    <!-- Hôm nay ăn gì 1 -->
+    
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
@@ -162,9 +160,9 @@
                     $listct = getCongThucByLoai(6);
                     $i = 0;
                     foreach ($listct as $ct) {
+                       
                         extract($ct);
-                        if ($i < 4) {
-                            if($duyet==1){
+                        if ($i < 4) {   
                             echo '<li class="cmp-recipe-listing-item hide">
                                 <div class="cmp-card-wrapper">
                                     <div class="cmp-recipe-image-wrapper">
@@ -182,7 +180,7 @@
                                     </div>
                                 </div>
                                 <h3 class="cmp-recipe-listing-title">';
-                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id='.$ma_cong_thuc.'" class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
                                 </h3>';
 
 
@@ -200,11 +198,9 @@
                                 <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
                                         </li>
                                     </ul>
-                                   
                                 </div>
                                 </li>';
                             $i++;
-                        }
                         }
                     }
                     ?>
