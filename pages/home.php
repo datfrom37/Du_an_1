@@ -410,18 +410,21 @@
                     $i = 0;
                     
                     foreach ($listct as $ct) {
-                        $mo_khoa = false;
+                        $mo_khoa = "false";
                         extract($ct);
                         $cong_thuc_tam = $ma_cong_thuc;
                         $gia_tam = $gia;
                         $listdh = getAllDonHang();
                         foreach ($listdh as $donhang2) {
                             extract($donhang2);
-                            if($ma_kh == $_SESSION['user'] && $ma_cong_thuc == $cong_thuc_tam) $mo_khoa = true;
+                            if(!isset($_SESSION['user'])){
+                                $mo_khoa = "no_login";
+                            }elseif($ma_kh == $_SESSION['user'] && $ma_cong_thuc == $cong_thuc_tam) $mo_khoa = "true";
+        
                         }
                         // echo $ma_cong_thuc;
                         if ($i < 4) {
-                            if($mo_khoa == true){
+                            if($mo_khoa == "true"){
                             echo '<li class="cmp-recipe-listing-item hide">
                                 <div class="cmp-card-wrapper">
                                     <div class="cmp-recipe-image-wrapper">
@@ -461,7 +464,7 @@
                                 </li>';
                             $i++;
                         
-                        }else{
+                        }elseif($mo_khoa == "false"){
                         
                                 echo '<li class="cmp-recipe-listing-item hide">
                                     <div class="cmp-card-wrapper">
@@ -575,6 +578,9 @@
                                    <!--END popup thanh toan -->';
                                    $popup++;
                                    $i++;
+                                }else{
+                                    //popup dang nhap
+                                    echo '123';
                                 }
                         }
                     }
