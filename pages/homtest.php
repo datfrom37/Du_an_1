@@ -419,7 +419,6 @@
                             extract($donhang2);
                             if($ma_kh == $_SESSION['user'] && $ma_cong_thuc == $cong_thuc_tam) $mo_khoa = true;
                         }
-                        // echo $ma_cong_thuc;
                         if ($i < 4) {
                             if($mo_khoa == true){
                             echo '<li class="cmp-recipe-listing-item hide">
@@ -431,7 +430,7 @@
                             $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
                             if (is_file($hinhpath)) {
-                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $cong_thuc_tam'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
+                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
                             } else {
                                 echo "no photo";
                             }
