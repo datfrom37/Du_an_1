@@ -36,10 +36,11 @@
                                 extract($ct);
                                 $ma_ct = $ma_cong_thuc;
                                 $listblct = getAllBinhLuanCongThuc();
+                                $listdh = getAllDonHang();
 
                                 foreach ($listblct as $blct) {
                                     extract($blct);
-                                    $listdh = getAllDonHang();
+                                    
                                     if($ma_cong_thuc == $ma_ct) deleteBinhLuanCongThuc($ma_binh_luan);
                                 }
 

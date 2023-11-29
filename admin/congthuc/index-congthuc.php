@@ -1,6 +1,7 @@
 <?php include "includes/connect.php"; ?>
 <?php include "dao/loaiDAO.php"; ?>
 <?php include "dao/congthucDAO.php"; ?>
+<?php include "dao/donhangDAO.php"; ?>
 <?php include "dao/binhluancongthucDAO.php"; ?>
 
 
@@ -54,6 +55,8 @@
                                 extract($blct);
                                 if($ma_cong_thuc == $ma_ct) deleteBinhLuanCongThuc($ma_binh_luan);
                             }
+
+                            $listdh = getAllDonHang();
                             foreach ($listdh as $dh) {
                                 extract($dh);
                                 if($ma_cong_thuc == $ma_ct) deleteDonHang($ma_don_hang);
