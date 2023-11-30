@@ -1,9 +1,10 @@
 <?php
-    if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])){
-        createDonHang($_POST['mact1'],$_POST['giact1'],$_POST['makh1']);
-        echo '<script>window.location.href = "index.php?tkh=chitietcongthuc&ct_id='.$_POST['mact1'].'";</script>';
-    } 
+if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
+    createDonHang($_POST['mact1'], $_POST['giact1'], $_POST['makh1']);
+    echo '<script>window.location.href = "index.php?tkh=chitietcongthuc&ct_id=' . $_POST['mact1'] . '";</script>';
+}
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,7 +144,7 @@
 
 
     <!-- Hôm nay ăn gì 1 -->
-    
+
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
@@ -157,51 +158,46 @@
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
                     <?php
-                    $listct = getCongThucByLoai(6);
-                    $i = 0;
+                    $listct = hienThiBonCongThuctheoloai(6);
                     foreach ($listct as $ct) {
-                       
                         extract($ct);
-                        if ($i < 4) {   
-                            echo '<li class="cmp-recipe-listing-item hide">
+                        echo '<li class="cmp-recipe-listing-item hide">
                                 <div class="cmp-card-wrapper">
                                     <div class="cmp-recipe-image-wrapper">
                                         <div class="cmp-recipe-listing-image-container">
                                         <picture>';
 
-                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+                        $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
-                            if (is_file($hinhpath)) {
-                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
-                            } else {
-                                echo "no photo";
-                            }
-                            echo '</picture>
+                        if (is_file($hinhpath)) {
+                            echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
+                        } else {
+                            echo "no photo";
+                        }
+                        echo '</picture>
                                     </div>
                                 </div>
                                 <h3 class="cmp-recipe-listing-title">';
-                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                        echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
                                 </h3>';
 
 
-                            echo '<ul class="cmp-recipe-listing-attributes">
+                        echo '<ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
-                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                        echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
                                 </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                        echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
                                 <p><i class="fas fa-star"></i> Dễ</p>
                                 </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                        echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
                                 <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
                                         </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                        echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
                                 <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
                                         </li>
                                     </ul>
                                 </div>
                                 </li>';
-                            $i++;
-                        }
                     }
                     ?>
                 </ul>
@@ -212,7 +208,7 @@
 
 
 
-   
+
 
 
 
@@ -263,11 +259,6 @@
 
 
     <!-- Món chay -->
-    <?php
-
-        $loai1= getLoaiByMaLoai(6); //ma loai can hien thi
-
-    ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
@@ -281,50 +272,46 @@
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
                     <?php
-                    $listct = getCongThucByLoai(6);
-                    $i = 0;
+                    $listct = hienThiBonCongThuctheoloai(6);
                     foreach ($listct as $ct) {
                         extract($ct);
-                        if ($i < 4) {
-                            echo '<li class="cmp-recipe-listing-item hide">
+                        echo '<li class="cmp-recipe-listing-item hide">
                                 <div class="cmp-card-wrapper">
                                     <div class="cmp-recipe-image-wrapper">
                                         <div class="cmp-recipe-listing-image-container">
                                         <picture>';
 
-                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+                        $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
-                            if (is_file($hinhpath)) {
-                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
-                            } else {
-                                echo "no photo";
-                            }
-                            echo '</picture>
+                        if (is_file($hinhpath)) {
+                            echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
+                        } else {
+                            echo "no photo";
+                        }
+                        echo '</picture>
                                     </div>
                                 </div>
                                 <h3 class="cmp-recipe-listing-title">';
-                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                        echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
                                 </h3>';
 
 
-                            echo '<ul class="cmp-recipe-listing-attributes">
+                        echo '<ul class="cmp-recipe-listing-attributes">
                                 <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
-                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                        echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
                                 </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                        echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
                                 <p><i class="fas fa-star"></i> Dễ</p>
                                 </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                        echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
                                 <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
                                         </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                        echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
                                 <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
                                         </li>
                                     </ul>
                                 </div>
                                 </li>';
-                            $i++;
-                        }
                     }
                     ?>
                 </ul>
@@ -385,9 +372,6 @@
 
 
     <!-- Công thức đặc biệt trả phí -->
-    <?php
-    $loai1 = getLoaiByMaLoai(6);
-    ?>
     <div class="recipelisting">
         <div class="cmp-recipe-listing-wrapper">
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
@@ -401,10 +385,9 @@
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
                     <?php
-                    $popup= 1;
-                    $listct = getCongThucByLoai(6);
-                    $i = 0;
-                    
+                    $popup = 1;
+                    $listct = hienThiBonCongThuctheoloai(6);
+
                     foreach ($listct as $ct) {
                         $mo_khoa = "false";
                         extract($ct);
@@ -413,65 +396,24 @@
                         $listdh = getAllDonHang();
                         foreach ($listdh as $donhang2) {
                             extract($donhang2);
-                            if(!isset($_SESSION['user'])){
+                            if (!isset($_SESSION['user'])) {
                                 $mo_khoa = "no_login";
-                            }elseif($ma_kh == $_SESSION['user'] && $ma_cong_thuc == $cong_thuc_tam) $mo_khoa = "true";
-        
+                            } elseif ($ma_kh == $_SESSION['user'] && $ma_cong_thuc == $cong_thuc_tam)
+                                $mo_khoa = "true";
+
                         }
-                        // echo $ma_cong_thuc;
-                        if ($i < 4) {
-                            if($mo_khoa == "true"){
-                            echo '<li class="cmp-recipe-listing-item hide">
+                        switch ($mo_khoa) {
+                            case 'true':
+                                echo '<li class="cmp-recipe-listing-item hide">
                                 <div class="cmp-card-wrapper">
                                     <div class="cmp-recipe-image-wrapper">
                                         <div class="cmp-recipe-listing-image-container">
                                         <picture>';
 
-                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
-
-                            if (is_file($hinhpath)) {
-                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $cong_thuc_tam'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
-                            } else {
-                                echo "no photo";
-                            }
-                            echo '</picture>
-                                    </div>
-                                </div>
-                                <h3 class="cmp-recipe-listing-title">';
-                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
-                                </h3>';
-
-
-                            echo '<ul class="cmp-recipe-listing-attributes">
-                                <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
-                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
-                                </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
-                                <p><i class="fas fa-star"></i> Dễ</p>
-                                </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
-                                <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
-                                        </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
-                                <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                </li>';
-                            $i++;
-                        
-                        }elseif($mo_khoa == "false"){
-                        
-                                echo '<li class="cmp-recipe-listing-item hide">
-                                    <div class="cmp-card-wrapper">
-                                        <div class="cmp-recipe-image-wrapper">
-                                            <div class="cmp-recipe-listing-image-container">
-                                            <picture >';
-    
                                 $hinhpath = "admin/congthuc/img/" . $hinh_anh;
-    
+
                                 if (is_file($hinhpath)) {
-                                    echo "<div id='openthanhtoanButton". $popup ."' onclick='openthanhtoanPopup()'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></div>";
+                                    echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $cong_thuc_tam'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
                                 } else {
                                     echo "no photo";
                                 }
@@ -481,8 +423,8 @@
                                     <h3 class="cmp-recipe-listing-title">';
                                 echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
                                     </h3>';
-    
-    
+
+
                                 echo '<ul class="cmp-recipe-listing-attributes">
                                     <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
                                 echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
@@ -499,15 +441,51 @@
                                         </ul>
                                     </div>
                                     </li>';
-    
-    
-    
-    
-    
-    
-    echo '
-                                <!-- popup thanh toan -->
-                                <div class="containerThanhtoanpro" id="popupthanhtoan'.$popup.'" >
+                                break;
+                            
+
+                            //chua mo khoa con thuc
+                            case 'false':
+                                echo '<li class="cmp-recipe-listing-item hide">
+                                    <div class="cmp-card-wrapper">
+                                        <div class="cmp-recipe-image-wrapper">
+                                            <div class="cmp-recipe-listing-image-container">
+                                            <picture >';
+
+                                $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+
+                                if (is_file($hinhpath)) {
+                                    echo "<div id='openthanhtoanButton" . $popup . "' onclick='openthanhtoanPopup()'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></div>";
+                                } else {
+                                    echo "no photo";
+                                }
+                                echo '</picture>
+                                        </div>
+                                    </div>
+                                    <h3 class="cmp-recipe-listing-title">';
+                                echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                                    </h3>';
+
+
+                                echo '<ul class="cmp-recipe-listing-attributes">
+                                    <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
+                                echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                                    </li>';
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                    <p><i class="fas fa-star"></i> Dễ</p>
+                                    </li>';
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                                    <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                            </li>';
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                    <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </li>';
+                                //<!-- popup thanh toan -->
+                                echo '
+                                <div class="containerThanhtoanpro" id="popupthanhtoan' . $popup . '" >
                                 <div class="container popupthanhtoan">
                                        <div class=" boxmain">
                                            <div class="row">
@@ -521,34 +499,34 @@
                                                        <div class="check-white">
                                                            <div class="col-12">
                                                                <div class="row">
-                                                                   <div class="col-12 tieude-medium"> '.$ten_cong_thuc.'  </div>
+                                                                   <div class="col-12 tieude-medium"> ' . $ten_cong_thuc . '  </div>
                                                                    <div class="col-4 tieude-small">Sở hữu ngay chỉ với:  </div>
-                                                                   <div class="col-8 big-cash">'. number_format($gia_tam, 0, ',', '.') .' ₫</div>
+                                                                   <div class="col-8 big-cash">' . number_format($gia_tam, 0, ',', '.') . ' ₫</div>
                                                                </div>
                                                            </div>
                                                            <div class="col-12 tieude-small-2">Phương thức thanh toán:</div>
                                                            <div class="col-12">
                                                                <form action="index.php" method="post">
                                                                    <div class="mb-3 form-check">
-                                                                       <input class="form-check-input" type="radio" name="option" id="option1"
+                                                                       <input class="form-check-input" type="radio" name="option" id="option'.$popup.'1"
                                                                            value="option1">
-                                                                       <label class="form-check-label" for="option1">
+                                                                       <label class="form-check-label" for="option'.$popup.'1">
                                                                        <img src="../images/bank.png" alt="" height="25px" style="margin-right: 48px;"> Chuyển khoản qua tài khoản ngân hàng 
                                                                        </label>
                                                                    </div>
                                
                                                                    <div class="mb-3 form-check">
-                                                                       <input class="form-check-input" type="radio" name="option" id="option2"
+                                                                       <input class="form-check-input" type="radio" name="option" id="option'.$popup.'2"
                                                                            value="option2">
-                                                                       <label class="form-check-label" for="option2">
+                                                                       <label class="form-check-label" for="option'.$popup.'2">
                                                                        <img src="../images/momo.png" alt="" height="20px" style="margin-right: 19px;"> Chuyển khoản qua tài khoản Momo
                                                                        </label>
                                                                    </div>
                                
                                                                    <div class="mb-3 form-check">
-                                                                       <input class="form-check-input" type="radio" name="option" id="option3"
+                                                                       <input class="form-check-input" type="radio" name="option" id="option'.$popup.'3"
                                                                            value="option3">
-                                                                       <label class="form-check-label" for="option3">
+                                                                       <label class="form-check-label" for="option'.$popup.'3">
                                                                        <img src="../images/zalo.png" alt="" height="15px" style="margin-right: 20px;"> Chuyển khoản qua tài khoản ZaloPay
                                                                        </label>
                                                                    </div>
@@ -556,9 +534,9 @@
                                                                    <div class="row">
                                                                        <div class="col-8"></div>
                                                                        <div class="col-4">
-                                                                       <input type="hidden" name="mact1" value="'.$cong_thuc_tam.'">
-                                                                       <input type="hidden" name="giact1" value="'.$gia_tam.'">
-                                                                       <input type="hidden" name="makh1" value="'.$_SESSION['user'].'">
+                                                                       <input type="hidden" name="mact1" value="' . $cong_thuc_tam . '">
+                                                                       <input type="hidden" name="giact1" value="' . $gia_tam . '">
+                                                                       <input type="hidden" name="makh1" value="' . $_SESSION['user'] . '">
                                                                        <input type="submit" name="thanhtoan" class="btn btn-primary button" value="Thanh toán">
                                                                        </div>
                                                                    </div>
@@ -572,15 +550,115 @@
                                    </div>
                                    </div>
                                    <!--END popup thanh toan -->';
-                                   $popup++;
-                                   $i++;
-                                }else{
-                                    //popup dang nhap
-                                    echo '123';
+                                $popup++;
+                                break;
+
+
+                            //chua dang nhap
+                            default:
+                                echo '<li class="cmp-recipe-listing-item hide">
+                                <div class="cmp-card-wrapper">
+                                    <div class="cmp-recipe-image-wrapper">
+                                        <div class="cmp-recipe-listing-image-container">
+                                        <picture >';
+
+                                $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+
+                                if (is_file($hinhpath)) {
+                                    echo "<div id='openPopupButton" . $popup . "' '><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></div>";
+                                } else {
+                                    echo "no photo";
                                 }
+                                echo '</picture>
+                                        </div>
+                                    </div>
+                                    <h3 class="cmp-recipe-listing-title">';
+                                echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                                    </h3>';
+
+
+                                echo '<ul class="cmp-recipe-listing-attributes">
+                                    <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
+                                echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                                    </li>';
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                    <p><i class="fas fa-star"></i> Dễ</p>
+                                    </li>';
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                                    <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                            </li>';
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                    <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </li>';
+
+
+
+
+
+
+                                echo '
+                                        <div class="containerloginpro" id="containerlogin'.$popup.'" style="display: none;">
+                                        <div class="containerlogin" id="ctlogin'.$popup.'">
+                                            <div class="form-containerlogin sign-up-containerlogin">';
+                                echo '                <form action="index.php" method="post">';
+                                echo '                    <h1>Đăng ký</h1>
+                                                    <div class="form-input-login">
+                                                        <input type="text" name="user" placeholder="Họ tên" />
+                                                        <input type="text" name="number" placeholder="Số điện thoại" />
+                                                        <input type="email" name="email" placeholder="Email" />
+                                                        <input type="password" name="pass" placeholder="Mật khẩu - tối thiểu 6 ký tự!" />
+                                                        <input type="password" name="checkpass" placeholder="Nhập lại mật khẩu" />
+                                                    </div>';
+                                
+                                                    
+                                                    if (isset($thongbao)) {
+                                                        echo '<p style="color: red; ">' . $thongbao . '</p>';
+                                                    }
+                                                    
+                                echo '                <input class="button1" type="submit" name="dangky" value="Đăng ký" >
+                                                </form>
+                                            </div>
+                                            <div class="form-containerlogin sign-in-containerlogin">
+                                                <form action="index.php" method="post">
+                                                    <h1>Đăng nhập</h1>
+                                                    <div class="form-input">
+                                                        <input type="text" name="email" placeholder="Email" />
+                                                        <input type="password" name="pass" placeholder="Mật khẩu" />
+                                                    </div>';
+                                                    if (isset($thongbao1)) {
+                                                        echo '<p style="color: red; ">' . $thongbao1 . '</p>';
+                                                    }
+                                echo '                    <a href="#">Quên mật khẩu?</a>
+                                                    <input class="button1" type="submit" name="dangnhap" value="Đăng nhập">
+
+                                                </form>
+                                            </div>
+                                            <div class="overlay-containerlogin">
+                                                <div class="overlay">
+                                                    <div class="overlay-panel overlay-left">
+                                                        <h1>Chào mừng trở lại!</h1>
+                                                        <!-- <p>To keep connected with us please login with your personal info</p> -->
+                                                        <p>Để duy trì kết nối với chúng tôi, vui lòng đăng nhập bằng thông tin cá nhân của bạn</p>
+                                                        <button class="ghost" id="signIn">Đăng nhập</button>
+                                                    </div>
+                                                    <div class="overlay-panel overlay-right">
+                                                        <h1>Chào bạn!</h1>
+                                                        <!-- <p>Enter your personal details and start journey with us</p> -->
+                                                        <p>Nhập thông tin cá nhân của bạn và bắt đầu hành trình với chúng tôi</p>
+                                                        <button class="ghost" id="signUp">Đăng Ký</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>';
+                                    $popup++;
+                                break;
                         }
                     }
-                
+
                     ?>
                 </ul>
             </div>

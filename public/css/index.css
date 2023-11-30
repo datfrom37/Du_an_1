@@ -13892,3 +13892,7 @@ body.boxed-wrapper {
   border-radius: 20px;
   margin-right: 5px;
 }
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Màu chữ mờ */
+}

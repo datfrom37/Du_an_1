@@ -134,3 +134,4 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/public/js/danhsach.js"></script>
 <script src="/public/js/home.js"></script>
+<script src="/public/js/dangnhap.js"></script>

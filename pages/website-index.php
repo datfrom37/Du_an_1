@@ -23,6 +23,10 @@ if (isset($_GET['tkh'])) {
         case "dscongthuc":
             include "dscongthuc.php";
             break;
+        case "dangxuat":
+            unset($_SESSION['user']);
+            echo '<meta http-equiv="refresh" content="0; url=index.php">';
+            break;
 
         default:
             include "home.php";

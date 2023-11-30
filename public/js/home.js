@@ -1,52 +1,54 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const openthanhtoanButton1 = document.getElementById('openthanhtoanButton1');
-    const openthanhtoanButton2 = document.getElementById('openthanhtoanButton2');
-    const openthanhtoanButton3 = document.getElementById('openthanhtoanButton3');
-    const openthanhtoanButton4 = document.getElementById('openthanhtoanButton4');
-    const popupContainer1 = document.getElementById('popupthanhtoan1');
-    const popupContainer2 = document.getElementById('popupthanhtoan2');
-    const popupContainer3 = document.getElementById('popupthanhtoan3');
-    const popupContainer4 = document.getElementById('popupthanhtoan4');
+    // Lặp qua các button và container để thêm sự kiện cho chúng
+    for (let i = 1; i <= 4; i++) {
+        const openthanhtoanButton = document.getElementById(`openthanhtoanButton${i}`);
+        const popupContainer = document.getElementById(`popupthanhtoan${i}`);
 
-    openthanhtoanButton1.addEventListener('click', function (event) {
-        event.stopPropagation();
-        $('#popupthanhtoan1').fadeIn();
-    });
-    openthanhtoanButton2.addEventListener('click', function (event) {
-        event.stopPropagation();
-        $('#popupthanhtoan2').fadeIn();
-    });
-    openthanhtoanButton3.addEventListener('click', function (event) {
-        event.stopPropagation();
-        $('#popupthanhtoan3').fadeIn();
-    });
-    openthanhtoanButton4.addEventListener('click', function (event) {
-        event.stopPropagation();
-        $('#popupthanhtoan4').fadeIn();
-    });
+        // Thêm sự kiện click cho nút mở popup
+        openthanhtoanButton.addEventListener('click', function (event) {
+            event.stopPropagation();
+            $(`#popupthanhtoan${i}`).fadeIn();
+        });
 
-    window.addEventListener('click', function (event) {
-        if (event.target === popupContainer1) {
-            $('#popupthanhtoan1').fadeOut();
-       
-        }
-    });
-    window.addEventListener('click', function (event) {
-        if (event.target === popupContainer2) {
-            $('#popupthanhtoan2').fadeOut();
-        }
-    });
-    window.addEventListener('click', function (event) {
-        if (event.target === popupContainer3) {
-            $('#popupthanhtoan3').fadeOut();
-        }
-    });
-    window.addEventListener('click', function (event) {
-        if (event.target === popupContainer4) {
-            $('#popupthanhtoan4').fadeOut();
-        }
-    });
+        // Thêm sự kiện click cho việc đóng popup khi click bên ngoài
+        window.addEventListener('click', function (event) {
+            if (event.target === popupContainer) {
+                $(`#popupthanhtoan${i}`).fadeOut();
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    for (let i = 1; i <= 4; i++) {
+        const openPopupButton = document.getElementById(`openPopupButton${i}`);
+        const popupContainer = document.getElementById(`containerlogin${i}`);
+        const ctlogin = document.getElementById('ctlogin');
+
+        openPopupButton.addEventListener('click', function (event) {
+            event.stopPropagation();
+            $(`#containerlogin${i}`).fadeIn();
+            // popupContainer.style.display = 'block';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === popupContainer) {
+                // popupContainer.style.display = 'none';
+                $(`#containerlogin${i}`).fadeOut();
+
+            }
+        });
+
+        // const $signUpButton = document.getElementById("signUp");
+        // const $signInButton = document.getElementById("signIn");
+
+        // $signUpButton.addEventListener("click", () => {
+        //     ctlogin.classList.add("right-panel-active");
+        // });
+
+        // $signInButton.addEventListener("click", () => {
+        //     ctlogin.classList.remove("right-panel-active");
+        // });
+    }
     
-
-   
 });

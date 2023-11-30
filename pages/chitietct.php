@@ -189,7 +189,7 @@
             extract($kh);
             $hinhpath = "admin/khachhang/img/" . $hinh_anh;
             if (is_file($hinhpath)) {
-                $img = "<img class='img' src='" . $hinhpath . "' >";
+                $img = "<img class='img-list' src='" . $hinhpath . "' >";
             } else {
                 $img = "no photo";
             }
@@ -203,7 +203,7 @@
                         <div class="col-11">
                             <div class="buttons " method="post">
                                 <div class="row">
-                                    <div class="div col-10">'.$ten_kh.'</div>
+                                    <div class="div-list col-10">'.$ten_kh.'</div>
                                     <div class="col-2 sua-xoabl">';
                                     if(isset($_SESSION['user'])&&$_SESSION['user'] == $ma_kh){
                                         $xoabl = "index.php?tkh=chitietcongthuc&ma_bl_xoa=".$ma_binh_luan."&ct_id=".$ma_cong_thuc;
@@ -215,14 +215,14 @@
                                 echo'
                                     </div>
                                     <div class="stars col-12 star-wow">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fa-regular fa-star cls"></i>
-                                        <xs> (4.0 / 5.0) </xs>
+                                        <i class="fas fa-star fa-xs"></i>
+                                        <i class="fas fa-star fa-xs"></i>
+                                        <i class="fas fa-star fa-xs"></i>
+                                        <i class="fas fa-star fa-xs"></i>
+                                        <i class="fa-regular fa-star cls fa-xs"></i>
+                                        <xl> (4.0 / 5.0) </xl>
                                     </div>
-                                    <div class="col-12">'.$ngay_binh_luan.'</div>
+                                    <div class="col-12 date-list">'.$ngay_binh_luan.'</div>
                                     <div class="col-12">
                                         <p class="titless">'.$noi_dung.'</p>
                                     </div>

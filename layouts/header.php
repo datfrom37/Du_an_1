@@ -121,32 +121,38 @@
                                 </li>
                                 <li>
                                     <a href="#">LIÊN HỆ</a>
-
                                 </li>
                             </ul>
                         </div>
                         <div class="main-menu-two__right">
-                            <ul class="list-unstyled main-menu-two__login">
                                 <?php
-
                                 if (!isset($_SESSION['user'])) {
+                                    echo ' <ul class="list-unstyled main-menu-two__login">';
                                     echo '   <li class="active" id="openPopupButton" onclick="openLoginPopup()">
                                             <a>Đăng nhập</a>
                                                     </li> ';
+                                    echo ' </ul>';
                                 } else {
                                     $makh = $_SESSION['user'];
                                     $list_kh = getKhachHangById($makh);
                                     foreach ($list_kh as $kh) {
                                         extract($kh);
                                         $hinhpath = "./admin/khachhang/img/" . $hinh_anh;
-                                        echo '<img src="'. $hinhpath .'" alt="" class="imguser" >';
-                                        echo $ten_kh;
+
+                                        echo '<ul class="list-unstyled  main-menu__list">';
+                                        echo '<li class="dropdown">';
+                                        echo '<a href="#"><img src="'. $hinhpath .'" alt="" class="imguser" >'. $ten_kh.' </a>';
+                                        echo '<ul class="sub-menu">';
+                                        echo '<li><a href="products.html">Thông tin tài khoản</a></li>';
+                                        echo '<li><a href="index.php?tkh=dangxuat">Đăng xuất</a></li>';
+                                        echo '</ul>';
+                                        echo '</li>';
+                                        echo '</ul>';
+
                                     }
 
                                 }
                                 ?>
-                                
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -249,7 +255,7 @@
                         <input type="text" name="user" placeholder="Họ tên" />
                         <input type="text" name="number" placeholder="Số điện thoại" />
                         <input type="email" name="email" placeholder="Email" />
-                        <input type="password" name="pass" placeholder="Mật khẩu" />
+                        <input type="password" name="pass" placeholder="Mật khẩu - tối thiểu 6 ký tự!" />
                         <input type="password" name="checkpass" placeholder="Nhập lại mật khẩu" />
                     </div>
                     <?php
