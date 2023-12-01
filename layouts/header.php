@@ -143,7 +143,7 @@
                                         echo '<li class="dropdown">';
                                         echo '<a href="#"><img src="'. $hinhpath .'" alt="" class="imguser" >'. $ten_kh.' </a>';
                                         echo '<ul class="sub-menu">';
-                                        echo '<li><a href="products.html">Thông tin tài khoản</a></li>';
+                                        echo '<li><a href="index.php?tkh=thongtinchitiet">Thông tin tài khoản</a></li>';
                                         echo '<li><a href="index.php?tkh=dangxuat">Đăng xuất</a></li>';
                                         echo '</ul>';
                                         echo '</li>';
