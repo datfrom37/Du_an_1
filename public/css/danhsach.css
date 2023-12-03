@@ -13,4 +13,12 @@
     margin-top: 1vh;
 }
 
-
+.name-ct{
+    width: 70vh;
+}
+.anh-dact{
+    height: 200px; width: 300px; object-fit: cover;
+}
+.anh-dact img{
+    width: 100%;
+}
