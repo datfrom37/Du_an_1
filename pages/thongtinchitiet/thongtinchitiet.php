@@ -39,10 +39,10 @@
                     <!-- thongtin -->
                     <div class="col-8">
                         <div class="row">
-                            <div class="col-4 justify-content-end d-flex mg-top">Tên đăng nhập:</div>
-                            <div class="col-8 mg-top">tubanovel</div>
                             <div class="col-4 justify-content-end d-flex mg-top">Tên:</div>
                             <div class="col-8 mg-top">Trương Bá Sơn</div>
+                            <div class="col-4 justify-content-end d-flex mg-top">Email:</div>
+                            <div class="col-8 mg-top">tubanovel@gmail.com</div>
                             <div class="col-4 justify-content-end d-flex mg-top">Số điện thoại:</div>
                             <div class="col-8 mg-top">0343561287</div>
                             <div class="col-4 justify-content-end d-flex mg-top">Giới tính:</div>

@@ -46,13 +46,13 @@
                     <form action="#" method="post" enctype="multipart/form-data" class="row">
                         <div class="col-8">
                             <div class="mg-top row">
-                                <input type="hidden" class="ctiet-input col-8 " id="hoTen" value="tubanovel">
-                                <div class="col-4 justify-content-end d-flex mg-top">Tên đăng nhập:</div>
-                                <div class="col-8 mg-top">tubanovel</div>
+                                <label for="hoten" class=" col-4 justify-content-end d-flex">Tên:</label>
+                                <input type="hoten" class="col-8 ctiet-input" id="email" placeholder="Họ và tên"
+                                    required>
                             </div>
                             <div class="mg-top row">
-                                <label for="email" class=" col-4 justify-content-end d-flex">Tên:</label>
-                                <input type="email" class="col-8 ctiet-input" id="email" placeholder="Họ và tên"
+                                <label for="email" class=" col-4 justify-content-end d-flex">Email:</label>
+                                <input type="email" class="col-8 ctiet-input" id="email" placeholder="Email"
                                     required>
                             </div>
                             <div class="mg-top row">
