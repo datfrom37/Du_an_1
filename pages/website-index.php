@@ -33,6 +33,13 @@ if (isset($_GET['tkh'])) {
             else include "home.php";
             break;
 
+        
+        case "suatk":
+            if(isset($_SESSION['user'])) include "thongtinchitiet/suatk.php";
+            else include "home.php";
+            break;
+
+
         default:
             include "home.php";
             break;
