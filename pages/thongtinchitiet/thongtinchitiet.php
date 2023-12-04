@@ -1,6 +1,12 @@
 <?php
     $list_tk = getKhachHangById($_SESSION['user']);
     extract($list_kh);
+    $hinhpath = "./admin/khachhang/img/" . $hinh_anh;
+    if (is_file($hinhpath)) {
+        $img = $hinhpath;
+    } else {
+        $img = './admin/khachhang/img/avt.jpg';
+    }
 ?>
 
 <head>
@@ -14,7 +20,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="row ctiet-top">
-                            <div class="col-3"><img src="/pages/imgweb/b1.jpg" alt="" class="ctiet-imguser"></div>
+                            <div class="col-3"><img src="<?php echo $img ?>" alt="" class="ctiet-imguser"></div>
                             <div class="col-9">
                                 <p>Trương Bá Sơn </p>
                                 <i class="fa-solid fa-mars blue"></i> Nam
@@ -63,7 +69,7 @@
                     <div class="col-4 row">
                         <div class="col-12 mg-top">Hình ảnh cá nhân:</div>
                         <div class="col-12 d-flex justify-content-center">
-                            <img src="/pages/imgweb/b1.jpg" alt="" class="ctiet-imguserbig">
+                            <img src="<?php echo $img ?>" alt="" class="ctiet-imguserbig">
                         </div>
                     </div>
                     <!-- END avata -->

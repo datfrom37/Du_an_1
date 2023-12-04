@@ -1,6 +1,31 @@
 <?php
-    $list_tk = getKhachHangById($_SESSION['user']);
+    if (isset($_POST['update-infor']) && ($_POST['update-infor'] > 0)) {
+        $ten_kh = $_POST['hoten'];
+        $email = $_POST['email'];
+        $so_dien_thoai = $_POST['sdt'];
+        $gioi_tinh = $_POST['gioitinh'];
+        $ngay_sinh = $_POST['ngaysinh'];
+        $hinhanh = $_FILES['hinhanh']['name'];
+        $target_dir = dirname(__FILE__) . '/img/';
+        $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
+        if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
+            // echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+        } else {
+            // echo "Sorry, there was an error uploading your file.";
+        }
+        updateKhachHangUser($ma_kh, $ten_kh, $email, $so_dien_thoai, $hinhanh, $gioi_tinh, $ngay_sinh);
+
+    }
+
+
+    $list_kh = getKhachHangById($_SESSION['user']);
     extract($list_kh);
+    $hinhpath = "./admin/khachhang/img/" . $hinh_anh;
+    if (is_file($hinhpath)) {
+        $img = $hinhpath;
+    } else {
+        $img = './admin/khachhang/img/avt.jpg';
+    }
 ?>
 <head>
     <link rel="stylesheet" href="/public/css/chitiettk.css">
@@ -14,9 +39,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="row ctiet-top">
-                            <div class="col-3"><img src="/pages/imgweb/b1.jpg" alt="" class="ctiet-imguser"></div>
+                            <div class="col-3"><img src="<?php echo $img ?>" alt="" class="ctiet-imguser"></div>
                             <div class="col-9">
-                                <p>Trương Bá Sơn </p>
+                                <p><?php echo $ten_kh ?> </p>
                                 <i class="fa-solid fa-mars blue"></i> Nam
                             </div>
                         </div>
@@ -47,22 +72,22 @@
                         Quản lý thông tin hồ sơ để bảo mật tài khoản
                     </div>
                     <!-- thongtin -->
-                    <form action="#" method="post" enctype="multipart/form-data" class="row">
+                    <form action="index.php?tkh=suatk" method="post" enctype="multipart/form-data" class="row">
                         <div class="col-8">
                             <div class="mg-top row">
                                 <label for="hoten" class=" col-4 justify-content-end d-flex">Tên:</label>
-                                <input type="hoten" class="col-8 ctiet-input" id="email" placeholder="Họ và tên" value="<?php echo $ten_kh ?>"
+                                <input type="hoten" class="col-8 ctiet-input" name="hoten" id="email" placeholder="Họ và tên" value="<?php echo $ten_kh ?>"
                                     required>
                             </div>
                             <div class="mg-top row">
                                 <label for="email" class=" col-4 justify-content-end d-flex">Email:</label>
-                                <input type="email" class="col-8 ctiet-input" id="email" placeholder="Email" value="<?php echo $email ?>
+                                <input type="email" class="col-8 ctiet-input" name="email" id="email" placeholder="Email" value="<?php echo $email ?>"
                                     required>
                             </div>
                             <div class="mg-top row">
                                 <label for="soDienThoai" class=" col-4 justify-content-end d-flex">Số điện
                                     thoại:</label>
-                                <input type="tel" class="col-8 ctiet-input" id="soDienThoai" placeholder="Số điện thoại" value="<?php echo $so_dien_thoai ?>"
+                                <input type="tel" class="col-8 ctiet-input" name="sdt" id="soDienThoai" placeholder="Số điện thoại" value="<?php echo $so_dien_thoai ?>"
                                     required>
                             </div>
                             <div class="row">
@@ -85,7 +110,7 @@
                             </div>
                             <div class="mg-top row">
                                 <label for="ngaySinh" class=" col-4 justify-content-end d-flex">Ngày sinh</label>
-                                <input type="date" class="col-8 ctiet-input" id="ngaySinh" placeholder="ngaySinh"
+                                <input type="date" class="col-8 ctiet-input" name="ngaysinh" id="ngaySinh" placeholder="ngaySinh"
                                     required>
                             </div>
 
@@ -96,11 +121,11 @@
                         <div class="col-4  row">
                             <div class="col-12 mg-top">Hình ảnh cá nhân:</div>
                             <div class="col-12 d-flex  justify-content-center">
-                                <img src="/pages/imgweb/b1.jpg" alt="" class="ctiet-imguserbig">
+                                <img src="<?php echo $img ?>" alt="" class="ctiet-imguserbig">
                             </div>
                             <div class="col-12   justify-content-center">
                                 <label for="hinh" class="custom-file-upload ">
-                                    <input type="file" name="hinh" id="hinh" >
+                                    <input type="file" name="hinhanh" id="hinh" >
                                     Chọn ảnh
                                 </label>
                             </div>
@@ -111,7 +136,7 @@
                             <div class="col-3"></div>
                             <div class="col-9">
                                 <div class="product__price-ranger-filter mg-top">
-                                    <input type="submit" class="ctiet-button" value="Lưu">
+                                    <input type="submit" name="update-infor" class="ctiet-button" value="Lưu">
                                 </div>
                             </div>
                         </div>
