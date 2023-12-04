@@ -6,7 +6,7 @@
         $gioi_tinh = $_POST['gioitinh'];
         $ngay_sinh = $_POST['ngaysinh'];
         $hinhanh = $_FILES['hinhanh']['name'];
-        $target_dir = dirname(__FILE__) . '/img/';
+        $target_dir =  './admin/khachhang/img/';
         $target_file = $target_dir . basename($_FILES["hinhanh"]["name"]);
         if (move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file)) {
             // echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
