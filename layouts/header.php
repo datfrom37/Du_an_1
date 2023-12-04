@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LSD - Kênh Ẩm Thực</title>
+    <link rel="icon" href="/images/title-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./public/bootstrap-5.3.2/dist/css/bootstrap.css">
     <script src="./public/bootstrap-5.3.2/dist/js/bootstrap.js"></script>
     <!-- Sử dụng thư viện Font Awesome -->
@@ -60,6 +61,12 @@
                             </div>
                             <div class="main-header-two__cart-box">
                                 <a href="menu.html" class="main-header-two__cart fas fa-bars"></a>
+                                <ul class="menu-list">
+                                    <li><a href="#">Mục 1</a></li>
+                                    <li><a href="#">Mục 2</a></li>
+                                    <li><a href="#">Mục 3</a></li>
+                                    <!-- Thêm các mục menu khác nếu cần -->
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -86,9 +93,9 @@
                                 <li class="dropdown">
                                     <a href="index.php?tkh=dscongthuc">CÔNG THỨC</a>
                                     <ul class="sub-menu">
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="team.html">Our Team</a></li>
-                                        <li><a href="team-carousel.html">Team Carousel</a></li>
+                                        <li><a href="team.html">Thêm công thức mới</a></li>
+                                        <li><a href="about.html">Tất cả công thức</a></li>
+                                        <li><a href="team.html">Công thức của tôi</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -98,25 +105,14 @@
                                         <li><a href="portfolio-carousel.html">Portfolio Carousel</a>
                                         </li>
                                         <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="testimonials-carousel.html">Testimonials
-                                                Carousel</a></li>
-                                        <li><a href="pricing.html">Pricing</a></li>
-                                        <li><a href="pricing-carousel.html">Pricing Carousel</a></li>
-                                        <li><a href="faq.html">FAQs</a></li>
-                                        <li><a href="404.html">404 Error</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#">BÀI VIẾT</a>
                                     <ul class="sub-menu">
-                                        <li><a href="products.html">Products</a></li>
-                                        <li><a href="product-list.html">Product List</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li>
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="my-account.html">My Account</a></li>
+                                        <li><a href="my-account.html">Thêm bài viết mới</a></li>
+                                        <li><a href="products.html">Tất cả bài viết</a></li>
+                                        <li><a href="product-list.html">Bài viết của tôi</a></li>
                                     </ul>
                                 </li>
                                 <li>

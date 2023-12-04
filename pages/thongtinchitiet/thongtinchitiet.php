@@ -31,6 +31,7 @@
                     <div class="col-12">
                         <p  class="mg-top-sb"><a href="index.php?tkh=thongtinchitiet" ><i class="fa-solid fa-user yellow"></i> Thông tin tài khoản</a></p>
                         <p  class="mg-top-sb"><a href="index.php?tkh=suatk" ><i class="fa-solid fa-pen yellow"></i> Sửa hồ sơ</a></p>
+                        <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-lock yellow"></i> Thay đổi mật khẩu</a></p>
                         <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-clock-rotate-left yellow"></i> Lịch sử đơn hàng</a></p>
                         <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-newspaper yellow"></i> Bài viết của tôi</a></p>
                         <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-right-from-bracket yellow"></i> Đăng xuất</a></p>
