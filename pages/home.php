@@ -340,7 +340,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                             <div class="banner-two__shape-1">
                                 <img src="pages/imgweb/banner-two-shape-1.png" alt="">
                             </div>
-                            <p class="banner-two__tagline">10% <span>off</span></p>
+                            <p class="banner-two__tagline">Bổ dưỡng <span>cùng</span></p>
                             <h3 class="banner-two__title">Công thức từ
                                 <br> Rau
                             </h3>
@@ -359,7 +359,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                             <div class="banner-two__shape-1">
                                 <img src="pages/imgweb/banner-two-shape-2.png" alt="">
                             </div>
-                            <p class="banner-two__tagline">10% <span>off</span></p>
+                            <p class="banner-two__tagline">Ngày mới <span>với</span></p>
                             <h3 class="banner-two__title">Công thức cho
                                 <br> Bữa sáng
                             </h3>
