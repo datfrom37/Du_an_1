@@ -1,3 +1,8 @@
+<?php
+    $list_tk = getKhachHangById($_SESSION['user']);
+    extract($list_kh);
+?>
+
 <head>
     <link rel="stylesheet" href="/public/css/chitiettk.css">
 </head>
@@ -40,11 +45,11 @@
                     <div class="col-8">
                         <div class="row">
                             <div class="col-4 justify-content-end d-flex mg-top">Tên:</div>
-                            <div class="col-8 mg-top">Trương Bá Sơn</div>
+                            <div class="col-8 mg-top"><?php echo $ten_kh ?></div>
                             <div class="col-4 justify-content-end d-flex mg-top">Email:</div>
-                            <div class="col-8 mg-top">tubanovel@gmail.com</div>
+                            <div class="col-8 mg-top"><?php echo $email ?></div>
                             <div class="col-4 justify-content-end d-flex mg-top">Số điện thoại:</div>
-                            <div class="col-8 mg-top">0343561287</div>
+                            <div class="col-8 mg-top"><?php echo $so_dien_thoai ?></div>
                             <div class="col-4 justify-content-end d-flex mg-top">Giới tính:</div>
                             <div class="col-8 mg-top"><i class="fa-solid fa-mars blue"></i> Nam</div>
                             <!-- <div class="col-8 mg-top"><i class="fa-solid fa-venus pink"></i> Nữ</div> -->

@@ -1,3 +1,7 @@
+<?php
+    $list_tk = getKhachHangById($_SESSION['user']);
+    extract($list_kh);
+?>
 <head>
     <link rel="stylesheet" href="/public/css/chitiettk.css">
 </head>
@@ -47,18 +51,18 @@
                         <div class="col-8">
                             <div class="mg-top row">
                                 <label for="hoten" class=" col-4 justify-content-end d-flex">Tên:</label>
-                                <input type="hoten" class="col-8 ctiet-input" id="email" placeholder="Họ và tên"
+                                <input type="hoten" class="col-8 ctiet-input" id="email" placeholder="Họ và tên" value="<?php echo $ten_kh ?>"
                                     required>
                             </div>
                             <div class="mg-top row">
                                 <label for="email" class=" col-4 justify-content-end d-flex">Email:</label>
-                                <input type="email" class="col-8 ctiet-input" id="email" placeholder="Email"
+                                <input type="email" class="col-8 ctiet-input" id="email" placeholder="Email" value="<?php echo $email ?>
                                     required>
                             </div>
                             <div class="mg-top row">
                                 <label for="soDienThoai" class=" col-4 justify-content-end d-flex">Số điện
                                     thoại:</label>
-                                <input type="tel" class="col-8 ctiet-input" id="soDienThoai" placeholder="Số điện thoại"
+                                <input type="tel" class="col-8 ctiet-input" id="soDienThoai" placeholder="Số điện thoại" value="<?php echo $so_dien_thoai ?>"
                                     required>
                             </div>
                             <div class="row">
@@ -66,13 +70,13 @@
                                 <div class="col-8 mg-top row">
                                     <div class="col-1"></div>
                                     <div class="col-4">
-                                        <input class="" type="radio" name="option" id="option1" value="option1">
+                                        <input class="" type="radio" name="gioitinh" id="option1" value="1">
                                         <label class="" for="option1">
                                             <i class="fa-solid fa-mars blue"></i> Nam
                                         </label>
                                     </div>
                                     <div class="col-4">
-                                        <input class="" type="radio" name="option" id="option2" value="option2">
+                                        <input class="" type="radio" name="gioitinh" id="option2" value="0">
                                         <label class="" for="option2">
                                             <i class="fa-solid fa-venus pink"></i> Nữ
                                         </label>
