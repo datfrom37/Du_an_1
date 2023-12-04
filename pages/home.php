@@ -30,15 +30,15 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
         <!-- Slides -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../images/banner1.jpg" class="d-block w-100" alt="Slide 1"
+                <img src="../images/banner 4.png" class="d-block w-100" alt="Slide 1"
                     style="width: 100%; height:70vh; object-fit: cover;">
             </div>
             <div class="carousel-item ">
-                <img src="../images/banner2.jpg" class="d-block w-100" alt="Slide 2"
+                <img src="../images/banner 5.jpg" class="d-block w-100" alt="Slide 2"
                     style="width: 100%; height:70vh; object-fit: cover;">
             </div>
             <div class="carousel-item ">
-                <img src="../images/banner3.jpg" class="d-block w-100" alt="Slide 3"
+                <img src="../images/banner 3.png" class="d-block w-100" alt="Slide 3"
                     style="width: 100%; height:70vh; object-fit: cover;">
             </div>
         </div>
