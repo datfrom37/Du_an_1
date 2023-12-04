@@ -22,8 +22,8 @@
                         <div class="row ctiet-top">
                             <div class="col-3"><img src="<?php echo $img ?>" alt="" class="ctiet-imguser"></div>
                             <div class="col-9">
-                                <p>Trương Bá Sơn </p>
-                                <i class="fa-solid fa-mars blue"></i> Nam
+                                <p><?php echo $ten_kh ?></p>
+                                <i class="fa-solid fa-mars <?php if($gioi_tinh == "1") echo 'blue' ; else echo 'pink'?>"></i> <?php if($gioi_tinh == "1") echo 'Nam' ; else echo 'Nữ' ?>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                             <div class="col-4 justify-content-end d-flex mg-top">Số điện thoại:</div>
                             <div class="col-8 mg-top"><?php echo $so_dien_thoai ?></div>
                             <div class="col-4 justify-content-end d-flex mg-top">Giới tính:</div>
-                            <div class="col-8 mg-top"><i class="fa-solid fa-mars blue"></i> Nam</div>
+                            <div class="col-8 mg-top"><i class="fa-solid fa-mars <?php if($gioi_tinh == "1") echo 'blue' ; else echo 'pink'?>"></i> <?php if($gioi_tinh == "1") echo 'Nam' ; else echo 'Nữ' ?></div>
                             <!-- <div class="col-8 mg-top"><i class="fa-solid fa-venus pink"></i> Nữ</div> -->
                             <div class="col-4 justify-content-end d-flex mg-top">Ngày sinh:</div>
                             <div class="col-8 mg-top">04/10/2004</div>

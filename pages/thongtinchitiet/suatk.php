@@ -13,7 +13,12 @@
         } else {
             // echo "Sorry, there was an error uploading your file.";
         }
-        updateKhachHangUser($ma_kh, $ten_kh, $email, $so_dien_thoai, $hinhanh, $gioi_tinh, $ngay_sinh);
+        if($hinhanh == ""){
+            updateKhachHangUserNoImg($ma_kh, $ten_kh, $email, $so_dien_thoai, $gioi_tinh, $ngay_sinh);
+        }else{
+            updateKhachHangUser($ma_kh, $ten_kh, $email, $so_dien_thoai, $hinhanh, $gioi_tinh, $ngay_sinh);
+        }
+        echo '<script>window.location.href = "index.php?tkh=thongtinchitiet";</script>';
 
     }
 
@@ -42,7 +47,7 @@
                             <div class="col-3"><img src="<?php echo $img ?>" alt="" class="ctiet-imguser"></div>
                             <div class="col-9">
                                 <p><?php echo $ten_kh ?> </p>
-                                <i class="fa-solid fa-mars blue"></i> Nam
+                                <i class="fa-solid fa-mars <?php if($gioi_tinh == "1") echo 'blue' ; else echo 'pink'?>"></i> <?php if($gioi_tinh == "1") echo 'Nam' ; else echo 'Nữ' ?>
                             </div>
                         </div>
                     </div>
@@ -95,13 +100,13 @@
                                 <div class="col-8 mg-top row">
                                     <div class="col-1"></div>
                                     <div class="col-4">
-                                        <input class="" type="radio" name="gioitinh" id="option1" value="1">
+                                        <input class="" type="radio" name="gioitinh" id="option1" value="1" <?php if(isset($gioi_tinh) && $gioi_tinh == 1) echo 'checked'?>>
                                         <label class="" for="option1">
                                             <i class="fa-solid fa-mars blue"></i> Nam
                                         </label>
                                     </div>
                                     <div class="col-4">
-                                        <input class="" type="radio" name="gioitinh" id="option2" value="0">
+                                        <input class="" type="radio" name="gioitinh" id="option2" value="0" <?php if(isset($gioi_tinh) && $gioi_tinh == 0) echo 'checked'?>>
                                         <label class="" for="option2">
                                             <i class="fa-solid fa-venus pink"></i> Nữ
                                         </label>
@@ -110,7 +115,7 @@
                             </div>
                             <div class="mg-top row">
                                 <label for="ngaySinh" class=" col-4 justify-content-end d-flex">Ngày sinh</label>
-                                <input type="date" class="col-8 ctiet-input" name="ngaysinh" id="ngaySinh" placeholder="ngaySinh"
+                                <input type="date" class="col-8 ctiet-input" name="ngaysinh" id="ngaySinh" placeholder="ngaySinh" value="<?php if(isset($ngay_sinh)) echo $ngay_sinh?>"
                                     required>
                             </div>
 

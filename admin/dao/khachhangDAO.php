@@ -62,6 +62,19 @@ function updateKhachHangUser($ma_kh, $ten_kh, $email, $so_dien_thoai, $hinh_anh,
     return $data; // Hoặc trả về thông tin khác nếu cần
 }
 
+function updateKhachHangUserNoImg($ma_kh, $ten_kh, $email, $so_dien_thoai, $gioi_tinh, $ngay_sinh) {
+    $sql = "UPDATE khach_hang SET ten_kh=:ten_kh, email=:email, so_dien_thoai=:so_dien_thoai, gioi_tinh=:gioi_tinh, ngay_sinh=:ngay_sinh WHERE ma_kh=:ma_kh";
+    $data = executeCUD($sql, [
+        "ma_kh" => $ma_kh,
+        "ten_kh" => $ten_kh,
+        "email" => $email,
+        "ngay_sinh" => $ngay_sinh,
+        "so_dien_thoai" => $so_dien_thoai,
+        "gioi_tinh" => $gioi_tinh
+    ]);
+    return $data; // Hoặc trả về thông tin khác nếu cần
+}
+
 function updateKhachHangnoimg($ma_kh, $ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro) {
     $sql = "UPDATE khach_hang SET ten_kh=:ten_kh, email=:email, mat_khau=:mat_khau, so_dien_thoai=:so_dien_thoai, vai_tro=:vai_tro WHERE ma_kh=:ma_kh";
     $data = executeCUD($sql, [
