@@ -134,10 +134,15 @@
                                     foreach ($list_kh as $kh) {
                                         extract($kh);
                                         $hinhpath = "./admin/khachhang/img/" . $hinh_anh;
+                                        if (is_file($hinhpath)) {
+                                            $img = $hinhpath;
+                                        } else {
+                                            $img = './admin/khachhang/img/avt.jpg';
+                                        }
 
                                         echo '<ul class="list-unstyled  main-menu__list">';
                                         echo '<li class="dropdown">';
-                                        echo '<a href="#"><img src="'. $hinhpath .'" alt="" class="imguser" >'. $ten_kh.' </a>';
+                                        echo '<a href="#"><img src="'. $img .'" alt="" class="imguser" >'. $ten_kh.' </a>';
                                         echo '<ul class="sub-menu">';
                                         echo '<li><a href="index.php?tkh=thongtinchitiet">Thông tin tài khoản</a></li>';
                                         echo '<li><a href="index.php?tkh=dangxuat">Đăng xuất</a></li>';
