@@ -46,7 +46,7 @@
 .menu-list {
     right: -150%;
     max-width: auto;
-    min-width: 280px;
+    min-width: 220px;
     display: none;
     position: absolute;
     z-index: 999;
