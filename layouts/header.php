@@ -61,10 +61,10 @@
                             </div>
                             <div class="main-header-two__cart-box">
                                 <a href="menu.html" class="main-header-two__cart fas fa-bars"></a>
-                                <ul class="menu-list">
-                                    <li><a href="#">Mục 1</a></li>
-                                    <li><a href="#">Mục 2</a></li>
-                                    <li><a href="#">Mục 3</a></li>
+                                <ul class="menu-list ">
+                                    <li class="row"><a href="#" class="col-12">Thêm bài viết mới</a></li>
+                                    <li class="row"><a href="#" class="col-12">Thêm công thức mới</a></li>
+                                    <li class="row"><a href="#" class="col-12">Trang Admin</a></li>
                                     <!-- Thêm các mục menu khác nếu cần -->
                                 </ul>
                             </div>

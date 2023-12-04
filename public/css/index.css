@@ -45,8 +45,8 @@
 
 .menu-list {
     right: -150%;
-    width: auto;
-    min-width: 200px;
+    max-width: auto;
+    min-width: 280px;
     display: none;
     position: absolute;
     z-index: 999;
@@ -62,16 +62,15 @@
 }
 .main-header-two__cart-box>ul>li>a {
   padding: 10px;
+  border-radius: 10px;
 }
 .main-header-two__cart-box>ul>li {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .main-header-two__cart-box:hover .menu-list {
     display: block;
 }
-
-
 
 body {
   /* font-family: var(--ogenix-font); */
