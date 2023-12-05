@@ -5,11 +5,11 @@
 <body>
     <section class="news-page">
         <div class="container">
-            <div class="section-title text-center">
+            <!-- <div class="section-title text-center">
                 <h2 class="section-title__title">TIN TỨC & BÀI VIẾT</h2>
-            </div>
+            </div> -->
             <div class="product__showing-text-box">
-                <p class="product__showing-text mr-bot-new">Hiện thị 1–6 trên 12 công thức</p>
+                <p class="product__showing-text mr-bot-new">Hiện thị 1–6 trên 12 bài viết</p>
             </div>
             <div class="row">
                 <!--News One Single Start-->
