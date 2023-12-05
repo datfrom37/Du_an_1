@@ -39,6 +39,10 @@ if (isset($_GET['tkh'])) {
             else include "home.php";
             break;
 
+        case "chitietbaiviet":
+            include "chitietbv.php";
+            break;
+
 
         default:
             include "home.php";

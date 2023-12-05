@@ -702,7 +702,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                     <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
                                 </li>
                             </ul>
-                            <h3 class="news-one__title"><a href="news-details.html">Which healthy food growth
+                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet">Which healthy food growth
                                     strategies required</a></h3>
                             <div class="news-one__bottom">
                                 <div class="news-one__read-more">
@@ -736,7 +736,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                     <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
                                 </li>
                             </ul>
-                            <h3 class="news-one__title"><a href="news-details.html">Donec aliquet blandit enim
+                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet">Donec aliquet blandit enim
                                     feugiat Suspendisse</a></h3>
                             <div class="news-one__bottom">
                                 <div class="news-one__read-more">
@@ -770,7 +770,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                     <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
                                 </li>
                             </ul>
-                            <h3 class="news-one__title"><a href="news-details.html">luctus sit amet eu nibh tempus
+                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet">luctus sit amet eu nibh tempus
                                     turpis.</a></h3>
                             <div class="news-one__bottom">
                                 <div class="news-one__read-more">
