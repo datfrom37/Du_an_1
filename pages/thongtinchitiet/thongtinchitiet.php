@@ -34,7 +34,7 @@
                         <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-lock yellow"></i> Thay đổi mật khẩu</a></p>
                         <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-clock-rotate-left yellow"></i> Lịch sử đơn hàng</a></p>
                         <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-newspaper yellow"></i> Bài viết của tôi</a></p>
-                        <p  class="mg-top-sb"><a href=""><i class="fa-solid fa-right-from-bracket yellow"></i> Đăng xuất</a></p>
+                        <?php echo '<p class="mg-top-sb"><a href="index.php?tkh=dangxuat"><i class="fa-solid fa-right-from-bracket yellow"></i> Đăng xuất</a></p>' ?>
                     </div>
                 </div>
             </div>
