@@ -94,7 +94,7 @@
                                     <a href="index.php?tkh=dscongthuc">CÔNG THỨC</a>
                                     <ul class="sub-menu">
                                         <li><a href="team.html">Thêm công thức mới</a></li>
-                                        <li><a href="about.html">Tất cả công thức</a></li>
+                                        <li><a href="index.php?tkh=dscongthuc">Tất cả công thức</a></li>
                                         <li><a href="team.html">Công thức của tôi</a></li>
                                     </ul>
                                 </li>
@@ -108,10 +108,10 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="#">BÀI VIẾT</a>
+                                    <a href="index.php?tkh=dsbaiviet">BÀI VIẾT</a>
                                     <ul class="sub-menu">
                                         <li><a href="my-account.html">Thêm bài viết mới</a></li>
-                                        <li><a href="products.html">Tất cả bài viết</a></li>
+                                        <li><a href="index.php?tkh=dsbaiviet">Tất cả bài viết</a></li>
                                         <li><a href="product-list.html">Bài viết của tôi</a></li>
                                     </ul>
                                 </li>

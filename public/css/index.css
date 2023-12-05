@@ -4896,6 +4896,8 @@ ul {
 
 .news-one__img img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
   border-radius: var(--ogenix-bdr-radius);
   transition: .5s ease;
   transform: scale(1.05);
@@ -10513,7 +10515,7 @@ ul {
 .news-page {
   position: relative;
   display: block;
-  padding: 112px 0 90px;
+  padding: 20px 0 90px;
   z-index: 1;
 }
 
@@ -13922,4 +13924,8 @@ body.boxed-wrapper {
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.5); /* Màu chữ mờ */
+}
+
+.mr-bot-new{
+  margin-bottom: 20px;
 }
