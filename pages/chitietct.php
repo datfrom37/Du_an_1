@@ -122,7 +122,7 @@
             if (is_file($hinhpath)) {
                 $img = "<img class='img' src='" . $hinhpath . "' >";
             } else {
-                $img = "no photo";
+                $img = "<img class='img' src='./admin/khachhang/img/avt.jpg' >";
             }
             echo'
                 <div class="container binhl">
@@ -191,7 +191,7 @@
             if (is_file($hinhpath)) {
                 $img = "<img class='img-list' src='" . $hinhpath . "' >";
             } else {
-                $img = "no photo";
+                $img = "<img class='img' src='./admin/khachhang/img/avt.jpg' >";
             }
             echo'
                 <!-- danh sach binh luan -->
