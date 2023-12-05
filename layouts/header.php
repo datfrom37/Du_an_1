@@ -64,7 +64,7 @@
                                 <ul class="menu-list ">
                                     <li class="row"><a href="#" class="col-12">Thêm bài viết mới</a></li>
                                     <li class="row"><a href="#" class="col-12">Thêm công thức mới</a></li>
-                                    <li class="row"><a href="#" class="col-12">Trang Admin</a></li>
+                                    <li class="row"><a href="/admin/index.php" class="col-12">Trang Admin</a></li>
                                     <!-- Thêm các mục menu khác nếu cần -->
                                 </ul>
                             </div>

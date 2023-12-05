@@ -8,11 +8,13 @@
             <span class="icon-bar"></span>
         </button>
         <!-- Chuyển trang -->
-        <a class="navbar-brand colortwo" href="<?php echo $link ?>">LSD - ADMIN</a>
+        <!-- <a class="navbar-brand colortwo" href="<?php //echo $link ?>">LSD - ADMIN</a> -->
+        <a class="navbar-brand colortwo" href="/admin/index.php">LSD - ADMIN</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
-        <li><a href="<?php echo $link ?>">LSD - Kênh ẩm thực</a></li>
+        <!-- <li><a href="<?php //echo $link ?>">LSD - Kênh ẩm thực</a></li> -->
+        <li><a href="/index.php">LSD - Kênh ẩm thực</a></li>
 
 
         <li class="dropdown">
