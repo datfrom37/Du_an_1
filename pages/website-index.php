@@ -39,6 +39,11 @@ if (isset($_GET['tkh'])) {
             else include "home.php";
             break;
 
+        case "thaydoimatkhau":
+            if(isset($_SESSION['user'])) include "thongtinchitiet/doimk.php";
+            else include "home.php";
+            break;
+
         case "chitietbaiviet":
             include "chitietbv.php";
             break;
