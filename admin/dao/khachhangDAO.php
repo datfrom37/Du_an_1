@@ -75,6 +75,7 @@ function updateKhachHangUserNoImg($ma_kh, $ten_kh, $email, $so_dien_thoai, $gioi
     return $data; // Hoặc trả về thông tin khác nếu cần
 }
 
+
 function updateKhachHangnoimg($ma_kh, $ten_kh, $email, $mat_khau, $so_dien_thoai, $vai_tro) {
     $sql = "UPDATE khach_hang SET ten_kh=:ten_kh, email=:email, mat_khau=:mat_khau, so_dien_thoai=:so_dien_thoai, vai_tro=:vai_tro WHERE ma_kh=:ma_kh";
     $data = executeCUD($sql, [
@@ -84,6 +85,15 @@ function updateKhachHangnoimg($ma_kh, $ten_kh, $email, $mat_khau, $so_dien_thoai
         "mat_khau" => $mat_khau,
         "so_dien_thoai" => $so_dien_thoai,
         "vai_tro" => $vai_tro
+    ]);
+    return $data; // Hoặc trả về thông tin khác nếu cần
+}
+
+function updateKhachHangMatKhau($ma_kh, $mat_khau) {
+    $sql = "UPDATE khach_hang SET mat_khau=:mat_khau  WHERE ma_kh=:ma_kh";
+    $data = executeCUD($sql, [
+        "ma_kh" => $ma_kh,
+        "mat_khau" => $mat_khau
     ]);
     return $data; // Hoặc trả về thông tin khác nếu cần
 }
