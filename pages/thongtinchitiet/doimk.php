@@ -45,7 +45,7 @@
                         Quản lý thông tin hồ sơ để bảo mật tài khoản
                     </div>
                     <!-- thongtin -->
-                    <form action="index.php?tkh=suatk" method="post" enctype="multipart/form-data" class="row">
+                    <form action="index.php?tkh=thaydoimatkhau" method="post" enctype="multipart/form-data" class="row">
                         <div class="col-8">
                             <div class="mg-top row">
                                 <label for="pass" class=" col-4 justify-content-end d-flex">Mật khẩu cũ:</label>
