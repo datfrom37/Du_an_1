@@ -17,6 +17,12 @@ function hienThiBonCongThuctheoloai($ma_loai){
     return $data;
 }
 
+function getCongThuctheoKhachHang($ma_kh){
+    $sql = "SELECT * FROM cong_thuc WHERE ma_kh=:ma_kh";
+    $data = getDataWidthParams($sql, ["ma_kh"=>$ma_kh]);
+    return $data;
+}
+
 function getCongThucByLoai($ma_loai) {
     $sql = "SELECT * FROM cong_thuc WHERE ma_loai=:ma_loai";
     $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);
