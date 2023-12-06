@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <?php 
-                            if(isset($thongbao)) echo "<div style = 'color: $color; '> $thongbao </div>";
+                            if(isset($thongbao)) echo "<div style = 'color: $color;'> $thongbao </div>";
                         ?>
                     </form>
                 </div>
