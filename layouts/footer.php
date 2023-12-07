@@ -57,20 +57,21 @@
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4">
-                                Products
+                                DANH MỤC
                             </h6>
                             <p>
-                                <a href="#!" class="text-reset">Angular</a>
+                                <a href="#!" class="text-reset">Trang chủ</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">React</a>
+                                <a href="#!" class="text-reset">Công thức</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Vue</a>
+                                <a href="#!" class="text-reset">Bài viết</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Laravel</a>
+                                <a href="#!" class="text-reset">Liên hệ</a>
                             </p>
+                            
                         </div>
                         <!-- Grid column -->
 
@@ -78,19 +79,19 @@
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4">
-                                Useful links
+                                VỀ CHÚNG TÔI
                             </h6>
                             <p>
-                                <a href="#!" class="text-reset">Pricing</a>
+                                <a href="#!" class="text-reset">Facebook</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Settings</a>
+                                <a href="#!" class="text-reset">Youtube</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Orders</a>
+                                <a href="#!" class="text-reset">TikTok</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-reset">Help</a>
+                                <a href="#!" class="text-reset">Gmail</a>
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -99,15 +100,14 @@
                         <div
                             class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                             <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                            <p><i class="fas fa-home me-3"></i> New York, NY
-                                10012, US</p>
+                            <h6 class="text-uppercase fw-bold mb-4">LIÊN HỆ</h6>
+                            <p><i class="fas fa-home me-3"></i>FPT Poly ,Liên Chiểu, Đà Nẵng, Việt Nam</p>
                             <p>
                                 <i class="fas fa-envelope me-3"></i>
-                                info@example.com
+                                lsdfood@gmail.com
                             </p>
-                            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                            <p><i class="fas fa-phone me-3"></i> + 84 123 456 789</p>
+                            <p><i class="fas fa-print me-3"></i> + 84 343 561 287</p>
                         </div>
                         <!-- Grid column -->
                     </div>

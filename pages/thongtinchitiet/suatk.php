@@ -126,11 +126,11 @@
                         <div class="col-4  row">
                             <div class="col-12 mg-top">Hình ảnh cá nhân:</div>
                             <div class="col-12 d-flex  justify-content-center">
-                                <img src="<?php echo $img ?>" alt="" class="ctiet-imguserbig">
+                                <img src="<?php echo $img ?>" alt="" class="ctiet-imguserbig" id="previewImg">
                             </div>
                             <div class="col-12   justify-content-center">
                                 <label for="hinh" class="custom-file-upload ">
-                                    <input type="file" name="hinhanh" id="hinh" >
+                                    <input type="file" name="hinhanh" id="hinh" onchange="previewImage(event)">
                                     Chọn ảnh
                                 </label>
                             </div>
@@ -152,3 +152,4 @@
         </div>
     </div>
 </body>
+<script src="/public/js/taikhoan.js"></script>
