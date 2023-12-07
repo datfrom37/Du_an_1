@@ -1,0 +1,121 @@
+.bviet-main {
+    color: black;
+    padding: 20px 20px 50px 20px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+}
+
+.bviet-top {
+    padding-bottom: 20px;
+}
+
+.bviet-imguser {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+.mg-top-sb {
+    margin-top: 10px;
+}
+
+.pink {
+    color: rgb(251, 0, 42);
+}
+
+.blue {
+    color: blue;
+    margin-right: 3px;
+}
+
+.yellow {
+    color: #FFBE1C;
+    margin-right: 5px;
+}
+
+.custom-file-upload {
+    text-align: center;
+    display: block;
+    padding: 7px 15px;
+    border-radius: 15px;
+    background-color: #FFED8A;
+    color: #B79C10;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.custom-file-upload:hover {
+    background-color: #FFE145;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.bviet-imgpost {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bviet-title {
+    border: none;
+    font-size: 48px;
+    width: 100%;
+    overflow-y: hidden;
+    resize: none;
+    line-height: 1;
+}
+
+.bviet-title:hover {
+    border: none;
+}
+
+.bviet-title:focus {
+    outline: none;
+}
+
+.bviet-soanthao {
+    padding: 20px 50px;
+}
+
+.bviet-content {
+    line-height: 1.5;
+    border: none;
+    font-size: 18px;
+    width: 100%;
+    resize: none;
+    /* Không cho phép thay đổi kích thước */
+    overflow-y: hidden;
+    /* Ẩn thanh cuộn theo chiều dọc */
+}
+
+.bviet-content:focus {
+    outline: none;
+}
+
+.bviet-submit {
+    text-align: center;
+    display: block;
+    padding: 7px 15px;
+    border-radius: 15px;
+    background-color: #FFED8A;
+    color: #B79C10;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+}
+.bviet-upimg{
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+}
+.bviet-submit:hover {
+    background-color: #ffde38;
+}

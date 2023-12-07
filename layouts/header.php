@@ -110,7 +110,7 @@
                                 <li class="dropdown">
                                     <a href="index.php?tkh=dsbaiviet">BÀI VIẾT</a>
                                     <ul class="sub-menu">
-                                        <li><a href="my-account.html">Thêm bài viết mới</a></li>
+                                        <li><a href="index.php?tkh=thembaiviet">Thêm bài viết mới</a></li>
                                         <li><a href="index.php?tkh=dsbaiviet">Tất cả bài viết</a></li>
                                         <li><a href="product-list.html">Bài viết của tôi</a></li>
                                     </ul>
