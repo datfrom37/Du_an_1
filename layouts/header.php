@@ -60,11 +60,28 @@
                                 <div class="mc-form__response"></div>
                             </div>
                             <div class="main-header-two__cart-box">
-                                <a href="menu.html" class="main-header-two__cart fas fa-bars"></a>
+                                <a href="#" class="main-header-two__cart fas fa-bars"></a>
                                 <ul class="menu-list ">
-                                    <li class="row"><a href="#" class="col-12">Thêm bài viết mới</a></li>
-                                    <li class="row"><a href="#" class="col-12">Thêm công thức mới</a></li>
-                                    <li class="row"><a href="/admin/index.php" class="col-12">Trang Admin</a></li>
+                                    <?php
+                                        if (isset($_SESSION['user'])){
+                                            echo '
+                                                <li class="row"><a href="index.php?tkh=thembaiviet" class="col-12">Thêm bài viết mới</a></li>
+                                                <li class="row"><a href="index.php?tkh=themcongthuc" class="col-12">Thêm công thức mới</a></li>
+                                            ';
+                                        }
+                                        if (isset($_SESSION['user'])){
+                                            $listkh = getKhachHangById($_SESSION['user']);
+                                            foreach ($listkh as $kh) {
+                                                extract($kh);
+                                                if($vai_tro == "1"){
+                                                    echo'
+                                                    <li class="row"><a href="/admin/index.php" class="col-12">Trang Admin</a></li>
+                                                    ';
+                                                }
+                                            }
+                                            
+                                        }
+                                    ?>
                                     <!-- Thêm các mục menu khác nếu cần -->
                                 </ul>
                             </div>
@@ -93,9 +110,15 @@
                                 <li class="dropdown">
                                     <a href="index.php?tkh=dscongthuc">CÔNG THỨC</a>
                                     <ul class="sub-menu">
-                                        <li><a href="index.php?tkh=themcongthuc">Thêm công thức mới</a></li>
-                                        <li><a href="index.php?tkh=dscongthuc">Tất cả công thức</a></li>
-                                        <li><a href="team.html">Công thức của tôi</a></li>
+                                    <li><a href="index.php?tkh=dscongthuc">Tất cả công thức</a></li>
+                                        <?php
+                                            if (isset($_SESSION['user'])){
+                                                echo '
+                                                    <li><a href="index.php?tkh=themcongthuc">Thêm công thức mới</a></li>
+                                                    <li><a href="team.html">Công thức của tôi</a></li>
+                                                ';
+                                            }
+                                        ?>
                                     </ul>
                                 </li>
                                 <!-- <li class="dropdown">
@@ -110,9 +133,15 @@
                                 <li class="dropdown">
                                     <a href="index.php?tkh=dsbaiviet">BÀI VIẾT</a>
                                     <ul class="sub-menu">
-                                        <li><a href="index.php?tkh=thembaiviet">Thêm bài viết mới</a></li>
                                         <li><a href="index.php?tkh=dsbaiviet">Tất cả bài viết</a></li>
-                                        <li><a href="product-list.html">Bài viết của tôi</a></li>
+                                        <?php
+                                            if (isset($_SESSION['user'])){
+                                                echo'
+                                                    <li><a href="index.php?tkh=thembaiviet">Thêm bài viết mới</a></li>
+                                                    <li><a href="product-list.html">Bài viết của tôi</a></li>
+                                                ';
+                                            }
+                                        ?>
                                     </ul>
                                 </li>
                                 <li>
