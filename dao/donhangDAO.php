@@ -32,5 +32,10 @@ function deleteDonHang($ma_don_hang) {
     $data = executeCUD($sql, ["ma_don_hang"=>$ma_don_hang]);
     // var_dump($data);
 }
+function getDonHangByKhachHang($ma_kh) {
+    $sql = "SELECT * FROM don_hang WHERE ma_kh=:ma_kh";
+    $data = getDataWidthParams($sql, ["ma_kh"=>$ma_kh]);
+    return $data;
+}
 
 ?>
