@@ -143,6 +143,10 @@
                                                 $listct = getAllCongThuc();
                                                 foreach ($listct as $ct) {
                                                     extract($ct);
+
+                                                    if($duyet == 0){
+                                                        
+                                                    
                                                     $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
                                                     if (is_file($hinhpath)) {
@@ -208,7 +212,7 @@
                                                         </div>
                                                     </div>
                                                         ';
-                                                }
+                                                }}
                                             ?>
                                         
                                             

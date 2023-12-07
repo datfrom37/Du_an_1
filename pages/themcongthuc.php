@@ -7,7 +7,7 @@
         $thoi_gian_so_che = $_POST['thoi_gian_so_che'];
         $so_nguoi_an = $_POST['so_nguoi_an'];
         $gia = $_POST['gia'];
-        // $ma_loai = $_POST['ma_loai'];
+        $ma_loai = $_POST['ma_loai'];
         $ma_kh = $_SESSION['user'];
         $noi_dung = $_POST['noi_dung'];
         $hinh_anh = $_FILES['hinh_anh']['name'];
@@ -15,8 +15,8 @@
         $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);
         move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file);
         echo "<div style='color:#00FF00'>Cập nhật thành công</div>";
-        echo $ten_cong_thuc;
 
+        createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh, 0);
 
     }
 
@@ -36,6 +36,18 @@
 
 
                 <div class="row">
+                <div class="mb-3">
+                <label for="ma_loai" class="form-lable">Loại</label>
+                <select name="ma_loai" class="form-select colorselect" >
+                <?php                   
+                    $listdanhmuc = getAllLoai();
+                    foreach ($listdanhmuc as $danhmuc) {
+                        extract($danhmuc);
+                        echo '<option value="' . $ma_loai . '">' . $ma_loai. ' - ' .  $ten_loai . '</option>';
+                    }
+                    ?>
+                </select>
+            </div>
                     <div class="col-6">
                         <label for="tgnau"><i class="fa-solid fa-fire-burner yellow"></i></label>
                         <input type="text" name="thoi_gian_nau" placeholder="Thời gian nấu" class="cthuc-input" id="tgnau">

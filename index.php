@@ -10,6 +10,7 @@
       include "dao/pdo.php";
       include './dao/khachhangDAO.php';
       include './dao/donhangDAO.php';
+      include './dao/baivietDAO.php';
 ?>
 
 

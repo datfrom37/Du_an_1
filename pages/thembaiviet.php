@@ -1,4 +1,18 @@
+<?php
+    if (isset($_POST['dangbai']) && ($_POST['dangbai'])) {
+        $ten_bai_viet = $_POST['ten_bai_viet'];
+        // $ma_bai_viet = $_POST['ma_bai_viet'];
+        $noi_dung = $_POST['noi_dung'];
+        $ma_kh = $_SESSION['user'];
+        $hinh_anh = $_FILES['hinh_anh']['name'];
+        $target_dir = "./admin/baiviet/img/";
+        $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);
+        if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {} 
 
+        createBaiViet($noi_dung, $ten_bai_viet, $ma_kh, 0, $hinh_anh);
+        echo "<div style='color:#00FF00'>Thêm thành công</div>";
+    }
+?>
 
 <head>
     <link rel="stylesheet" href="/public/css/baivietmoi.css">
@@ -6,11 +20,11 @@
 
 <body>
     <div class="container bviet-main">
-        <form class="row" >
+        <form class="row" action="index.php?tkh=thembaiviet" method="POST" enctype="multipart/form-data">
             <!-- nội dung bài viết -->
             <div class="col-9 bviet-soanthao">
-                <textarea name="title" id="title" type="text" placeholder="Thêm tiêu đề" class="bviet-title"></textarea>
-                <textarea name="content" id="content" class="bviet-content"
+                <textarea name="ten_bai_viet" id="title" type="text" placeholder="Thêm tiêu đề" class="bviet-title"></textarea>
+                <textarea name="noi_dung" id="content" class="bviet-content"
                     placeholder="Nhập nội dung bài viết"></textarea>
             </div>
             <!-- END nội dung bài viết -->
@@ -43,7 +57,7 @@
                         <p>Ảnh bìa bài viết:</p>
                         <img src="<?php echo $img ?>" alt="" class="bviet-imgpost" id="previewImg">
                         <label for="hinh" class="custom-file-upload">
-                            <input type="file" name="hinhanh" id="hinh" onchange="previewImage(event)">
+                            <input type="file" name="hinh_anh" id="hinh" onchange="previewImage(event)">
                             Chọn ảnh
                         </label>
                     </div>
