@@ -1,10 +1,12 @@
+
+
 <head>
     <link rel="stylesheet" href="/public/css/baivietmoi.css">
 </head>
 
 <body>
     <div class="container bviet-main">
-        <form class="row">
+        <form class="row" >
             <!-- nội dung bài viết -->
             <div class="col-9 bviet-soanthao">
                 <textarea name="title" id="title" type="text" placeholder="Thêm tiêu đề" class="bviet-title"></textarea>
@@ -47,7 +49,7 @@
                     </div>
 
                     <div class="col-12 d-flex justify-content-center">
-                        <input type="submit" value="ĐĂNG BÀI" class="bviet-submit">
+                        <input type="submit" name="dangbai" value="ĐĂNG BÀI" class="bviet-submit">
                     </div>
                 </div>
             </div>
