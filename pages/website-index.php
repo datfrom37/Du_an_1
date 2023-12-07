@@ -60,6 +60,10 @@ if (isset($_GET['tkh'])) {
         case "thembaiviet":
             include "thembaiviet.php";
             break;
+        
+        case "themcongthuc":
+            include "themcongthuc.php";
+            break;
 
 
         default:
