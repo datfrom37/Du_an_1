@@ -144,7 +144,7 @@
                                                 foreach ($listct as $ct) {
                                                     extract($ct);
 
-                                                    if($duyet == 0){
+                                                    if($duyet == 1){
                                                         
                                                     
                                                     $hinhpath = "admin/congthuc/img/" . $hinh_anh;
