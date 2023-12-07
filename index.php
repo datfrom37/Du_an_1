@@ -1,13 +1,13 @@
 <?php 
       session_start();
       ob_start();
-      // session_destroy();
 
+      include "dao/pdo.php";
       include './config/connect.php';
       include './dao/congthucDAO.php';
       include './dao/binhluancongthucDAO.php';
+      include './dao/binhluanbaivietDAO.php';
       include './dao/loaiDAO.php';
-      include "dao/pdo.php";
       include './dao/khachhangDAO.php';
       include './dao/donhangDAO.php';
       include './dao/baivietDAO.php';

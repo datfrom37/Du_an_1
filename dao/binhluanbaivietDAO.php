@@ -11,6 +11,12 @@ function getBinhLuanBaiVietById($ma_binh_luan) {
     return $data;
 }
 
+function getBinhLuanBaiVietByMaBaiViet($ma_bai_viet) {
+    $sql = "SELECT * FROM binh_luan_bai_viet WHERE ma_bai_viet=:ma_bai_viet";
+    $data = getDataWidthParams($sql, ["ma_bai_viet"=>$ma_bai_viet]);
+    return $data;
+}
+
 
 function deleteBinhLuanBaiViet($ma_binh_luan) {
     $sql = "DELETE FROM binh_luan_bai_viet WHERE ma_binh_luan=:ma_binh_luan";

@@ -685,108 +685,74 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                 <h2 class="section-title__title">TIN TỨC & BÀI VIẾT</h2>
             </div>
             <div class="row">
-                <!--News One Single Start-->
-                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
-                    <div class="news-one__single">
-                        <div class="news-one__img-box">
-                            <div class="news-one__img">
-                                <img src="pages/imgweb/banhxeo.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="news-one__content-box">
-                            <ul class="news-one__meta list-unstyled">
-                                <li>
-                                    <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
-                                </li>
-                                <li>
-                                    <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                                </li>
-                            </ul>
-                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet">Which healthy food growth
-                                    strategies required</a></h3>
-                            <div class="news-one__bottom">
-                                <div class="news-one__read-more">
-                                    <a href="news-details.html">Read More</a>
+                <?php
+                    $listbv = getAllBaiViet();
+                    $biendem = 0;
+                        foreach ($listbv as $bv) {
+                            extract($bv);
+
+                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+                            if (is_file($hinhpath)) {
+                                $url = $hinhpath;
+                            } else {
+                                $url = ""; //link anh vao day
+                            }
+                            $listkh = getKhachHangById($ma_kh);
+
+                            $dembinhluan = 0;
+                            $listblbv = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
+                            
+                            foreach ($listblbv as $bl) {
+                                $dembinhluan++;
+                            }
+
+
+                            echo '
+                                <!--News One Single Start-->
+                                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                                    <div class="news-one__single">
+                                        <div class="news-one__img-box">
+                                            <div class="news-one__img">
+                                                <img src="'.$url.'" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="news-one__content-box">
+                                            <ul class="news-one__meta list-unstyled">
+                                                <!--<li>
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fa fa-tag"></i>Apartment</a>
+                                                </li>-->
+                                                <li>
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-user-circle"></i>by <b>'.$ten_kh.' </b> </a>
+                                                </li>
+                                            </ul>
+                                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">'.$ten_bai_viet.'</a></h3>
+                                            <div class="news-one__bottom">
+                                                <div class="news-one__read-more">
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">Xem thêm</a>
+                                                </div>
+                                                <div class="news-one__comment">
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-comments"></i>'.$dembinhluan.'</a>
+                                                </div>
+                                            </div>
+                                            <div class="news-one__date">
+                                                <p>20 Sep</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="news-one__comment">
-                                    <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
-                                </div>
-                            </div>
-                            <div class="news-one__date">
-                                <p>20 Sep</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--News One Single End-->
-                <!--News One Single Start-->
-                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="news-one__single">
-                        <div class="news-one__img-box">
-                            <div class="news-one__img">
-                                <img src="pages/imgweb/banhxeo.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="news-one__content-box">
-                            <ul class="news-one__meta list-unstyled">
-                                <li>
-                                    <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
-                                </li>
-                                <li>
-                                    <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                                </li>
-                            </ul>
-                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet">Donec aliquet blandit enim
-                                    feugiat Suspendisse</a></h3>
-                            <div class="news-one__bottom">
-                                <div class="news-one__read-more">
-                                    <a href="news-details.html">Read More</a>
-                                </div>
-                                <div class="news-one__comment">
-                                    <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
-                                </div>
-                            </div>
-                            <div class="news-one__date">
-                                <p>20 Sep</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--News One Single End-->
-                <!--News One Single Start-->
-                <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                    <div class="news-one__single">
-                        <div class="news-one__img-box">
-                            <div class="news-one__img">
-                                <img src="pages/imgweb/banhxeo.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="news-one__content-box">
-                            <ul class="news-one__meta list-unstyled">
-                                <li>
-                                    <a href="news-details.html"><i class="fa fa-tag"></i>Apartment</a>
-                                </li>
-                                <li>
-                                    <a href="news-details.html"><i class="fas fa-user-circle"></i>by Admin</a>
-                                </li>
-                            </ul>
-                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet">luctus sit amet eu nibh tempus
-                                    turpis.</a></h3>
-                            <div class="news-one__bottom">
-                                <div class="news-one__read-more">
-                                    <a href="news-details.html">Read More</a>
-                                </div>
-                                <div class="news-one__comment">
-                                    <a href="news-details.html"><i class="fas fa-comments"></i>02</a>
-                                </div>
-                            </div>
-                            <div class="news-one__date">
-                                <p>20 Sep</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--News One Single End-->
+                                <!--News One Single End-->
+                            
+                            ';
+
+                            if($biendem == 3) break;
+                            $biendem++;
+                        }
+                    
+
+
+                ?>
+                
+                
             </div>
         </div>
     </section>
