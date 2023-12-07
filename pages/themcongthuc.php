@@ -10,8 +10,6 @@
         // $ma_loai = $_POST['ma_loai'];
         $ma_kh = $_SESSION['user'];
         $noi_dung = $_POST['noi_dung'];
-
-
         $hinh_anh = $_FILES['hinh_anh']['name'];
         $target_dir = "./admin/khachhang/img/" ;
         $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);
@@ -30,7 +28,7 @@
 
 <body>
     <div class="container cthuc-main">
-        <form class="row" action="index.php?tkh=themcongthuc" method="POST">
+        <form class="row" action="index.php?tkh=themcongthuc" method="POST" enctype="multipart/form-data">
             <!-- nội dung công thức -->
             <div class="col-9 cthuc-soanthao">
                 <textarea name="ten_cong_thuc" id="title" type="text" placeholder="Thêm tên công thức"
