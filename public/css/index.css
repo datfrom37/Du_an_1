@@ -22,11 +22,11 @@
   --ogenix-white: #ffffff;
   --ogenix-white-rgb: 255, 255, 255;
   --ogenix-base: #50a72c;
-  --ogenix-baseew: #ffed8a;
+  --ogenix-primary: #ffbd3c;
+  --ogenix-baseew: #ffbd3c;
   --ogenix-base-rgb: 80, 167, 44;
   --ogenix-black: #2a491d;
   --ogenix-black-rgb: 42, 73, 29;
-  --ogenix-primary: #ffbd3c;
   --ogenix-primary-rgb: 255, 189, 60;
   --ogenix-gray: #7d8978;
   --ogenix-gray-rgb: 125, 137, 120;
@@ -11393,7 +11393,7 @@ ul {
   bottom: 0;
   width: 50px;
   /* background-color: #4a9e27; */
-  background-color: #FFE145;
+  background-color: #f7b534;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -11410,7 +11410,7 @@ ul {
   display: block;
   text-align: center;
   border: none;
-  color: #B79C10;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   margin-top: 0;

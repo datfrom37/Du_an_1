@@ -698,7 +698,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                     } else {
                         $url = ""; //link anh vao day
                     }
-                    $listkh = getKhachHangById($ma_kh);
+                    
 
                     $dembinhluan = 0;
                     $listblbv = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
@@ -723,7 +723,13 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                                     <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '"><i class="fa fa-tag"></i>Apartment</a>
                                                 </li>-->
                                                 <li>
-                                                    <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '"><i class="fas fa-user-circle"></i>by <b>' . $ten_kh . ' </b> </a>
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '"><i class="fas fa-user-circle"></i>by <b>';
+                                                    $kh = getKhachHangById($ma_kh);
+                                                    foreach ($kh as $kh1) {
+                                                        extract($kh1);
+                                                    echo $ten_kh;
+                                                    }
+                        echo                            '</b> </a>
                                                 </li>
                                             </ul>
                                             <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '">' . $ten_bai_viet . '</a></h3>

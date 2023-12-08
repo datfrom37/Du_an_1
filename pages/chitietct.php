@@ -45,15 +45,15 @@
                 <!-- Tiêu đề -->
                 <h2 style="width: 95%; ">' . $ten_cong_thuc . '</h2> 
                 <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <xs> (5.0 / 999) </xs>
-                </div>
+                Tác giả: ';
+                
+            $kh = getKhachHangById($ma_kh);
+            foreach ($kh as $kh1) {
+                extract($kh1);
+            echo $ten_kh;
+            }
+     echo           '</div>
                 </br>
-
 
                 <ul class="row">
                     <l class="col-md-1 "></l>
@@ -133,14 +133,6 @@
                             <form class="buttons " method="post" action"index.php?tkh=chitietcongthuc">
                                 <div class="row">
                                     <div class="div col-12">' . $ten_kh . '</div>
-                                    <div class="stars col-12 star-wow">
-                                        <i class="fa-regular fa-star cls"></i>
-                                        <i class="fa-regular fa-star cls"></i>
-                                        <i class="fa-regular fa-star cls"></i>
-                                        <i class="fa-regular fa-star cls"></i>
-                                        <i class="fa-regular fa-star cls"></i>
-                                        <xs> (0.0 / 5.0) </xs>
-                                    </div>
 
                                     <div class="col-12">
                                         <textarea class="comment-input" name="NoiDungBinhLuan" placeholder="Nhập nội dung đánh giá"></textarea>
@@ -212,14 +204,6 @@
                                         ';
                 }
                 echo '
-                                    </div>
-                                    <div class="stars col-12 star-wow">
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fas fa-star fa-xs"></i>
-                                        <i class="fa-regular fa-star cls fa-xs"></i>
-                                        <xl> (4.0 / 5.0) </xl>
                                     </div>
                                     <div class="col-12 date-list">' . $ngay_binh_luan . '</div>
                                     <div class="col-12">

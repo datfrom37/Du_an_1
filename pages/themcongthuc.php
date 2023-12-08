@@ -1,4 +1,5 @@
 <?php
+$thongbao = "";
     if (isset($_POST['dangbai']) && ($_POST['dangbai'])) {
 
         $ten_cong_thuc = $_POST['ten_cong_thuc'];
@@ -11,10 +12,10 @@
         $ma_kh = $_SESSION['user'];
         $noi_dung = $_POST['noi_dung'];
         $hinh_anh = $_FILES['hinh_anh']['name'];
-        $target_dir = "./admin/khachhang/img/" ;
+        $target_dir = "./admin/congthuc/img/" ;
         $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);
         move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file);
-        echo "<div style='color:#00FF00'>Cập nhật thành công</div>";
+        $thongbao =  "<div style='color:#00FF00'>Cập nhật thành công</div>";
 
         createCongThuc($ten_cong_thuc, $nguyen_lieu, $thoi_gian_nau, $thoi_gian_so_che, $so_nguoi_an, $gia, $noi_dung, $ma_kh, $ma_loai, $hinh_anh, 0);
 
@@ -112,6 +113,9 @@
 
                     <div class="col-12 d-flex justify-content-center">
                         <input type="submit" name="dangbai" value="ĐĂNG BÀI" class="cthuc-submit">
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                    <?php echo $thongbao; ?>
                     </div>
                 </div>
             </div>

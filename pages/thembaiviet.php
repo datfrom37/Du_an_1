@@ -1,4 +1,5 @@
 <?php
+    $thongbao = "";
     if (isset($_POST['dangbai']) && ($_POST['dangbai'])) {
         $ten_bai_viet = $_POST['ten_bai_viet'];
         // $ma_bai_viet = $_POST['ma_bai_viet'];
@@ -10,7 +11,7 @@
         if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {} 
 
         createBaiViet($noi_dung, $ten_bai_viet, $ma_kh, 0, $hinh_anh);
-        echo "<div style='color:#00FF00'>Thêm thành công</div>";
+        $thongbao =  "<div style='color:#00FF00'>Thêm thành công</div>";
     }
 ?>
 
@@ -64,6 +65,9 @@
 
                     <div class="col-12 d-flex justify-content-center">
                         <input type="submit" name="dangbai" value="ĐĂNG BÀI" class="bviet-submit">
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <?php echo $thongbao; ?>
                     </div>
                 </div>
             </div>

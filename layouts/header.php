@@ -145,7 +145,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">LIÊN HỆ</a>
+                                    <a href="index.php?tkh=lienhe">LIÊN HỆ</a>
                                 </li>
                             </ul>
                         </div>
