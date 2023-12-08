@@ -43,7 +43,7 @@
                     $listdanhmuc = getAllLoai();
                     foreach ($listdanhmuc as $danhmuc) {
                         extract($danhmuc);
-                        echo '<option value="' . $ma_loai . '">' . $ma_loai. ' - ' .  $ten_loai . '</option>';
+                        echo '<option value="' . $ma_loai . '">' .  $ten_loai . '</option>';
                     }
                     ?>
                 </select>

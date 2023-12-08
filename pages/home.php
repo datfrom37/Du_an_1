@@ -162,7 +162,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                     $flat = "1";
                     foreach ($listct as $ct) {
                         extract($ct);
-                        if($gia == 0){
+                        if ($gia == 0) {
                             echo '<li class="cmp-recipe-listing-item hide">
                                     <div class="cmp-card-wrapper">
                                         <div class="cmp-recipe-image-wrapper">
@@ -203,7 +203,8 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                             $flat = "0";
                         }
                     }
-                    if($flat == "1") echo "<div> Không có sản phẩm </div>";
+                    if ($flat == "1")
+                        echo "<div> Không có sản phẩm </div>";
                     ?>
                 </ul>
             </div>
@@ -395,7 +396,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
 
                     foreach ($listct as $ct) {
                         extract($ct);
-                        
+
                         $mo_khoa = "false";
                         $cong_thuc_tam = $ma_cong_thuc;
                         $gia_tam = $gia;
@@ -448,7 +449,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                     </div>
                                     </li>';
                                 break;
-                            
+
 
                             //chua mo khoa con thuc
                             case 'false':
@@ -514,25 +515,25 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                                            <div class="col-12">
                                                                <form action="index.php" method="post">
                                                                    <div class="mb-3 form-check">
-                                                                       <input class="form-check-input" type="radio" name="option" id="option'.$popup.'1"
+                                                                       <input class="form-check-input" type="radio" name="option" id="option' . $popup . '1"
                                                                            value="option1">
-                                                                       <label class="form-check-label" for="option'.$popup.'1">
+                                                                       <label class="form-check-label" for="option' . $popup . '1">
                                                                        <img src="../images/bank.png" alt="" height="25px" style="margin-right: 48px;"> Chuyển khoản qua tài khoản ngân hàng 
                                                                        </label>
                                                                    </div>
                                
                                                                    <div class="mb-3 form-check">
-                                                                       <input class="form-check-input" type="radio" name="option" id="option'.$popup.'2"
+                                                                       <input class="form-check-input" type="radio" name="option" id="option' . $popup . '2"
                                                                            value="option2">
-                                                                       <label class="form-check-label" for="option'.$popup.'2">
+                                                                       <label class="form-check-label" for="option' . $popup . '2">
                                                                        <img src="../images/momo.png" alt="" height="20px" style="margin-right: 19px;"> Chuyển khoản qua tài khoản Momo
                                                                        </label>
                                                                    </div>
                                
                                                                    <div class="mb-3 form-check">
-                                                                       <input class="form-check-input" type="radio" name="option" id="option'.$popup.'3"
+                                                                       <input class="form-check-input" type="radio" name="option" id="option' . $popup . '3"
                                                                            value="option3">
-                                                                       <label class="form-check-label" for="option'.$popup.'3">
+                                                                       <label class="form-check-label" for="option' . $popup . '3">
                                                                        <img src="../images/zalo.png" alt="" height="15px" style="margin-right: 20px;"> Chuyển khoản qua tài khoản ZaloPay
                                                                        </label>
                                                                    </div>
@@ -606,8 +607,8 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
 
 
                                 echo '
-                                        <div class="containerloginpro" id="containerlogin'.$popup.'" style="display: none;">
-                                        <div class="containerlogin" id="ctlogin'.$popup.'">
+                                        <div class="containerloginpro" id="containerlogin' . $popup . '" style="display: none;">
+                                        <div class="containerlogin" id="ctlogin' . $popup . '">
                                             <div class="form-containerlogin sign-up-containerlogin">';
                                 echo '                <form action="index.php" method="post">';
                                 echo '                    <h1>Đăng ký</h1>
@@ -618,12 +619,12 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                                         <input type="password" name="pass" placeholder="Mật khẩu - tối thiểu 6 ký tự!" />
                                                         <input type="password" name="checkpass" placeholder="Nhập lại mật khẩu" />
                                                     </div>';
-                                
-                                                    
-                                                    if (isset($thongbao)) {
-                                                        echo '<p style="color: red; ">' . $thongbao . '</p>';
-                                                    }
-                                                    
+
+
+                                if (isset($thongbao)) {
+                                    echo '<p style="color: red; ">' . $thongbao . '</p>';
+                                }
+
                                 echo '                <input class="button1" type="submit" name="dangky" value="Đăng ký" >
                                                 </form>
                                             </div>
@@ -634,9 +635,9 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                                         <input type="text" name="email" placeholder="Email" />
                                                         <input type="password" name="pass" placeholder="Mật khẩu" />
                                                     </div>';
-                                                    if (isset($thongbao1)) {
-                                                        echo '<p style="color: red; ">' . $thongbao1 . '</p>';
-                                                    }
+                                if (isset($thongbao1)) {
+                                    echo '<p style="color: red; ">' . $thongbao1 . '</p>';
+                                }
                                 echo '                    <a href="#">Quên mật khẩu?</a>
                                                     <input class="button1" type="submit" name="dangnhap" value="Đăng nhập">
 
@@ -660,11 +661,11 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                             </div>
                                         </div>
                                     </div>';
-                                    $popup++;
+                                $popup++;
                                 break;
                         }
                     }
-                    
+
 
                     ?>
                 </ul>
@@ -686,56 +687,56 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
             </div>
             <div class="row">
                 <?php
-                    $listbv = getAllBaiViet();
-                    $biendem = 0;
-                        foreach ($listbv as $bv) {
-                            extract($bv);
+                $listbv = getAllBaiViet();
+                $biendem = 0;
+                foreach ($listbv as $bv) {
+                    extract($bv);
 
-                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
-                            if (is_file($hinhpath)) {
-                                $url = $hinhpath;
-                            } else {
-                                $url = ""; //link anh vao day
-                            }
-                            $listkh = getKhachHangById($ma_kh);
+                    $hinhpath = "admin/baiviet/img/" . $hinh_anh;
+                    if (is_file($hinhpath)) {
+                        $url = $hinhpath;
+                    } else {
+                        $url = ""; //link anh vao day
+                    }
+                    $listkh = getKhachHangById($ma_kh);
 
-                            $dembinhluan = 0;
-                            $listblbv = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
-                            
-                            foreach ($listblbv as $bl) {
-                                $dembinhluan++;
-                            }
+                    $dembinhluan = 0;
+                    $listblbv = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
 
+                    foreach ($listblbv as $bl) {
+                        $dembinhluan++;
+                    }
 
-                            echo '
+                    if ($duyet == 1) {
+                        echo '
                                 <!--News One Single Start-->
                                 <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
                                     <div class="news-one__single">
                                         <div class="news-one__img-box">
                                             <div class="news-one__img">
-                                                <img src="'.$url.'" alt="">
+                                                <img src="' . $url . '" alt="">
                                             </div>
                                         </div>
                                         <div class="news-one__content-box">
                                             <ul class="news-one__meta list-unstyled">
                                                 <!--<li>
-                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fa fa-tag"></i>Apartment</a>
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '"><i class="fa fa-tag"></i>Apartment</a>
                                                 </li>-->
                                                 <li>
-                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-user-circle"></i>by <b>'.$ten_kh.' </b> </a>
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '"><i class="fas fa-user-circle"></i>by <b>' . $ten_kh . ' </b> </a>
                                                 </li>
                                             </ul>
-                                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">'.$ten_bai_viet.'</a></h3>
+                                            <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '">' . $ten_bai_viet . '</a></h3>
                                             <div class="news-one__bottom">
                                                 <div class="news-one__read-more">
-                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">Xem thêm</a>
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '">Xem thêm</a>
                                                 </div>
                                                 <div class="news-one__comment">
-                                                    <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-comments"></i>'.$dembinhluan.'</a>
+                                                    <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '"><i class="fas fa-comments"></i>' . $dembinhluan . '</a>
                                                 </div>
                                             </div>
                                             <div class="news-one__date">
-                                                <p>20 Sep</p>
+                                                <p>' . $ngay_dang . '</p>
                                             </div>
                                         </div>
                                     </div>
@@ -743,16 +744,18 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                 <!--News One Single End-->
                             
                             ';
+                    }
+                    if ($biendem == 3)
+                        break;
 
-                            if($biendem == 3) break;
-                            $biendem++;
-                        }
-                    
+                    $biendem++;
+                }
+
 
 
                 ?>
-                
-                
+
+
             </div>
         </div>
     </section>
