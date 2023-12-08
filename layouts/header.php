@@ -97,7 +97,7 @@
                     <div class="main-menu-two__wrapper-inner">
                         <div class="main-header-two__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.facebook.com/meowwnovel/"><i class="fab fa-facebook"></i></a>
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
@@ -121,16 +121,7 @@
                                         ?>
                                     </ul>
                                 </li>
-                                <!-- <li class="dropdown">
-                                    <a href="#">DANH MỤC</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="portfolio.html">Portfolio</a></li>
-                                        <li><a href="portfolio-carousel.html">Portfolio Carousel</a>
-                                        </li>
-                                        <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                    </ul>
-                                </li> -->
-                                <li class="dropdown">
+                                <li class="dropdown ">
                                     <a href="index.php?tkh=dsbaiviet">BÀI VIẾT</a>
                                     <ul class="sub-menu">
                                         <li><a href="index.php?tkh=dsbaiviet">Tất cả bài viết</a></li>

@@ -52,18 +52,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12">
-                        <p class="mg-top-sb"><a href="index.php?tkh=thongtinchitiet"><i
-                                    class="fa-solid fa-user yellow"></i> Thông tin tài khoản</a></p>
-                        <p class="mg-top-sb"><a href="index.php?tkh=suatk"><i class="fa-solid fa-pen yellow"></i> Sửa hồ sơ</a></p>
-                        <p  class="mg-top-sb"><a href="index.php?tkh=thaydoimatkhau"><i class="fa-solid fa-lock yellow"></i> Thay đổi mật khẩu</a></p>
-                        <p class="mg-top-sb"><a href="index.php?tkh=congthucdamua"><i class="fa-solid fa-clock-rotate-left yellow"></i> Công thức đã mua</a></p>
-                        <p class="mg-top-sb"><a href=""><i class="fa-solid fa-newspaper yellow"></i> Bài viết của
-                                tôi</a></p>
-                        <?php echo '<p class="mg-top-sb"><a href="index.php?tkh=dangxuat"><i class="fa-solid fa-right-from-bracket yellow"></i> Đăng
-                                xuất</a></p>' ?>
-
-                    </div>
+                    <?php include "sidebar.php"; ?>
                 </div>
             </div>
             <!-- END sidebar -->

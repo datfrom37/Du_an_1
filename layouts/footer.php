@@ -110,3 +110,4 @@
 <script src="/public/js/danhsach.js"></script>
 <script src="/public/js/home.js"></script>
 <script src="/public/js/dangnhap.js"></script>
+<script src="/public/js/index.js"></script>

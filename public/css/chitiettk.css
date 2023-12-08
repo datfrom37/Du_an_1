@@ -42,6 +42,9 @@
     color: #FFBE1C;
     margin-right: 5px;
   }
+  .active{
+    color: #FFBE1C;
+  }
   .mg-top-sb{
     margin-top: 10px;
   }
