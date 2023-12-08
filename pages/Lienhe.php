@@ -17,33 +17,33 @@
                     <ul class="contact-details__contact-list list-unstyled">
                         <li>
                             <div class="icon">
-                                <span class="icon-help"></span>
+                            <i class="fa-regular fa-circle-question fa-2xl yellow"></i>
                             </div>
                             <div class="content">
-                                <p>Have question?</p>
+                                <p>Cần liên lạc ngay?</p>
                                 <h4>
-                                    <a href="tel:923076806860">+ 92 ( 307 ) 68 - 06860</a>
+                                    <a href="tel:84343561287">+ 84 343 561 287</a>
                                 </h4>
                             </div>
                         </li>
                         <li>
                             <div class="icon">
-                                <span class="icon-mailbox"></span>
+                                <i class="fa-solid fa-envelope-open-text fa-2xl yellow"></i>
                             </div>
                             <div class="content">
-                                <p>Write email</p>
+                                <p>Viết email</p>
                                 <h4>
-                                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
+                                    <a href="mailto:lsdfood@gmail.com">lsdfood@gmail.com</a>
                                 </h4>
                             </div>
                         </li>
                         <li>
                             <div class="icon">
-                                <span class="icon-maps-and-flags"></span>
+                            <i class="fa-solid fa-location-dot fa-2xl yellow"></i>
                             </div>
                             <div class="content">
-                                <p>Visit store</p>
-                                <h4>Valentin, Street Road 24, New York</h4>
+                                <p>Ghé thăm </p>
+                                <h4>FPT Poly ,Liên Chiểu, Đà Nẵng, Việt Nam</h4>
                             </div>
                         </li>
                     </ul>
@@ -58,56 +58,9 @@
         </section>
         <!--Contact Details End-->
 
-        <!--Contact Details Start-->
-        <section class="contact-details">
-            <div class="container">
-                <div class="contact-details__inner">
-                    <ul class="contact-details__contact-list list-unstyled">
-                        <li>
-                            <div class="icon">
-                                <span class="icon-help"></span>
-                            </div>
-                            <div class="content">
-                                <p>Have question?</p>
-                                <h4>
-                                    <a href="tel:923076806860">+ 92 ( 307 ) 68 - 06860</a>
-                                </h4>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <span class="icon-mailbox"></span>
-                            </div>
-                            <div class="content">
-                                <p>Write email</p>
-                                <h4>
-                                    <a href="mailto:needhelp@company.com">needhelp@company.com</a>
-                                </h4>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon">
-                                <span class="icon-maps-and-flags"></span>
-                            </div>
-                            <div class="content">
-                                <p>Visit store</p>
-                                <h4>Valentin, Street Road 24, New York</h4>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="contact-details__social-box">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Contact Details End-->
 
-        <!--Contact Page Start-->
-        <section class="contact-page">
+        <!-- Contact Page Start-->
+        <!-- <section class="contact-page">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -155,7 +108,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!--Contact Page End-->
+        </section> -->
+        <!--Contact Page End -->
     
 </body>
