@@ -36,7 +36,17 @@
                         </div>
                     </div>
 
-                    <?php include "sidebar.php"; ?>
+                    <div class="col-12">
+                        <p class="mg-top-sb"><a href="index.php?tkh=thongtinchitiet" ><i class="fa-solid fa-user "></i>
+                                Thông tin tài khoản</a></p>
+                        <p class="mg-top-sb"><a href="index.php?tkh=suatk " ><i class="fa-solid fa-pen "></i> Sửa hồ sơ</a></p>
+                        <p class="mg-top-sb"><a href="index.php?tkh=thaydoimatkhau" class="active"><i class="fa-solid fa-lock yellow"></i> Thay đổi mật khẩu</a>
+                        </p>
+                        <p class="mg-top-sb"><a href="index.php?tkh=congthucdamua"><i class="fa-solid fa-clock-rotate-left "></i> Công thức
+                                đã mua </a></p>
+                        <p class="mg-top-sb"><a href=""><i class="fa-solid fa-newspaper "></i> Bài viết của tôi</a></p>
+                        <?php echo '<p class="mg-top-sb"><a href="index.php?tkh=dangxuat"><i class="fa-solid fa-right-from-bracket "></i> Đăng xuất</a></p>' ?>
+                    </div>
                 </div>
             </div>
             <!-- END sidebar -->
