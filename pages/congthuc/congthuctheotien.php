@@ -20,10 +20,12 @@
                             <div id="slider-range"></div>
                             <div class="ranger-min-max-block">
                                 <div class="product__price-ranger-filter">
-                                    <input type="submit" value="Miễn phí">
+                                    <a href="index.php?tkh=congthuctheotien&tien=free"><input type="submit"
+                                            value="Miễn phí"></a>
                                 </div>
                                 <div class="product__price-ranger-filter">
-                                    <input type="submit" value="Trả phí">
+                                    <a href="index.php?tkh=congthuctheotien&tien=cophi"><input type="submit"
+                                            value="Trả phí"></a>
                                 </div>
                             </div>
                         </div>
@@ -31,15 +33,29 @@
                     <div class="shop-category product__sidebar-single">
                         <h3 class="product__sidebar-title">Categories</h3>
                         <ul class="list-unstyled">
-                            <li class="active"><a href="#">Tất cả <span>(9)</span></a></li>
-                            <li><a href="#">Món ăn ngày Tết <span>(9)</span></a></li>
-                            <li><a href="#">Món ăn chay <span>(8)</span></a></li>
-                            <li><a href="#">Món ăn giảm cân <span>(10)</span></a></li>
-                            <li><a href="#">Món ăn nhậu <span>(16)</span></a></li>
-                            <li><a href="#">Món ăn gia đình <span>(4)</span></a></li>
-                            <li><a href="#">Món ăn mẹ nấu <span>(3)</span></a></li>
-                            <li><a href="#">Món ăn tráng miệng <span>(10)</span></a></li>
-                            <li><a href="#">Món ăn nhẹ <span>(10)</span></a></li>
+                            <?php
+                            $listallct = getAllCongThuc();
+                            $soluongg = 0;
+                            foreach ($listallct as $i) {
+                                extract($i);
+                                if ($duyet == 1)
+                                    $soluongg++;
+                            }
+                            echo '<li class="active"><a href="index.php?tkh=dscongthuc">Tất cả <span>(' . $soluongg . ')</span></a></li>';
+
+                            $listdanhmuc = getAllLoai();
+                            foreach ($listdanhmuc as $dm) {
+                                extract($dm);
+                                $listct = getCongThucByLoai($ma_loai);
+                                $soluong = 0;
+                                foreach ($listct as $i) {
+                                    extract($i);
+                                    if ($duyet == 1)
+                                        $soluong++;
+                                }
+                                echo '<li><a href="index.php?tkh=congthuctheoloai&maloai=' . $ma_loai . '">' . $ten_loai . '<span>(' . $soluong . ')</span></a></li>';
+                            }
+                            ?>
                         </ul>
                     </div>
 
@@ -47,7 +63,7 @@
 
 
 
-                    <div class="shop-best-sellers product__sidebar-single">
+                    <!-- <div class="shop-best-sellers product__sidebar-single">
                         <h3 class="product__sidebar-title">Best sellers</h3>
                         <ul class="list-unstyled shop-best-sellers__list">
                             <li>
@@ -100,7 +116,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -139,14 +155,18 @@
 
 
 
-                                                <?php
-                                                $listct = getAllCongThuc();
-                                                foreach ($listct as $ct) {
-                                                    extract($ct);
+                                            <?php
+                                            
+                                            $tien = $_GET['tien']; 
+                                            if($tien == 'cophi') $listct = getCongThucCoPhi();
+                                            if($tien == 'free') $listct = getCongThucKhongCoPhi();
+                                            
+                                            foreach ($listct as $ct) {
+                                                extract($ct);
 
-                                                    if($duyet == 1){
-                                                        
-                                                    
+                                                if ($duyet == 1) {
+
+
                                                     $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
                                                     if (is_file($hinhpath)) {
@@ -159,7 +179,7 @@
                                                         <div class="product-list__single-inner">
                                                             <div class="product-list__img-box">
                                                                 <div class="product-list__img anh-dact">
-                                                                    '.$img.'
+                                                                    ' . $img . '
                                                                 </div>
                                                                 <div class="product-list__icon-boxes">
                                                                     <a href="#"><i class="far fa-heart"></i></a>
@@ -173,7 +193,7 @@
                                                                     <i class="fa fa-star"></i>
                                                                     <i class="fa fa-star"></i>
                                                                     <i class="fa fa-star"></i>
-                                                                    <i>- '.$ngay_dang.'</i>
+                                                                    <i>- ' . $ngay_dang . '</i>
                                                                 </div>
                                                                 <h4 class="cmp-recipe-listing-link mr-bot name-ct"><a
                                                                         href="product-details.html">' . $ten_cong_thuc . '</a>
@@ -184,7 +204,7 @@
                                                                         <div class="col-md-6">
                                                                             <l
                                                                                 class="cmp-recipe-listing-attribute justify-content-center d-flex ">
-                                                                                <p><i class="fa-solid fa-fire-burner"></i> '.$thoi_gian_nau.' </p>
+                                                                                <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . ' </p>
                                                                             </l>
                                                                         </div>
                                                                         <div class="col-md-6">
@@ -196,13 +216,13 @@
                                                                         <div class="col-md-6">
                                                                             <l
                                                                                 class="cmp-recipe-listing-attribute justify-content-center d-flex">
-                                                                                <p><i class="fas fa-clock"></i> '.$thoi_gian_so_che.'</p>
+                                                                                <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
                                                                             </l>
                                                                         </div>
                                                                         <div class="col-md-6">
                                                                             <l
                                                                                 class="cmp-recipe-listing-attribute ">
-                                                                                <p><i class="fas fa-user"></i> '.$so_nguoi_an.' nguời</p>
+                                                                                <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' nguời</p>
                                                                             </l>
         
                                                                         </div>
@@ -212,10 +232,11 @@
                                                         </div>
                                                     </div>
                                                         ';
-                                                }}
+                                                }
+                                            }
                                             ?>
-                                        
-                                            
+
+
 
 
                                         </ul>

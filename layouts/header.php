@@ -115,7 +115,7 @@
                                             if (isset($_SESSION['user'])){
                                                 echo '
                                                     <li><a href="index.php?tkh=themcongthuc">Thêm công thức mới</a></li>
-                                                    <li><a href="team.html">Công thức của tôi</a></li>
+                                                    <li><a href="index.php?tkh=congthuccuatoi">Công thức của tôi</a></li>
                                                 ';
                                             }
                                         ?>

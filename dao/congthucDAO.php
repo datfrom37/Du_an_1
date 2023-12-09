@@ -11,6 +11,18 @@ function hienThiBonCongThucCoPhi(){
     return $data;
 }
 
+function getCongThucCoPhi(){
+    $sql = "SELECT * FROM cong_thuc WHERE gia>0";
+    $data = getData($sql);
+    return $data;
+}
+
+function getCongThucKhongCoPhi(){
+    $sql = "SELECT * FROM cong_thuc WHERE gia='0'";
+    $data = getData($sql);
+    return $data;
+}
+
 function hienThiBonCongThuctheoloai($ma_loai){
     $sql = "SELECT * FROM cong_thuc WHERE ma_loai=:ma_loai LIMIT 4";
     $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);

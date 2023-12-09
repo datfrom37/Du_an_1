@@ -26,6 +26,9 @@ if (isset($_GET['ma_bl_xoa']) && ($_GET['ma_bl_xoa'])) {
             $url = ""; //link anh vao day
         }
         $listkh = getKhachHangById($ma_kh);
+        foreach ($listkh as $kh) {
+            extract($kh);
+        }
         ?>
         <!--News Details Start-->
         <section class="news-details">
@@ -81,63 +84,98 @@ if (isset($_GET['ma_bl_xoa']) && ($_GET['ma_bl_xoa'])) {
 
 
                             <!-- bình luận -->
-                            <?php
-                            $soluongbinhluan = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
-                            $soLuongbl = 0;
-                            foreach ($soluongbinhluan as $bl) {
-                                $soLuongbl++;
-                            }
 
-                            $khachhanguser = getKhachHangById($_SESSION['user']);
-                            foreach ($khachhanguser as $khuser) {
-                                extract($khuser);
-                                $hinhpath = "admin/khachhang/img/" . $hinh_anh;
-                                if (is_file($hinhpath)) {
-                                    $url = $hinhpath;
-                                } else {
-                                    $url = ""; //link anh vao day
+                            <?php
+                            if(isset($_SESSION['user'])){
+                                $soluongbinhluan = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
+                                $soLuongbl = 0;
+                                foreach ($soluongbinhluan as $bl) {
+                                    $soLuongbl++;
                                 }
-                                ?>
-                                <div class="container mt-5">
-                                    <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="line">
-                                                <div class="comm cq-active">BÌNH LUẬN (
-                                                    <?php echo $soLuongbl; ?>)
+
+                                $khachhanguser = getKhachHangById($_SESSION['user']);
+                                foreach ($khachhanguser as $khuser) {
+                                    extract($khuser);
+                                    $hinhpath = "admin/khachhang/img/" . $hinh_anh;
+                                    if (is_file($hinhpath)) {
+                                        $url = $hinhpath;
+                                    } else {
+                                        $url = ""; //link anh vao day
+                                    }
+                                    ?>
+                                    <div class="container mt-5">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12">
+                                                <div class="line">
+                                                    <div class="comm cq-active">BÌNH LUẬN (
+                                                        <?php echo $soLuongbl; ?>)
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="container binhl">
-                                    <div class="row">
-                                        <div class="col-1">
-                                            <img class='img' src='<?php echo $url; ?>'>
+                                    <div class="container binhl">
+                                        <div class="row">
+                                            <div class="col-1">
+                                                <img class='img' src='<?php echo $url; ?>'>
+                                            </div>
+                                            <div class="col-11 main-cmt">
+                                                <form class="buttons" method="post"
+                                                    action="index.php?tkh=chitietbaiviet&mabv=<?php echo $_GET['mabv']; ?>">
+                                                    <div class="row">
+                                                        <div class="div col-12">
+                                                            <?php echo $ten_kh; ?>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <textarea class="comment-input" name="NoiDungBinhLuan"
+                                                                placeholder="Nhập nội dung đánh giá"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-9"></div>
+                                                        <div class="col-3">
+                                                            <input type="submit" class="button" name="GuiBinhLuan"
+                                                                value="Gửi đánh giá" style="padding-top:10px">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
-                                        <div class="col-11 main-cmt">
-                                            <form class="buttons" method="post"
-                                                action="index.php?tkh=chitietbaiviet&mabv=<?php echo $_GET['mabv']; ?>">
-                                                <div class="row">
-                                                    <div class="div col-12">
-                                                        <?php echo $ten_kh; ?>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <textarea class="comment-input" name="NoiDungBinhLuan"
-                                                            placeholder="Nhập nội dung đánh giá"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-9"></div>
-                                                    <div class="col-3">
-                                                        <input type="submit" class="button" name="GuiBinhLuan"
-                                                            value="Gửi đánh giá" style="padding-top:10px">
-                                                    </div>
-                                                </div>
-                                            </form>
+                                    </div>
+                                    <?php
+                                }
+                            }else{
+                                echo '
+                                <div class="container mt-5">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <div class="line">
+                                            <div class="comm cq-active">BÌNH LUẬN (
+                                                <?php echo $soLuongbl; ?>)
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <?php
+                            </div>
+                            <div class="container binhl">
+                                <div class="row">
+                                    
+                                    <div class="col-11 main-cmt">
+                                        <form class="buttons" method="post">
+                                            <div class="row">
+                                                <div class="div col-12">
+                                                    <?php echo $ten_kh; ?>
+                                                </div>
+                                                <div class="col-12">
+                                                    <textarea class="comment-input" name="NoiDungBinhLuan"
+                                                        placeholder="Đăng nhập để bình luận" disabled></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                                ';
                             }
                             ?>
                             <!-- END bình luận -->

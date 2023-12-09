@@ -9,11 +9,11 @@ if (isset($_GET['tkh'])) {
             break;
 
         case 'congthuc':
-            include "congthuc.php";
+            include "congthuc/congthuc.php";
             break;
         
         case 'chitietcongthuc':
-            include "chitietct.php";
+            include "congthuc/chitietct.php";
             break;
 
         case 'lienhe':
@@ -21,7 +21,7 @@ if (isset($_GET['tkh'])) {
             break;
 
         case "dscongthuc":
-            include "dscongthuc.php";
+            include "congthuc/dscongthuc.php";
             break;
 
         case "dsbaiviet":
@@ -60,9 +60,21 @@ if (isset($_GET['tkh'])) {
         case "thembaiviet":
             include "thembaiviet.php";
             break;
+
+        case "congthuctheoloai":
+            include "congthuc/congthuctheoloai.php";
+            break;
         
+        case "congthuccuatoi":
+            include "congthuc/congthuccuatoi.php";
+            break;
+
         case "themcongthuc":
-            include "themcongthuc.php";
+            include "congthuc/themcongthuc.php";
+            break;
+
+        case "congthuctheotien":
+            include "congthuc/congthuctheotien.php";
             break;
 
 
