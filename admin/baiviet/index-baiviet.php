@@ -20,7 +20,7 @@
                             $ten_bai_viet = $_POST['ten_bai_viet'];
                             // $ma_bai_viet = $_POST['ma_bai_viet'];
                             $noi_dung = $_POST['noi_dung'];
-                            $ma_kh = 2;
+                            $ma_kh = $_SESSION['user'];;
                             $duyet = $_POST['duyet'];
                             $hinh_anh = $_FILES['hinh_anh']['name'];
                             $target_dir = dirname(__FILE__) . '/img/';

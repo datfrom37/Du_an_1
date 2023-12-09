@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "dao/pdo.php";
 // include "includes/connect.php";
 include "config/connect.php";

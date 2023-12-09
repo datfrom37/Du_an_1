@@ -26,7 +26,7 @@
                             $so_nguoi_an = $_POST['so_nguoi_an'];
                             $gia = $_POST['gia'];
                             $ma_loai = $_POST['ma_loai'];
-                            $ma_kh = 2;
+                            $ma_kh = $_SESSION['user'];
                             $noi_dung = $_POST['noi_dung'];
                             
                             $hinh_anh = $_FILES['hinh_anh']['name'];

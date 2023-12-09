@@ -163,6 +163,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                     foreach ($listct as $ct) {
                         extract($ct);
                         if ($gia == 0) {
+                            if($duyet == 1){
                             echo '<li class="cmp-recipe-listing-item hide">
                                     <div class="cmp-card-wrapper">
                                         <div class="cmp-recipe-image-wrapper">
@@ -203,6 +204,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                             $flat = "0";
                         }
                     }
+                }
                     if ($flat == "1")
                         echo "<div> Không có sản phẩm </div>";
                     ?>
@@ -270,7 +272,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
             <div class="cmp-recipe-listing-container cmp-3by3-layout cmp-grid-layout">
                 <div class="row">
                     <div class="main_header col-10">
-                        <h2>Công thức nấu gà</h2>
+                        <h2>Công thức nấu gà miễn phí</h2>
                     </div>
                     <div class="col-2 xemthem-more"><a href="index.php?tkh=dscongthuc">Xem thêm <i
                                 class="fa-solid fa-circle-arrow-right fa-xl"></i></a> </div>

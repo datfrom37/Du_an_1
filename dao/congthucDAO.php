@@ -6,7 +6,7 @@ function getAllCongThuc() {
 }
 
 function hienThiBonCongThucCoPhi(){
-    $sql = "SELECT * FROM cong_thuc WHERE gia>0 LIMIT 4";
+    $sql = "SELECT * FROM cong_thuc WHERE gia>0 AND duyet = '1' LIMIT 4";
     $data = getData($sql);
     return $data;
 }
@@ -24,11 +24,10 @@ function getCongThucKhongCoPhi(){
 }
 
 function hienThiBonCongThuctheoloai($ma_loai){
-    $sql = "SELECT * FROM cong_thuc WHERE ma_loai=:ma_loai LIMIT 4";
+    $sql = "SELECT * FROM cong_thuc WHERE ma_loai=:ma_loai AND duyet = '1' LIMIT 4";
     $data = getDataWidthParams($sql, ["ma_loai"=>$ma_loai]);
     return $data;
 }
-
 function getCongThuctheoKhachHang($ma_kh){
     $sql = "SELECT * FROM cong_thuc WHERE ma_kh=:ma_kh";
     $data = getDataWidthParams($sql, ["ma_kh"=>$ma_kh]);
