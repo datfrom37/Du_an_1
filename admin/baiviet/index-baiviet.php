@@ -75,6 +75,7 @@
                             $noi_dung = $_POST['noi_dung'];
                             $ma_kh = $_POST['ma_kh'];
                             $duyet = $_POST['duyet'];
+                            
                             $hinh_anh = $_FILES['hinh_anh']['name'];
                             $target_dir = dirname(__FILE__) . '/img/';
                             $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);

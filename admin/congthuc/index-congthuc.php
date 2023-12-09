@@ -28,6 +28,7 @@
                             $ma_loai = $_POST['ma_loai'];
                             $ma_kh = 2;
                             $noi_dung = $_POST['noi_dung'];
+                            
                             $hinh_anh = $_FILES['hinh_anh']['name'];
                             $target_dir = dirname(__FILE__) . '/img/';
                             $target_file = $target_dir . basename($_FILES["hinh_anh"]["name"]);
