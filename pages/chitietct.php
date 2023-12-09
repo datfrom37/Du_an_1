@@ -86,13 +86,30 @@
             <div class="col-md-6 ">
                 <div class="custom-box boxmain">
                     <h2>Nguyên liệu</h2>
-                    <p>' . $nguyen_lieu . '</p>
+                    <p>';
+
+                    $nb = 1;
+                    $nguyen_lieu_array = explode("; ", $nguyen_lieu);   
+                    foreach ($nguyen_lieu_array as $nguyen_lieu_item) {
+                        echo '<p><op>'. $nb.'.</op> '. $nguyen_lieu_item . '</p>';
+                        $nb++;
+                    }
+                    
+    echo                 '</p>
                 </div>
             </div>
             <div class="col-md-6 ">
                 <div class="custom-box boxmain">
                     <h2>Hướng dấn nấu ăn</h2>
-                    <p>' . $noi_dung . '</p>
+                    <p>';
+                     $contentNB = 1;
+                     $noi_dung_array = explode("; ", $noi_dung);   
+                     foreach ($noi_dung_array as $noi_dung_item) {
+                         echo '<p><op> Bước '. $contentNB.'.</op> '. $noi_dung_item . '</p>';
+                         $contentNB++;
+                     }
+                     
+     echo       '</p>
                 </div>
             </div>
         </div>
