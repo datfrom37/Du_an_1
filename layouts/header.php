@@ -108,9 +108,9 @@
                                     <a href="index.php">TRANG CHỦ</a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="index.php?tkh=dscongthuc">CÔNG THỨC</a>
+                                    <a href="index.php?tkh=dscongthuc&loai=mienphi">CÔNG THỨC</a>
                                     <ul class="sub-menu">
-                                    <li><a href="index.php?tkh=dscongthuc">Tất cả công thức</a></li>
+                                    <li><a href="index.php?tkh=dscongthuc&loai=mienphi">Tất cả công thức</a></li>
                                         <?php
                                             if (isset($_SESSION['user'])){
                                                 echo '
