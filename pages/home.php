@@ -224,7 +224,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
     <!-- ẩm thực -->
     <div style="margin-bottom: 10vh; margin-top: 5vh;">
         <div class="container text-left mt-4">
-            <h2 style="margin-bottom: 2vh;">Nguyên liệu theo mùa</h2>
+            <h2 style="margin-bottom: 2vh;">Nguyên liệu</h2>
         </div>
 
 
