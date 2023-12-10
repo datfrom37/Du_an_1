@@ -52,7 +52,7 @@
                 <td class="vertical-center" >'.$ma_bai_viet.'</td>
                 <td class="vertical-center" >'.$ten_bai_viet.'</td>
                 <td class="vertical-center"  style="width: 200px;" >'.$img.'</td>
-                <td class="vertical-center" style="width: 300px;">'.$noi_dung.'</td>
+                <td class="vertical-center" style="width: 300px;">'.substr($noi_dung, 0, 100 ) . " ...".'</td>
                 <td class="vertical-center">'.$ngay_dang.'</td>
                 <td class="vertical-center">'.$ma_kh.'</td>
                 '.$tinhtrang.'
