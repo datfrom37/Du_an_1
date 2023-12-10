@@ -25,7 +25,7 @@ if (isset($_GET['tkh'])) {
             break;
 
         case "dsbaiviet":
-            include "dsbaiviet.php";
+            include "baiviet/dsbaiviet.php";
             break;
 
         case "dangxuat":
@@ -50,7 +50,7 @@ if (isset($_GET['tkh'])) {
             break;
 
         case "chitietbaiviet":
-            include "chitietbv.php";
+            include "baiviet/chitietbv.php";
             break;
 
         case "congthucdamua":
@@ -58,7 +58,7 @@ if (isset($_GET['tkh'])) {
             break;
 
         case "thembaiviet":
-            include "thembaiviet.php";
+            include "baiviet/thembaiviet.php";
             break;
 
         case "congthuctheoloai":
@@ -71,6 +71,10 @@ if (isset($_GET['tkh'])) {
 
         case "themcongthuc":
             include "congthuc/themcongthuc.php";
+            break;
+
+        case "baivietcuatoi":
+            include "baiviet/baivietcuatoi.php";
             break;
 
 
