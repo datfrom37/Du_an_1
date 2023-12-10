@@ -42,31 +42,64 @@
                         </div>
                     </div>
                     <div class="shop-category product__sidebar-single">
-                        <h3 class="product__sidebar-title">Danh mục</h3>
-                        <ul class="list-unstyled">
-                            <?php
-                            $listallct = getAllCongThuc();
-                            $soluongg = 0;
-                            foreach ($listallct as $i) {
-                                extract($i);
-                                if ($duyet == 1)
-                                    $soluongg++;
-                            }
-                            echo '<li class="active"><a href="index.php?tkh=dscongthuc">Tất cả <span>(' . $soluongg . ')</span></a></li>';
-
-                            $listdanhmuc = getAllLoai();
-                            foreach ($listdanhmuc as $dm) {
-                                extract($dm);
-                                $listct = getCongThucByLoai($ma_loai);
-                                $soluong = 0;
-                                foreach ($listct as $i) {
+                    <?php
+                        switch($loaif){
+                            case "mienphi":
+                                echo '<h3 class="product__sidebar-title">Danh mục miễn phí</h3>';
+                                echo '<ul class="list-unstyled">';
+                                $listallct = getCongThucKhongCoPhi();
+                                $soluongg = 0;
+                                foreach ($listallct as $i) {
                                     extract($i);
                                     if ($duyet == 1)
-                                        $soluong++;
+                                        $soluongg++;
                                 }
-                                echo '<li><a href="index.php?tkh=congthuctheoloai&maloai=' . $ma_loai . '">' . $ten_loai . '<span>(' . $soluong . ')</span></a></li>';
+                                echo '<li class="active"><a href="index.php?tkh=dscongthuc">Tất cả <span>(' . $soluongg . ')</span></a></li>';
+    
+                                $listdanhmuc = getAllLoai();
+                                foreach ($listdanhmuc as $dm) {
+                                    extract($dm);
+                                    $listct = getCongThucByLoai($ma_loai);
+                                    $soluong = 0;
+                                    foreach ($listct as $i) {
+                                        extract($i);
+                                        if ($duyet == 1)
+                                            $soluong++;
+                                    }
+                                    echo '<li><a href="index.php?tkh=congthuctheoloai&maloai=' . $ma_loai . '">' . $ten_loai . '<span>(' . $soluong . ')</span></a></li>';
+                                }
+
+                                break;
+                            case "traphi":
+                                echo '<h3 class="product__sidebar-title">Danh mục trả phí</h3>';
+                                echo '<ul class="list-unstyled">';
+                                $listallct = getCongThucCoPhi();
+                                $soluongg = 0;
+                                foreach ($listallct as $i) {
+                                    extract($i);
+                                    if ($duyet == 1)
+                                        $soluongg++;
+                                }
+                                echo '<li class="active"><a href="index.php?tkh=dscongthuc">Tất cả <span>(' . $soluongg . ')</span></a></li>';
+    
+                                $listdanhmuc = getAllLoai();
+                                foreach ($listdanhmuc as $dm) {
+                                    extract($dm);
+                                    $listct = getCongThucByLoai($ma_loai);
+                                    $soluong = 0;
+                                    foreach ($listct as $i) {
+                                        extract($i);
+                                        if ($duyet == 1)
+                                            $soluong++;
+                                    }
+                                    echo '<li><a href="index.php?tkh=congthuctheoloai&maloai=' . $ma_loai . '">' . $ten_loai . '<span>(' . $soluong . ')</span></a></li>';
+                                }
+
+                                break;
                             }
-                            ?>
+                        ?>
+                        
+                          
                         </ul>
                     </div>
 

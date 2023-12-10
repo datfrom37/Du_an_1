@@ -20,16 +20,18 @@
                             <div id="slider-range"></div>
                             <div class="ranger-min-max-block">
                                 <div class="product__price-ranger-filter">
-                                    <a href="index.php?tkh=congthuctheotien&tien=free"><input type="submit" value="Miễn phí"></a>
+                                    <a href="index.php?tkh=congthuctheotien&tien=free"><input type="submit"
+                                            value="Miễn phí"></a>
                                 </div>
                                 <div class="product__price-ranger-filter">
-                                    <a href="index.php?tkh=congthuctheotien&tien=cophi"><input type="submit" value="Trả phí"></a>
+                                    <a href="index.php?tkh=congthuctheotien&tien=cophi"><input type="submit"
+                                            value="Trả phí"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="shop-category product__sidebar-single">
-                        <h3 class="product__sidebar-title">Categories</h3>
+                        <h3 class="product__sidebar-title">Danh mục</h3>
                         <ul class="list-unstyled">
                             <?php
                             $listallct = getAllCongThuc();
@@ -39,7 +41,7 @@
                                 if ($duyet == 1)
                                     $soluongg++;
                             }
-                            echo '<li><a href="index.php?tkh=dscongthuc">Tất cả <span>(' . $soluongg . ')</span></a></li>';
+                            echo '<li><a href="index.php?tkh=dscongthuc&loai=mienphi">Tất cả <span>(' . $soluongg . ')</span></a></li>';
 
                             $listdanhmuc = getAllLoai();
                             foreach ($listdanhmuc as $dm) {
@@ -51,72 +53,16 @@
                                     if ($duyet == 1)
                                         $soluong++;
                                 }
-                                if($_GET['maloai'] == $ma_loai) $class = 'class="active"';
-                                else $class = '';
-                                echo'<li '.$class.'><a href="index.php?tkh=congthuctheoloai&maloai='.$ma_loai.'">'.$ten_loai.'<span>('.$soluong.')</span></a></li>';
+                                if ($_GET['maloai'] == $ma_loai)
+                                    $class = 'class="active"';
+                                else
+                                    $class = '';
+                                echo '<li ' . $class . '><a href="index.php?tkh=congthuctheoloai&maloai=' . $ma_loai . '">' . $ten_loai . '<span>(' . $soluong . ')</span></a></li>';
                             }
                             ?>
                         </ul>
                     </div>
 
-
-
-
-
-                    <!-- <div class="shop-best-sellers product__sidebar-single">
-                        <h3 class="product__sidebar-title">Best sellers</h3>
-                        <ul class="list-unstyled shop-best-sellers__list">
-                            <li>
-                                <div class="shop-best-sellers__img">
-                                    <img src="assets/images/shop/shop-best-sellers-img-1-1.jpg" alt="">
-                                </div>
-                                <div class="shop-best-sellers__content">
-                                    <div class="shop-best-sellers__review">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4 class="shop-best-sellers__title"><a href="product-details.html">Carrot</a></h4>
-                                    <p class="shop-best-sellers__rate">$9.00</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="shop-best-sellers__img">
-                                    <img src="assets/images/shop/shop-best-sellers-img-1-2.jpg" alt="">
-                                </div>
-                                <div class="shop-best-sellers__content">
-                                    <div class="shop-best-sellers__review">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4 class="shop-best-sellers__title"><a href="product-details.html">Green
-                                            grapes</a></h4>
-                                    <p class="shop-best-sellers__rate">$16.00</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="shop-best-sellers__img">
-                                    <img src="assets/images/shop/shop-best-sellers-img-1-3.jpg" alt="">
-                                </div>
-                                <div class="shop-best-sellers__content">
-                                    <div class="shop-best-sellers__review">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <h4 class="shop-best-sellers__title"><a href="product-details.html">Apples</a></h4>
-                                    <p class="shop-best-sellers__rate">$23.00</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
 
@@ -156,78 +102,219 @@
 
 
                                             <?php
+                                            $popup = 1;
                                             $listct = getCongThucByLoai($_GET['maloai']);
                                             foreach ($listct as $ct) {
                                                 extract($ct);
+                                                $mo_khoa = "false";
+                                                $cong_thuc_tam = $ma_cong_thuc;
+                                                $gia_tam = $gia;
+                                                $listdh = getAllDonHang();
+                                                foreach ($listdh as $donhang2) {
+                                                    extract($donhang2);
+                                                    if ($ma_kh == $_SESSION['user'] && $ma_cong_thuc == $cong_thuc_tam) {
+                                                        $mo_khoa = "true";
+                                                    } else {
+                                                        $mo_khoa = "false";
+                                                    }
+
+                                                }
 
                                                 if ($duyet == 1) {
+                                                    if ($gia == 0) {
 
+                                                        $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
-                                                    $hinhpath = "admin/congthuc/img/" . $hinh_anh;
-
-                                                    if (is_file($hinhpath)) {
-                                                        $img = "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "'></a>";
-                                                    } else {
-                                                        $img = "no photo";
-                                                    }
-                                                    echo '
-                                                        <div class="product-list__single">
-                                                        <div class="product-list__single-inner">
-                                                            <div class="product-list__img-box">
-                                                                <div class="product-list__img anh-dact">
-                                                                    ' . $img . '
-                                                                </div>
-                                                                <div class="product-list__icon-boxes">
-                                                                    <a href="#"><i class="far fa-heart"></i></a>
-                                                                    <a href="#"><i class="fas fa-eye"></i></a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-list__content">
-                                                                <div class="product-list__review">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i>- ' . $ngay_dang . '</i>
-                                                                </div>
-                                                                <h4 class="cmp-recipe-listing-link mr-bot name-ct"><a
-                                                                        href="product-details.html">' . $ten_cong_thuc . '</a>
-                                                                </h4>
-                                                                <!-- <p class="product-list__price">$18.00</p> -->
-                                                                <ul class="cmp-recipe-listing-attributes">
-                                                                    <div class="row justify-content-center d-flex">
-                                                                        <div class="col-md-6">
-                                                                            <l
-                                                                                class="cmp-recipe-listing-attribute justify-content-center d-flex ">
-                                                                                <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . ' </p>
-                                                                            </l>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <l
-                                                                                class="cmp-recipe-listing-attribute ">
-                                                                                <p><i class="fas fa-star"></i> Dễ</p>
-                                                                            </l>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <l
-                                                                                class="cmp-recipe-listing-attribute justify-content-center d-flex">
-                                                                                <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
-                                                                            </l>
-                                                                        </div>
-                                                                        <div class="col-md-6">
-                                                                            <l
-                                                                                class="cmp-recipe-listing-attribute ">
-                                                                                <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' nguời</p>
-                                                                            </l>
-        
-                                                                        </div>
+                                                        if (is_file($hinhpath)) {
+                                                            $img = "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "'></a>";
+                                                        } else {
+                                                            $img = "no photo";
+                                                        }
+                                                        echo '
+                                                            <div class="product-list__single">
+                                                            <div class="product-list__single-inner">
+                                                                <div class="product-list__img-box">
+                                                                    <div class="product-list__img anh-dact">
+                                                                        ' . $img . '
                                                                     </div>
-                                                                </ul>
+                                                                    <div class="product-list__icon-boxes">
+                                                                        <a href="#"><i class="far fa-heart"></i></a>
+                                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-list__content">
+                                                                    <div class="product-list__review">
+                                                                        <i>- ' . $ngay_dang . '</i>
+                                                                    </div>
+                                                                    <h4 class="cmp-recipe-listing-link mr-bot name-ct"><a
+                                                                            href="product-details.html">' . $ten_cong_thuc . '</a>
+                                                                    </h4>
+                                                                    <!-- <p class="product-list__price">$18.00</p> -->
+                                                                    <ul class="cmp-recipe-listing-attributes">
+                                                                        <div class="row justify-content-center d-flex">
+                                                                            <div class="col-md-6">
+                                                                                <l
+                                                                                    class="cmp-recipe-listing-attribute justify-content-center d-flex ">
+                                                                                    <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . ' </p>
+                                                                                </l>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <l
+                                                                                    class="cmp-recipe-listing-attribute ">
+                                                                                    <p><i class="fas fa-star"></i> Dễ</p>
+                                                                                </l>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <l
+                                                                                    class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                                    <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                                                                </l>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <l
+                                                                                    class="cmp-recipe-listing-attribute ">
+                                                                                    <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' nguời</p>
+                                                                                </l>
+            
+                                                                            </div>
+                                                                        </div>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                        ';
+                                                            ';
+                                                    } else {
+                                                        $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+
+                                                        if (is_file($hinhpath)) {
+                                                            $img = "<div id='openthanhtoanButton" . $popup . "' onclick='openthanhtoanPopup()'><img src='" . $hinhpath . "'></a></div>";
+                                                        } else {
+                                                            $img = "no photo";
+                                                        }
+                                                        echo '
+                                                                                    <div class="product-list__single">
+                                                                                    <div class="product-list__single-inner">
+                                                                                        <div class="product-list__img-box">
+                                                                                            <div class="product-list__img anh-dact">
+                                                                                                ' . $img . '
+                                                                                            </div>
+                                                                                            <div class="product-list__icon-boxes">
+                                                                                                <a href="#"><i class="far fa-heart"></i></a>
+                                                                                                <a href="#"><i class="fas fa-eye"></i></a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="product-list__content">
+                                                                                            <div class="product-list__review">
+                                                                                                <i>- ' . $ngay_dang . '</i>
+                                                                                            </div>
+                                                                                            <h4 class="cmp-recipe-listing-link mr-bot name-ct"><a
+                                                                                                    href="product-details.html">' . $ten_cong_thuc . '</a>
+                                                                                            </h4>
+                                                                                            <!-- <p class="product-list__price">$18.00</p> -->
+                                                                                            <ul class="cmp-recipe-listing-attributes">
+                                                                                                <div class="row justify-content-center d-flex">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <l
+                                                                                                            class="cmp-recipe-listing-attribute justify-content-center d-flex ">
+                                                                                                            <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . ' </p>
+                                                                                                        </l>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <l
+                                                                                                            class="cmp-recipe-listing-attribute ">
+                                                                                                            <p><i class="fas fa-star"></i> Dễ</p>
+                                                                                                        </l>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <l
+                                                                                                            class="cmp-recipe-listing-attribute justify-content-center d-flex">
+                                                                                                            <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
+                                                                                                        </l>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <l
+                                                                                                            class="cmp-recipe-listing-attribute ">
+                                                                                                            <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' nguời</p>
+                                                                                                        </l>
+                                    
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                    ';
+
+
+                                                        //<!-- popup thanh toan -->
+                                                        echo '
+                                                                        <div class="containerThanhtoanpro" id="popupthanhtoan' . $popup . '" >
+                                                                        <div class="container popupthanhtoan">
+                                                                            <div class=" boxmain">
+                                                                                <div class="row">
+                                                                                    <div class="col-5 ">
+                                                                                        <div class="check-yellow">
+                                                                                            <p>Úi chà! Có vẻ như bạn chưa sở hữu công thức này ??:D??</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-7">
+                                                                                        <div class="row">
+                                                                                            <div class="check-white">
+                                                                                                <div class="col-12">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-12 tieude-medium"> ' . $ten_cong_thuc . '  </div>
+                                                                                                        <div class="col-4 tieude-small">Sở hữu ngay chỉ với:  </div>
+                                                                                                        <div class="col-8 big-cash">' . number_format($gia_tam, 0, ',', '.') . ' ₫</div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-12 tieude-small-2">Phương thức thanh toán:</div>
+                                                                                                <div class="col-12">
+                                                                                                    <form action="index.php" method="post">
+                                                                                                        <div class="mb-3 form-check">
+                                                                                                            <input class="form-check-input" type="radio" name="option" id="option' . $popup . '1"
+                                                                                                                value="option1">
+                                                                                                            <label class="form-check-label" for="option' . $popup . '1">
+                                                                                                            <img src="../images/bank.png" alt="" height="25px" style="margin-right: 48px;"> Chuyển khoản qua tài khoản ngân hàng 
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                    
+                                                                                                        <div class="mb-3 form-check">
+                                                                                                            <input class="form-check-input" type="radio" name="option" id="option' . $popup . '2"
+                                                                                                                value="option2">
+                                                                                                            <label class="form-check-label" for="option' . $popup . '2">
+                                                                                                            <img src="../images/momo.png" alt="" height="20px" style="margin-right: 19px;"> Chuyển khoản qua tài khoản Momo
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                    
+                                                                                                        <div class="mb-3 form-check">
+                                                                                                            <input class="form-check-input" type="radio" name="option" id="option' . $popup . '3"
+                                                                                                                value="option3">
+                                                                                                            <label class="form-check-label" for="option' . $popup . '3">
+                                                                                                            <img src="../images/zalo.png" alt="" height="15px" style="margin-right: 20px;"> Chuyển khoản qua tài khoản ZaloPay
+                                                                                                            </label>
+                                                                                                        </div>
+                                                                                                        <!-- Thêm các radio button khác nếu cần -->
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-8"></div>
+                                                                                                            <div class="col-4">
+                                                                                                            <input type="hidden" name="mact1" value="' . $cong_thuc_tam . '">
+                                                                                                            <input type="hidden" name="giact1" value="' . $gia_tam . '">
+                                                                                                            <input type="hidden" name="makh1" value="' . $_SESSION['user'] . '">
+                                                                                                            <input type="submit" name="thanhtoan" class="btn btn-primary button" value="Thanh toán">
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </form>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        </div>
+                                                                        <!--END popup thanh toan -->';
+                                                        $popup++;
+                                                    }
                                                 }
                                             }
                                             ?>
