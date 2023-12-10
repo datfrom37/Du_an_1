@@ -1,3 +1,9 @@
+<?php
+        if(isset($_POST['search'])) {
+            $keyword = $_POST['search'];
+            $dsBviet = timKiembv($keyword);
+        }
+?>
 <head>
 
 </head>
@@ -12,75 +18,157 @@
                 <p class="product__showing-text mr-bot-new">Hiện thị 1–9 trên 12 bài viết</p>
             </div> -->
             <div class="row">
+            
 
     <?php 
+        echo '<div class="section-title text-center">
+                <h2>Kết quả cho "'.$keyword .'"</h2>
+            </div>';
+
+
         $bien = 0;
-        $list_bv = getAllBaiViet();
-        foreach ($list_bv as $bv) {
-            extract($bv);
-
-            $hinhpath = "admin/baiviet/img/" . $hinh_anh;
-            if (is_file($hinhpath)) {
-                $url = $hinhpath;
-            } else {
-                $url = ""; //link anh vao day
-            }
-
-            if($duyet == 1){
-                
-
-                $list_bl = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
-
-                $soluong = 0;
-                foreach ($list_bl as $bl) {
-                    $soluong ++;
-                }
-                $kh = getKhachHangById($ma_kh);
-                foreach ($kh as $ctkh) {
-                    extract($ctkh);
-                }
-                
-                echo'
-                
-                    <!--News One Single Start-->
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <div class="news-one__single">
-                            <div class="news-one__img-box">
-                                <div class="news-one__img">
-                                    <img src="'.$url.'" alt="">
+        if(isset($dsBviet)&&$dsBviet!=""){
+            foreach($dsBviet as $dsbv){
+                extract($dsbv);
+                $list_bv = getBaiVietByName($ten_bai_viet);
+                foreach ($list_bv as $bv) {
+                    extract($bv);
+    
+                    $hinhpath = "admin/baiviet/img/" . $hinh_anh;
+                    if (is_file($hinhpath)) {
+                        $url = $hinhpath;
+                    } else {
+                        $url = ""; //link anh vao day
+                    }
+    
+                    if($duyet == 1){
+                        
+    
+                        $list_bl = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
+    
+                        $soluong = 0;
+                        foreach ($list_bl as $bl) {
+                            $soluong ++;
+                        }
+                        $kh = getKhachHangById($ma_kh);
+                        foreach ($kh as $ctkh) {
+                            extract($ctkh);
+                        }
+                        
+                        echo'
+                                
+                        
+                            <!--News One Single Start-->
+                            <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                                <div class="news-one__single">
+                                    <div class="news-one__img-box">
+                                        <div class="news-one__img">
+                                            <img src="'.$url.'" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="news-one__content-box">
+                                        <ul class="news-one__meta list-unstyled">
+                                            <li>
+                                                <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fa fa-tag"></i>'.$ma_bai_viet.'</a>
+                                            </li>
+                                            <li>
+                                                <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-user-circle"></i>'.$ten_kh.'</a>
+                                            </li>
+                                        </ul>
+                                        <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">'.$ten_bai_viet.'</a></h3>
+                                        <div class="news-one__bottom">
+                                            <div class="news-one__read-more">
+                                                <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">Xem thêm</a>
+                                            </div>
+                                            <div class="news-one__comment">
+                                                <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-comments"></i>'.$soluong.'</a>
+                                            </div>
+                                        </div>
+                                        <div class="news-one__date">
+                                            <p>'.$ngay_dang.'</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="news-one__content-box">
-                                <ul class="news-one__meta list-unstyled">
-                                    <li>
-                                        <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fa fa-tag"></i>'.$ma_bai_viet.'</a>
-                                    </li>
-                                    <li>
-                                        <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-user-circle"></i>'.$ten_kh.'</a>
-                                    </li>
-                                </ul>
-                                <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">'.$ten_bai_viet.'</a></h3>
-                                <div class="news-one__bottom">
-                                    <div class="news-one__read-more">
-                                        <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">Xem thêm</a>
-                                    </div>
-                                    <div class="news-one__comment">
-                                        <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-comments"></i>'.$soluong.'</a>
+                            <!--News One Single End-->
+    
+                        ';
+                        $bien++;
+                        if($bien == 9) break;
+                    }
+                    
+                }
+
+            }
+
+        }else{
+            $list_bv = getAllBaiViet();
+            foreach ($list_bv as $bv) {
+                extract($bv);
+
+                $hinhpath = "admin/baiviet/img/" . $hinh_anh;
+                if (is_file($hinhpath)) {
+                    $url = $hinhpath;
+                } else {
+                    $url = ""; //link anh vao day
+                }
+
+                if($duyet == 1){
+                    
+
+                    $list_bl = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
+
+                    $soluong = 0;
+                    foreach ($list_bl as $bl) {
+                        $soluong ++;
+                    }
+                    $kh = getKhachHangById($ma_kh);
+                    foreach ($kh as $ctkh) {
+                        extract($ctkh);
+                    }
+                    
+                    echo'
+                    
+                        <!--News One Single Start-->
+                        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="news-one__single">
+                                <div class="news-one__img-box">
+                                    <div class="news-one__img">
+                                        <img src="'.$url.'" alt="">
                                     </div>
                                 </div>
-                                <div class="news-one__date">
-                                    <p>'.$ngay_dang.'</p>
+                                <div class="news-one__content-box">
+                                    <ul class="news-one__meta list-unstyled">
+                                        <li>
+                                            <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fa fa-tag"></i>'.$ma_bai_viet.'</a>
+                                        </li>
+                                        <li>
+                                            <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-user-circle"></i>'.$ten_kh.'</a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">'.$ten_bai_viet.'</a></h3>
+                                    <div class="news-one__bottom">
+                                        <div class="news-one__read-more">
+                                            <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'">Xem thêm</a>
+                                        </div>
+                                        <div class="news-one__comment">
+                                            <a href="index.php?tkh=chitietbaiviet&mabv='.$ma_bai_viet.'"><i class="fas fa-comments"></i>'.$soluong.'</a>
+                                        </div>
+                                    </div>
+                                    <div class="news-one__date">
+                                        <p>'.$ngay_dang.'</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--News One Single End-->
+                        <!--News One Single End-->
 
-                ';
-                $bien++;
-                if($bien == 9) break;
+                    ';
+                    $bien++;
+                    if($bien == 9) break;
+                }
+                
             }
-            
         }
         if($bien == 0) echo'Chưa có bài viết';
     ?>
