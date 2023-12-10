@@ -42,7 +42,7 @@
                                     if ($duyet == 1)
                                         $soluongg++;
                                 }
-                                echo '<li class="active"><a href="index.php?tkh=dscongthuc">Tất cả <span>(' . $soluongg . ')</span></a></li>';
+                                echo '<li class="active"><a href="index.php?tkh=dscongthuc?loai=mienphi">Tất cả <span>(' . $soluongg . ')</span></a></li>';
     
                                 $listdanhmuc = getAllLoai();
                                 foreach ($listdanhmuc as $dm) {
