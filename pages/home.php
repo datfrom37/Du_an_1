@@ -68,15 +68,15 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                         <div class="feature-two__single-inner">
                             <div class="feature-two__img-box">
                                 <div class="feature-two__img">
-                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
+                                    <img src="pages/imgweb/đồ ngọt.jpg" alt="">
                                 </div>
                             </div>
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="agriculture-services.html">Món ăn gia đình</a>
+                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=14">Thức ăn ngọt</a>
                                 </h3>
-                                <p class="feature-two__sub-title">Các món ăn tên bàn ăn người Việt</p>
+                                <p class="feature-two__sub-title">Đồ ăn vặt, ăn nhẹ</p>
                                 <div class="feature-two__btn-box">
-                                    <a href="agriculture-services.html" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                    <a href="index.php?tkh=congthuctheoloai&maloai=14" class="thm-btn feature-two__btn">XEM THỬ</a>
                                 </div>
                             </div>
                         </div>
@@ -89,15 +89,15 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                         <div class="feature-two__single-inner">
                             <div class="feature-two__img-box">
                                 <div class="feature-two__img">
-                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
+                                    <img src="pages/imgweb/Tráng miệng.jpg" alt="">
                                 </div>
                             </div>
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="farming-products.html">Ẩm thực đường phố</a>
+                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=15">Món tráng miệng</a>
                                 </h3>
-                                <p class="feature-two__sub-title">Đồ ăn vỉa hè,...</p>
+                                <p class="feature-two__sub-title">Đồ ăn nhẹ sau khi dùng bữa chính</p>
                                 <div class="feature-two__btn-box">
-                                    <a href="farming-products.html" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                    <a href="index.php?tkh=congthuctheoloai&maloai=15" class="thm-btn feature-two__btn">XEM THỬ</a>
                                 </div>
                             </div>
                         </div>
@@ -110,14 +110,14 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                         <div class="feature-two__single-inner">
                             <div class="feature-two__img-box">
                                 <div class="feature-two__img">
-                                    <img src="pages/imgweb/banhxeo.jpg" alt="">
+                                    <img src="pages/imgweb/Chiên xào.jpg" alt="">
                                 </div>
                             </div>
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="organic-services.html">Món tráng miệng</a></h3>
-                                <p class="feature-two__sub-title">Các loại đồ ăn nhẹ, ...</p>
+                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=16">Đồ chiên xào</a></h3>
+                                <p class="feature-two__sub-title">Các loại đồ ăn nhanh</p>
                                 <div class="feature-two__btn-box">
-                                    <a href="organic-services.html" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                    <a href="index.php?tkh=congthuctheoloai&maloai=16" class="thm-btn feature-two__btn">XEM THỬ</a>
                                 </div>
                             </div>
                         </div>
@@ -753,10 +753,11 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                             
                             ';
                     }
-                    if ($biendem == 3)
+                    $biendem++;
+
+                    if ($biendem == 6)
                         break;
 
-                    $biendem++;
                 }
 
 
