@@ -224,38 +224,38 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
     <!-- ẩm thực -->
     <div style="margin-bottom: 10vh; margin-top: 5vh;">
         <div class="container text-left mt-4">
-            <h2 style="margin-bottom: 2vh;">Ẩm thực</h2>
+            <h2 style="margin-bottom: 2vh;">Nguyên liệu theo mùa</h2>
         </div>
 
 
         <!-- Phần hiển thị hình ảnh -->
-        <div class="container-fluid bg-light">
+        <div class="container-fluid bg-light text-center">
             <div class="row">
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Hành%20lá"><img src="/images/hanh-la.jpg" alt="Ảnh 1" class="rounded-image"> <p>Hành lá</p> </a>
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20gà"><img src="/images/thit-ga.jpg" alt="Ảnh 1" class="rounded-image"><p>Thịt gà</p> </a>
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20bò"><img src="/images/thitbo.jpg" alt="Ảnh 1" class="rounded-image"><p>Thịt bò</p> </a>
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20dê"><img src="/images/thitde.jpg" alt="Ảnh 1" class="rounded-image"><p>Thịt dê</p> </a>
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cà%20rốt"><img src="/images/carot.jpg" alt="Ảnh 1" class="rounded-image"><p>Cà rốt</p> </a>
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Bột%20mì"><img src="/images/bột mì.png" alt="Ảnh 1" class="rounded-image"><p>Bột mì</p> </a>
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cá%20tuyết"><img src="/images/catuyet.jpg" alt="Ảnh 1" class="rounded-image"><p>Cá tuyết</p> </a>
                 </div>
                 <div class="col-md-1">
-                    <img src="./images/banner3.jpg" alt="Ảnh 1" class="rounded-image">
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cá%20saba"><img src="/images/casaba.jpg" alt="Ảnh 1" class="rounded-image"><p>Cá saba</p> </a>
                 </div>
                 <div class="col-md-2">
                 </div>

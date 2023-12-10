@@ -8977,15 +8977,16 @@ ul {
   display: block;
   background: var(--ogenix-extra);
   border-radius: var(--ogenix-bdr-radius);
-  padding: 46px 45px 50px;
+  padding: 30px 15px 30px 15px;
   overflow: hidden;
   z-index: 1;
-  padding-right: 33px;
+  margin-top: 30px;
 }
 
 .sidebar__tags .sidebar__title {
-  margin-left: 5px;
+  margin-left: 15px;
   margin-bottom: 25px;
+
 }
 
 .sidebar__tags-list {

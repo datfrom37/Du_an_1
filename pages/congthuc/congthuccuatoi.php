@@ -56,7 +56,35 @@
                         </ul>
                     </div>
 
+                    <div class="sidebar__single sidebar__tags">
+                        <h3 class="sidebar__title">Nguyên liệu</h3>
+                        <div class="sidebar__tags-list">
 
+                        <?php
+                            $nguyenLieu = hienThinguyenlieu();
+
+                            if ($nguyenLieu && count($nguyenLieu) > 0) {
+                                $uniqueIngredients = array(); // Mảng để lưu trữ các nguyên liệu duy nhất
+
+                                foreach ($nguyenLieu as $nguyen) {
+                                    // Tách các nguyên liệu thành mảng sử dụng dấu chấm phẩy (;) làm điểm tách
+                                    $arrNguyenLieu = explode(';', $nguyen['nguyen_lieu']);
+
+                                    // Lặp qua từng nguyên liệu trong danh sách
+                                    foreach ($arrNguyenLieu as $nguyenLieuItem) {
+                                        $ingredient = trim($nguyenLieuItem); // Làm sạch nguyên liệu từ khoảng trắng thừa
+
+                                        // Kiểm tra xem nguyên liệu đã tồn tại trong mảng duy nhất chưa, nếu chưa thêm vào mảng
+                                        if (!isset($uniqueIngredients[$ingredient])) {
+                                            $uniqueIngredients[$ingredient] = true;
+                                            echo '<a href="index.php?tkh=nguyenlieuma&nguyenl='.$ingredient.'">' . $ingredient . '</a>';
+                                        }
+                                    }
+                                }
+                            } 
+                        ?>
+                        </div>
+                    </div>
 
 
 

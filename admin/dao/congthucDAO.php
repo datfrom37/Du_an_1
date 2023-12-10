@@ -10,6 +10,17 @@ function hienThiBonCongThucCoPhi(){
     $data = getData($sql);
     return $data;
 }
+function hienThinguyenlieu(){
+    $sql = "SELECT nguyen_lieu FROM cong_thuc WHERE duyet = '1'";
+    $data = getData($sql);
+    return $data;
+}
+
+function hienThicongthuctheonguyenlieu($nguyen_lieu){
+    $sql = "SELECT * FROM cong_thuc WHERE nguyen_lieu LIKE '%$nguyen_lieu%' AND duyet = '1'";
+    $data = getData($sql);
+    return $data;
+}
 
 function getCongThucCoPhi(){
     $sql = "SELECT * FROM cong_thuc WHERE gia>0 ";

@@ -31,35 +31,33 @@
                         </div>
                     </div>
                     <div class="shop-category product__sidebar-single">
-                        <h3 class="product__sidebar-title">Danh mục</h3>
-                        <ul class="list-unstyled">
-                            <?php
-                            $listallct = getAllCongThuc();
-                            $soluongg = 0;
-                            foreach ($listallct as $i) {
-                                extract($i);
-                                if ($duyet == 1)
-                                    $soluongg++;
-                            }
-                            echo '<li><a href="index.php?tkh=dscongthuc&loai=mienphi">Tất cả <span>(' . $soluongg . ')</span></a></li>';
-
-                            $listdanhmuc = getAllLoai();
-                            foreach ($listdanhmuc as $dm) {
-                                extract($dm);
-                                $listct = getCongThucByLoai($ma_loai);
-                                $soluong = 0;
-                                foreach ($listct as $i) {
+                      
+                        <?php
+                                echo '<h3 class="product__sidebar-title">Danh mục </h3>';
+                                echo '<ul class="list-unstyled">';
+                                $listallct = getAllCongThuc();
+                                $soluongg = 0;
+                                foreach ($listallct as $i) {
                                     extract($i);
                                     if ($duyet == 1)
-                                        $soluong++;
+                                        $soluongg++;
                                 }
-                                if ($_GET['maloai'] == $ma_loai)
-                                    $class = 'class="active"';
-                                else
-                                    $class = '';
-                                echo '<li ' . $class . '><a href="index.php?tkh=congthuctheoloai&maloai=' . $ma_loai . '">' . $ten_loai . '<span>(' . $soluong . ')</span></a></li>';
-                            }
-                            ?>
+                                echo '<li class="active"><a href="index.php?tkh=dscongthuc">Tất cả <span>(' . $soluongg . ')</span></a></li>';
+    
+                                $listdanhmuc = getAllLoai();
+                                foreach ($listdanhmuc as $dm) {
+                                    extract($dm);
+                                    $listct = getCongThucByLoai($ma_loai);
+                                    $soluong = 0;
+                                    foreach ($listct as $i) {
+                                        extract($i);
+                                        if ($duyet == 1)
+                                            $soluong++;
+                                    }
+                                    echo '<li><a href="index.php?tkh=congthuctheoloai&maloai=' . $ma_loai . '">' . $ten_loai . '<span>(' . $soluong . ')</span></a></li>';
+                                }
+                        ?>
+                        
                         </ul>
                     </div>
                     <div class="sidebar__single sidebar__tags">
@@ -83,7 +81,7 @@
                                         // Kiểm tra xem nguyên liệu đã tồn tại trong mảng duy nhất chưa, nếu chưa thêm vào mảng
                                         if (!isset($uniqueIngredients[$ingredient])) {
                                             $uniqueIngredients[$ingredient] = true;
-                                            echo '<a href="index.php?tkh=nguyenliemau&nguyenl='.$ingredient.'">' . $ingredient . '</a>';
+                                            echo '<a href="index.php?tkh=nguyenlieuma&nguyenl='.$ingredient.'">' . $ingredient . '</a>';
                                         }
                                     }
                                 }
@@ -103,7 +101,10 @@
                         <div class="col-xl-12">
                             <div class="product__showing-result">
                                 <div class="product__showing-text-box">
-                                    <p class="product__showing-text">Hiện thị 1–6 trên 12 công thức</p>
+                                    <?php
+                                        $hien_thi = $_GET['nguyenl'];
+                                        echo '<p class="product__showing-text">Hiện thị 1–6 trên 12 công thức có '. $hien_thi .'</p>'
+                                    ?>
                                 </div>
                                 <div class="product__menu-showing-sort">
                                     <div class="product__menu">
@@ -131,7 +132,7 @@
 
                                             <?php
                                             $popup = 1;
-                                            $listct = getCongThucByLoai($_GET['maloai']);
+                                            $listct = hienThicongthuctheonguyenlieu($_GET['nguyenl']);
                                             foreach ($listct as $ct) {
                                                 extract($ct);
                                                 $mo_khoa = "false";
