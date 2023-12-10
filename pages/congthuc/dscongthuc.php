@@ -110,24 +110,40 @@
                             $nguyenLieu = hienThinguyenlieu();
 
                             if ($nguyenLieu && count($nguyenLieu) > 0) {
-                                $uniqueIngredients = array(); // Mảng để lưu trữ các nguyên liệu duy nhất
-
+                                $ingredientCounts = array(); // Mảng để lưu trữ số lần xuất hiện của từng nguyên liệu
+                            
                                 foreach ($nguyenLieu as $nguyen) {
                                     // Tách các nguyên liệu thành mảng sử dụng dấu chấm phẩy (;) làm điểm tách
                                     $arrNguyenLieu = explode(';', $nguyen['nguyen_lieu']);
-
+                            
                                     // Lặp qua từng nguyên liệu trong danh sách
                                     foreach ($arrNguyenLieu as $nguyenLieuItem) {
                                         $ingredient = trim($nguyenLieuItem); // Làm sạch nguyên liệu từ khoảng trắng thừa
-
-                                        // Kiểm tra xem nguyên liệu đã tồn tại trong mảng duy nhất chưa, nếu chưa thêm vào mảng
-                                        if (!isset($uniqueIngredients[$ingredient])) {
-                                            $uniqueIngredients[$ingredient] = true;
-                                            echo '<a href="index.php?tkh=nguyenlieuma&nguyenl='.$ingredient.'">' . $ingredient . '</a>';
+                            
+                                        // Kiểm tra xem nguyên liệu không chứa số (sử dụng is_numeric)
+                                        if (!is_numeric($ingredient)) {
+                                            if (array_key_exists($ingredient, $ingredientCounts)) {
+                                                $ingredientCounts[$ingredient]++;
+                                            } else {
+                                                $ingredientCounts[$ingredient] = 1;
+                                            }
                                         }
                                     }
                                 }
-                            } 
+                            
+                                // Sắp xếp mảng theo số lần xuất hiện giảm dần
+                                arsort($ingredientCounts);
+                            
+                                $count = 0;
+                                foreach ($ingredientCounts as $ingredient => $countOccurrences) {
+                                    if ($count < 10) {
+                                        echo '<a href="index.php?tkh=nguyenlieuma&nguyenl=' . $ingredient . '">' . $ingredient . '</a>';
+                                        $count++;
+                                    } else {
+                                        break;
+                                    }
+                                }
+                            }
                         ?>
                         </div>
                     </div>
