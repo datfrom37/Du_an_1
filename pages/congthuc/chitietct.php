@@ -123,7 +123,6 @@
             <div class="col-12">
                 <div class="line">
                     <div class="comm cq-active">ĐÁNH GIÁ (0)</div>
-                    <div class="ques">CÂU HỎI (0)</div>
                 </div>
             </div>
         </div>
