@@ -83,7 +83,7 @@
                                         // Kiểm tra xem nguyên liệu đã tồn tại trong mảng duy nhất chưa, nếu chưa thêm vào mảng
                                         if (!isset($uniqueIngredients[$ingredient])) {
                                             $uniqueIngredients[$ingredient] = true;
-                                            echo '<a href="index.php?tkh=nguyenliemau&nguyenl='.$ingredient.'">' . $ingredient . '</a>';
+                                            echo '<a href="index.php?tkh=nguyenlieuma&nguyenl='.$ingredient.'">' . $ingredient . '</a>';
                                         }
                                     }
                                 }
