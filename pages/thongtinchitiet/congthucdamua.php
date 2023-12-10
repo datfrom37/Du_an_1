@@ -70,7 +70,6 @@ if (isset($_POST['doimatkhau']) && ($_POST['doimatkhau'] > 0)) {
                             </p>
                             <p class="mg-top-sb"><a href="index.php?tkh=congthucdamua" class="active"><i class="fa-solid fa-clock-rotate-left yellow"></i> Công thức
                                     đã mua </a></p>
-                            <p class="mg-top-sb"><a href=""><i class="fa-solid fa-newspaper "></i> Bài viết của tôi</a></p>
                             <?php echo '<p class="mg-top-sb"><a href="index.php?tkh=dangxuat"><i class="fa-solid fa-right-from-bracket "></i> Đăng xuất</a></p>' ?>
                         </div>
                 </div>
