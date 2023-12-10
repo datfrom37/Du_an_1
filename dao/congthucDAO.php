@@ -16,6 +16,11 @@ function hienThinguyenlieu(){
     $data = getData($sql);
     return $data;
 }
+function timKiemct($key_word){
+    $sql = "SELECT * FROM cong_thuc WHERE ten_cong_thuc LIKE '%$key_word%' AND duyet = '1'";
+    $data = getData($sql);
+    return $data;
+}
 
 function hienThicongthuctheonguyenlieu($nguyen_lieu){
     $sql = "SELECT * FROM cong_thuc WHERE nguyen_lieu LIKE '%$nguyen_lieu%' AND duyet = '1'";
