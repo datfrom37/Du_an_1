@@ -65,7 +65,7 @@
                 <td class="vertical-center">'.$thoi_gian_so_che.'</td>
                 <td class="vertical-center" style="width: 50pxpx;" >'.$so_nguoi_an.'</td>
                 <td class="vertical-center" >'.$gia.'</td>
-                <td class="vertical-center" style="width: 200px; text-align: left;" >'.$noi_dung.'</td>
+                <td class="vertical-center" style="width: 200px; text-align: left;" >'.substr($noi_dung, 0, 100 ) . " ...".'</td>
                 <td class="vertical-center" >'.$ngay_dang.'</td>
                 '.$tinhtrang.'
                 <td class="vertical-center" >
