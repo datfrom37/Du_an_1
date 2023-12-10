@@ -753,10 +753,11 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                             
                             ';
                     }
-                    if ($biendem == 3)
+                    $biendem++;
+
+                    if ($biendem == 6)
                         break;
 
-                    $biendem++;
                 }
 
 
