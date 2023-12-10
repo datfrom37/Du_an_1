@@ -19,7 +19,7 @@ if (isset($_GET['ma_bl_xoa']) && ($_GET['ma_bl_xoa'])) {
     $listbv = getBaiVietByMaBaiViet($_GET['mabv']);
     foreach ($listbv as $bv) {
         extract($bv);
-        $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+        $hinhpath = "admin/baiviet/img/" . $hinh_anh;
         if (is_file($hinhpath)) {
             $url = $hinhpath;
         } else {

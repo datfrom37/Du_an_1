@@ -129,7 +129,7 @@
                                             if (isset($_SESSION['user'])){
                                                 echo'
                                                     <li><a href="index.php?tkh=thembaiviet">Thêm bài viết mới</a></li>
-                                                    <li><a href="product-list.html">Bài viết của tôi</a></li>
+                                                    <li><a href="index.php?tkh=baivietcuatoi">Bài viết của tôi</a></li>
                                                 ';
                                             }
                                         ?>
