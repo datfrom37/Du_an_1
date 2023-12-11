@@ -7,8 +7,6 @@ if (isset($_GET['tkh'])) {
         case 'home':
             include "home.php";
             break;
-      
-        
         case 'chitietcongthuc':
             include "congthuc/chitietct.php";
             break;
@@ -60,6 +58,10 @@ if (isset($_GET['tkh'])) {
 
         case "congthuctheoloai":
             include "congthuc/congthuctheoloai.php";
+            break;
+
+        case "timkiemct":
+            include "congthuc/timkiemct.php";
             break;
         
         case "congthuccuatoi":

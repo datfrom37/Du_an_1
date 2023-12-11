@@ -47,8 +47,8 @@
                         </ul>
                         <div class="main-header-two__search-cart-box">
                             <div class="main-header-two__search-form-box">
-                                <form class="main-header-two__search-form mc-form" data-url="MC_FORM_URL"
-                                    novalidate="novalidate">
+                                <form class="main-header-two__search-form mc-form" 
+                                     action="index.php?tkh=dsbaiviet" method="post">
                                     <div class="main-header-two__search-input-box">
                                         <div class="main-header-two__search-icon"><i class="fas fa-search fa-lg"
                                                 style='margin-bottom: 0.5vh;'></i></div>
@@ -57,6 +57,7 @@
                                             kiếm</button>
                                     </div>
                                 </form>
+                               
                                 <div class="mc-form__response"></div>
                             </div>
                             <div class="main-header-two__cart-box">
@@ -82,7 +83,6 @@
                                             
                                         }
                                     ?>
-                                    <!-- Thêm các mục menu khác nếu cần -->
                                 </ul>
                             </div>
                         </div>

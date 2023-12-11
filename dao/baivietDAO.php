@@ -11,6 +11,12 @@ function getLoaiByMaBaiViet($ma_bai_viet) {
     return $data;
 }
 
+function timKiembv($key_word){
+    $sql = "SELECT * FROM bai_viet WHERE ten_bai_viet LIKE '%$key_word%' AND duyet = '1'";
+    $data = getData($sql);
+    return $data;
+}
+
 function getBaiVietByMaBaiViet($ma_bai_viet) {
     $sql = "SELECT * FROM bai_viet WHERE ma_bai_viet=:ma_bai_viet";
     $data = getDataWidthParams($sql, ["ma_bai_viet"=>$ma_bai_viet]);

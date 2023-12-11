@@ -68,17 +68,17 @@ if (isset($_GET['ma_bl_xoa']) && ($_GET['ma_bl_xoa'])) {
                                 pellentesque vitae et nunc. Sed vitae leo vitae nisl pellentesque semper.</p> -->
                             </div>
                             <div class="news-details__bottom">
-                                <p class="news-details__tags">
+                                <!-- <p class="news-details__tags">
                                     <span>Tags</span>
                                     <a href="#" class="thm-btn">Dairy</a>
                                     <a href="#" class="thm-btn">Food</a>
                                 </p>
                                 <div class="news-details__social-list">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class    ="fab fa-twitter"></i></a>
                                     <a href="#"><i class="fab fa-facebook"></i></a>
                                     <a href="#"><i class="fab fa-pinterest-p"></i></a>
                                     <a href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                </div> -->
                             </div>
 
 

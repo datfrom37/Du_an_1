@@ -10,8 +10,8 @@
             <div class="col-xl-3 col-lg-3">
                 <div class="product__sidebar">
                     <div class="shop-search product__sidebar-single">
-                        <form action="#">
-                            <input type="text" placeholder="Search">
+                    <form action="index.php?tkh=timkiemct" method="post">
+                            <input type="text" name="search" placeholder="Tìm kiếm">
                         </form>
                     </div>
                     <div class="product__price-ranger product__sidebar-single">
