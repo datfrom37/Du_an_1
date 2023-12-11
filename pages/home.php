@@ -158,7 +158,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                 <ul class="cmp-recipe-listing-items-container">
                     <!-- 1 -->
                     <?php
-                    $listct = hienThiBonCongThuctheoloai(15);
+                    $listct = hienThiBonCongThuctheoloai(17);
                     $flat = "1";
                     foreach ($listct as $ct) {
                         extract($ct);
