@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LSD - Kênh Ẩm Thực</title>
-    <link rel="icon" href="/images/title-logo.png" type="image/x-icon">
+    <title>ShareFoods - Kênh Ẩm Thực</title>
+    <link rel="icon" href="/images/Share_Food-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="./public/bootstrap-5.3.2/dist/css/bootstrap.css">
     <script src="./public/bootstrap-5.3.2/dist/js/bootstrap.js"></script>
     <!-- Sử dụng thư viện Font Awesome -->
@@ -24,7 +24,8 @@
             <div class="container">
                 <div class="main-header-two__top-inner">
                     <div class="main-header-two__logo">
-                        <a href="index.php"><img src="../images/logo2.png" alt="" width="170vw"></a>
+                        <a href="index.php"><img src="../images/Share_Food-removebg-preview.png" alt=""
+                                width="100vw"></a>
                     </div>
                     <div class="main-header-two__right">
                         <ul class="list-unstyled main-header-two__contact-list">
@@ -41,14 +42,14 @@
                                     <i class="fas fa-envelope-open"></i>
                                 </div>
                                 <div class="text">
-                                    <a href="mailto:lsdfood@gmail.com">lsdfood@gmail.com</a>
+                                    <a href="mailto:lsdfood@gmail.com">sharefoods@gmail.com</a>
                                 </div>
                             </li>
                         </ul>
                         <div class="main-header-two__search-cart-box">
                             <div class="main-header-two__search-form-box">
-                                <form class="main-header-two__search-form mc-form" 
-                                     action="index.php?tkh=dsbaiviet" method="post">
+                                <form class="main-header-two__search-form mc-form" action="index.php?tkh=dsbaiviet"
+                                    method="post">
                                     <div class="main-header-two__search-input-box">
                                         <div class="main-header-two__search-icon"><i class="fas fa-search fa-lg"
                                                 style='margin-bottom: 0.5vh;'></i></div>
@@ -57,31 +58,31 @@
                                             kiếm</button>
                                     </div>
                                 </form>
-                               
+
                                 <div class="mc-form__response"></div>
                             </div>
                             <div class="main-header-two__cart-box">
                                 <a href="#" class="main-header-two__cart fas fa-bars"></a>
                                 <ul class="menu-list ">
                                     <?php
-                                        if (isset($_SESSION['user'])){
-                                            echo '
+                                    if (isset($_SESSION['user'])) {
+                                        echo '
                                                 <li class="row"><a href="index.php?tkh=thembaiviet" class="col-12">Thêm bài viết mới</a></li>
                                                 <li class="row"><a href="index.php?tkh=themcongthuc" class="col-12">Thêm công thức mới</a></li>
                                             ';
-                                        }
-                                        if (isset($_SESSION['user'])){
-                                            $listkh = getKhachHangById($_SESSION['user']);
-                                            foreach ($listkh as $kh) {
-                                                extract($kh);
-                                                if($vai_tro == "1"){
-                                                    echo'
+                                    }
+                                    if (isset($_SESSION['user'])) {
+                                        $listkh = getKhachHangById($_SESSION['user']);
+                                        foreach ($listkh as $kh) {
+                                            extract($kh);
+                                            if ($vai_tro == "1") {
+                                                echo '
                                                     <li class="row"><a href="/admin/index.php" class="col-12">Trang Admin</a></li>
                                                     ';
-                                                }
                                             }
-                                            
                                         }
+
+                                    }
                                     ?>
                                 </ul>
                             </div>
@@ -110,14 +111,14 @@
                                 <li class="dropdown">
                                     <a href="index.php?tkh=dscongthuc&loai=mienphi">CÔNG THỨC</a>
                                     <ul class="sub-menu">
-                                    <li><a href="index.php?tkh=dscongthuc&loai=mienphi">Tất cả công thức</a></li>
+                                        <li><a href="index.php?tkh=dscongthuc&loai=mienphi">Tất cả công thức</a></li>
                                         <?php
-                                            if (isset($_SESSION['user'])){
-                                                echo '
+                                        if (isset($_SESSION['user'])) {
+                                            echo '
                                                     <li><a href="index.php?tkh=themcongthuc">Thêm công thức mới</a></li>
                                                     <li><a href="index.php?tkh=congthuccuatoi">Công thức của tôi</a></li>
                                                 ';
-                                            }
+                                        }
                                         ?>
                                     </ul>
                                 </li>
@@ -126,12 +127,12 @@
                                     <ul class="sub-menu">
                                         <li><a href="index.php?tkh=dsbaiviet">Tất cả bài viết</a></li>
                                         <?php
-                                            if (isset($_SESSION['user'])){
-                                                echo'
+                                        if (isset($_SESSION['user'])) {
+                                            echo '
                                                     <li><a href="index.php?tkh=thembaiviet">Thêm bài viết mới</a></li>
                                                     <li><a href="index.php?tkh=baivietcuatoi">Bài viết của tôi</a></li>
                                                 ';
-                                            }
+                                        }
                                         ?>
                                     </ul>
                                 </li>
@@ -141,39 +142,39 @@
                             </ul>
                         </div>
                         <div class="main-menu-two__right">
-                                <?php
-                                if (!isset($_SESSION['user'])) {
-                                    echo ' <ul class="list-unstyled main-menu-two__login">';
-                                    echo '   <li class="active" id="openPopupButton" onclick="openLoginPopup()">
+                            <?php
+                            if (!isset($_SESSION['user'])) {
+                                echo ' <ul class="list-unstyled main-menu-two__login">';
+                                echo '   <li class="active" id="openPopupButton" onclick="openLoginPopup()">
                                             <a>Đăng nhập</a>
                                                     </li> ';
-                                    echo ' </ul>';
-                                } else {
-                                    $makh = $_SESSION['user'];
-                                    $list_kh = getKhachHangById($makh);
-                                    foreach ($list_kh as $kh) {
-                                        extract($kh);
-                                        $hinhpath = "./admin/khachhang/img/" . $hinh_anh;
-                                        if (is_file($hinhpath)) {
-                                            $img = $hinhpath;
-                                        } else {
-                                            $img = './admin/khachhang/img/avt.jpg';
-                                        }
-
-                                        echo '<ul class="list-unstyled  main-menu__list">';
-                                        echo '<li class="dropdown">';
-                                        echo '<a href="#"><img src="'. $img .'" alt="" class="imguser" >'. $ten_kh.' </a>';
-                                        echo '<ul class="sub-menu">';
-                                        echo '<li><a href="index.php?tkh=thongtinchitiet">Thông tin tài khoản</a></li>';
-                                        echo '<li><a href="index.php?tkh=dangxuat">Đăng xuất</a></li>';
-                                        echo '</ul>';
-                                        echo '</li>';
-                                        echo '</ul>';
-
+                                echo ' </ul>';
+                            } else {
+                                $makh = $_SESSION['user'];
+                                $list_kh = getKhachHangById($makh);
+                                foreach ($list_kh as $kh) {
+                                    extract($kh);
+                                    $hinhpath = "./admin/khachhang/img/" . $hinh_anh;
+                                    if (is_file($hinhpath)) {
+                                        $img = $hinhpath;
+                                    } else {
+                                        $img = './admin/khachhang/img/avt.jpg';
                                     }
 
+                                    echo '<ul class="list-unstyled  main-menu__list">';
+                                    echo '<li class="dropdown">';
+                                    echo '<a href="#"><img src="' . $img . '" alt="" class="imguser" >' . $ten_kh . ' </a>';
+                                    echo '<ul class="sub-menu">';
+                                    echo '<li><a href="index.php?tkh=thongtinchitiet">Thông tin tài khoản</a></li>';
+                                    echo '<li><a href="index.php?tkh=dangxuat">Đăng xuất</a></li>';
+                                    echo '</ul>';
+                                    echo '</li>';
+                                    echo '</ul>';
+
                                 }
-                                ?>
+
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -190,32 +191,31 @@
 
     <!-- đăng nhập -->
     <?php
-    if(isset($_POST["dangnhap"])){
-        if((isset($_POST["email"]) && $_POST["pass"])){
+    if (isset($_POST["dangnhap"])) {
+        if ((isset($_POST["email"]) && $_POST["pass"])) {
             $user = $_POST['email'];
             $pass = $_POST['pass'];
-    
+
             $list_kh = getAllKhachHang();
             $loginSuccessful = false;
-            
-            foreach($list_kh as $kh) {
+
+            foreach ($list_kh as $kh) {
                 extract($kh);
-                if($user == $email && $pass == $mat_khau) {
+                if ($user == $email && $pass == $mat_khau) {
                     $_SESSION['user'] = $ma_kh;
                     $loginSuccessful = true;
                     echo '<script>window.location.href = "../index.php" </script>';
                     break;
                 }
             }
-            if(!$loginSuccessful) {
+            if (!$loginSuccessful) {
                 $thongbao1 = 'Thông tin đăng nhập không chính xác';
             }
         } else {
             $thongbao1 = 'Vui lòng nhập đầy đủ thông tin !';
         }
-    }
-    else{
-        if((isset($_POST["dangky"]) && $_POST["dangky"])){
+    } else {
+        if ((isset($_POST["dangky"]) && $_POST["dangky"])) {
             $user = $_POST['user'];
             $pass = $_POST['pass'];
             $checkpass = $_POST['checkpass'];
@@ -226,17 +226,18 @@
             $list_kh = getAllKhachHang();
             foreach ($list_kh as $kh) {
                 extract($kh);
-                if($email_input == $email) $flag = 1;
+                if ($email_input == $email)
+                    $flag = 1;
             }
-            if(isset($_POST['user']) && $_POST['pass'] && $_POST['checkpass'] && $_POST['number'] && $_POST['email']){
+            if (isset($_POST['user']) && $_POST['pass'] && $_POST['checkpass'] && $_POST['number'] && $_POST['email']) {
 
-                if(strlen($number) < 10){
+                if (strlen($number) < 10) {
                     $thongbao = "SĐT không đúng.";
                 } elseif (!filter_var($email_input, FILTER_VALIDATE_EMAIL)) {
                     $thongbao = "Email không hợp lệ.";
-                }elseif($flag == 1){
+                } elseif ($flag == 1) {
                     $thongbao = 'Email đã tồn tại';
-                }elseif ($pass !== $checkpass) {
+                } elseif ($pass !== $checkpass) {
                     $thongbao = "Mật khẩu và xác nhận mật khẩu không khớp!";
                 } elseif (strlen($pass) < 6) {
                     $thongbao = "Mật khẩu phải chứa ít nhất 6 ký tự.";
@@ -244,23 +245,23 @@
                     $ten_kh = $user;
                     $mat_khau = $pass;
                     $so_dien_thoai = $number;
-                    $email = $email_input;           
+                    $email = $email_input;
                     $vai_tro = 0;
                     // Thực hiện truy vấn SQL để chèn dữ liệu;
                     $sql = createKhachHang($ten_kh, $mat_khau, $so_dien_thoai, $email, 0);
                     $thongbao = "Đăng ký thành công!";
                     //echo '<script>window.location.href = "dangky_dangnhap.php" </script>';
                 }
-            }else{
+            } else {
                 $thongbao = 'Vui lòng nhập đầy đủ thông tin !';
             }
-            
+
         }
     }
-?>
+    ?>
 
 
-<div class="containerloginpro" id="containerlogin" style="display: none;">
+    <div class="containerloginpro" id="containerlogin" style="display: none;">
         <div class="containerlogin" id="ctlogin">
             <div class="form-containerlogin sign-up-containerlogin">
                 <!-- đăng ký; -->
@@ -284,7 +285,7 @@
                         echo '<p style="color: red; ">' . $thongbao . '</p>';
                     }
                     ?>
-                    <input class="button1" type="submit" name="dangky" value="Đăng ký" >
+                    <input class="button1" type="submit" name="dangky" value="Đăng ký">
                 </form>
             </div>
             <div class="form-containerlogin sign-in-containerlogin">
@@ -330,11 +331,8 @@
     </div>
 
 
-    
+
     <script src="/public/js/dangnhap.js"></script>
 
- 
-<!-- END đăng nhập -->
 
-
-
+    <!-- END đăng nhập -->
