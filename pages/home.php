@@ -72,11 +72,13 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                 </div>
                             </div>
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=14">Thức ăn ngọt</a>
+                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=14">Thức
+                                        ăn ngọt</a>
                                 </h3>
                                 <p class="feature-two__sub-title">Đồ ăn vặt, ăn nhẹ</p>
                                 <div class="feature-two__btn-box">
-                                    <a href="index.php?tkh=congthuctheoloai&maloai=14" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                    <a href="index.php?tkh=congthuctheoloai&maloai=14"
+                                        class="thm-btn feature-two__btn">XEM THỬ</a>
                                 </div>
                             </div>
                         </div>
@@ -93,11 +95,13 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                 </div>
                             </div>
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=15">Món tráng miệng</a>
+                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=15">Món
+                                        tráng miệng</a>
                                 </h3>
                                 <p class="feature-two__sub-title">Đồ ăn nhẹ sau khi dùng bữa chính</p>
                                 <div class="feature-two__btn-box">
-                                    <a href="index.php?tkh=congthuctheoloai&maloai=15" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                    <a href="index.php?tkh=congthuctheoloai&maloai=15"
+                                        class="thm-btn feature-two__btn">XEM THỬ</a>
                                 </div>
                             </div>
                         </div>
@@ -114,10 +118,12 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                 </div>
                             </div>
                             <div class="feature-two__content">
-                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=16">Đồ chiên xào</a></h3>
+                                <h3 class="feature-two__title"><a href="index.php?tkh=congthuctheoloai&maloai=16">Đồ
+                                        chiên xào</a></h3>
                                 <p class="feature-two__sub-title">Các loại đồ ăn nhanh</p>
                                 <div class="feature-two__btn-box">
-                                    <a href="index.php?tkh=congthuctheoloai&maloai=16" class="thm-btn feature-two__btn">XEM THỬ</a>
+                                    <a href="index.php?tkh=congthuctheoloai&maloai=16"
+                                        class="thm-btn feature-two__btn">XEM THỬ</a>
                                 </div>
                             </div>
                         </div>
@@ -163,48 +169,48 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                     foreach ($listct as $ct) {
                         extract($ct);
                         if ($gia == 0) {
-                            if($duyet == 1){
-                            echo '<li class="cmp-recipe-listing-item hide">
+                            if ($duyet == 1) {
+                                echo '<li class="cmp-recipe-listing-item hide">
                                     <div class="cmp-card-wrapper">
                                         <div class="cmp-recipe-image-wrapper">
                                             <div class="cmp-recipe-listing-image-container">
                                             <picture>';
 
-                            $hinhpath = "admin/congthuc/img/" . $hinh_anh;
+                                $hinhpath = "admin/congthuc/img/" . $hinh_anh;
 
-                            if (is_file($hinhpath)) {
-                                echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
-                            } else {
-                                echo "no photo";
-                            }
-                            echo '</picture>
+                                if (is_file($hinhpath)) {
+                                    echo "<a href='index.php?tkh=chitietcongthuc&ct_id= $ma_cong_thuc'><img src='" . $hinhpath . "' class='cmp-recipe-listing-image' style='height: 200px; width:100%; object-fit: cover;'></a>";
+                                } else {
+                                    echo "no photo";
+                                }
+                                echo '</picture>
                                         </div>
                                     </div>
                                     <h3 class="cmp-recipe-listing-title">';
-                            echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
+                                echo '    <a href="index.php?tkh=chitietcongthuc&ct_id=' . $ma_cong_thuc . ' " class="cmp-recipe-listing-link">' . $ten_cong_thuc . '</a>
                                     </h3>';
 
 
-                            echo '<ul class="cmp-recipe-listing-attributes">
+                                echo '<ul class="cmp-recipe-listing-attributes">
                                     <li class="cmp-recipe-listing-attribute justify-content-end d-flex">';
-                            echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
+                                echo ' <p><i class="fa-solid fa-fire-burner"></i> ' . $thoi_gian_nau . '</p>
                                     </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
                                     <p><i class="fas fa-star"></i> Dễ</p>
                                     </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-end d-flex">
                                     <p><i class="fas fa-clock"></i> ' . $thoi_gian_so_che . '</p>
                                             </li>';
-                            echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
+                                echo '<li class="cmp-recipe-listing-attribute justify-content-start d-flex">
                                     <p><i class="fas fa-user"></i> ' . $so_nguoi_an . ' người</p>
                                             </li>
                                         </ul>
                                     </div>
                                     </li>';
-                            $flat = "0";
+                                $flat = "0";
+                            }
                         }
                     }
-                }
                     if ($flat == "1")
                         echo "<div> Không có sản phẩm </div>";
                     ?>
@@ -234,28 +240,52 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Hành%20lá"><img src="/images/hanh-la.jpg" alt="Ảnh 1" class="rounded-image"> <p>Hành lá</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Hành%20lá"><img src="/images/hanh-la.jpg" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Hành lá</p>
+                    </a>
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20gà"><img src="/images/thit-ga.jpg" alt="Ảnh 1" class="rounded-image"><p>Thịt gà</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20gà"><img src="/images/thit-ga.jpg" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Thịt gà</p>
+                    </a>
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20bò"><img src="/images/thitbo.jpg" alt="Ảnh 1" class="rounded-image"><p>Thịt bò</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20bò"><img src="/images/thitbo.jpg" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Thịt bò</p>
+                    </a>
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20dê"><img src="/images/thitde.jpg" alt="Ảnh 1" class="rounded-image"><p>Thịt dê</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Thịt%20dê"><img src="/images/thitde.jpg" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Thịt dê</p>
+                    </a>
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cà%20rốt"><img src="/images/carot.jpg" alt="Ảnh 1" class="rounded-image"><p>Cà rốt</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cà%20rốt"><img src="/images/carot.jpg" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Cà rốt</p>
+                    </a>
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Bột%20mì"><img src="/images/bột mì.png" alt="Ảnh 1" class="rounded-image"><p>Bột mì</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Bột%20mì"><img src="/images/bột mì.png" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Bột mì</p>
+                    </a>
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cá%20tuyết"><img src="/images/catuyet.jpg" alt="Ảnh 1" class="rounded-image"><p>Cá tuyết</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cá%20tuyết"><img src="/images/catuyet.jpg" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Cá tuyết</p>
+                    </a>
                 </div>
                 <div class="col-md-1">
-                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cá%20saba"><img src="/images/casaba.jpg" alt="Ảnh 1" class="rounded-image"><p>Cá saba</p> </a>
+                    <a href="index.php?tkh=nguyenlieuma&nguyenl=Cá%20saba"><img src="/images/casaba.jpg" alt="Ảnh 1"
+                            class="rounded-image">
+                        <p>Cá saba</p>
+                    </a>
                 </div>
                 <div class="col-md-2">
                 </div>
@@ -499,8 +529,8 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                        <div class=" boxmain">
                                            <div class="row">
                                                <div class="col-5 ">
-                                                   <div class="check-yellow">
-                                                       <p>Úi chà! Có vẻ như bạn chưa sở hữu công thức này ??:D??</p>
+                                                   <div class="check-yellow" style="background-image: url(' . $hinhpath . '); color: black;">
+                                                       <p>Bạn chưa sở hữu công thức này!!!</p>
                                                    </div>
                                                </div>
                                                <div class="col-7">
@@ -700,7 +730,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                     } else {
                         $url = ""; //link anh vao day
                     }
-                    
+
 
                     $dembinhluan = 0;
                     $listblbv = getBinhLuanBaiVietByMaBaiViet($ma_bai_viet);
@@ -726,12 +756,12 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                                 </li>-->
                                                 <li>
                                                     <a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '"><i class="fas fa-user-circle"></i>by <b>';
-                                                    $kh = getKhachHangById($ma_kh);
-                                                    foreach ($kh as $kh1) {
-                                                        extract($kh1);
-                                                    echo $ten_kh;
-                                                    }
-                        echo                            '</b> </a>
+                        $kh = getKhachHangById($ma_kh);
+                        foreach ($kh as $kh1) {
+                            extract($kh1);
+                            echo $ten_kh;
+                        }
+                        echo '</b> </a>
                                                 </li>
                                             </ul>
                                             <h3 class="news-one__title"><a href="index.php?tkh=chitietbaiviet&mabv=' . $ma_bai_viet . '">' . $ten_bai_viet . '</a></h3>
