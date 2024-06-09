@@ -530,7 +530,7 @@ if (isset($_POST['thanhtoan']) && ($_POST['thanhtoan'])) {
                                            <div class="row">
                                                <div class="col-5 ">
                                                    <div class="check-yellow" style="background-image: url(' . $hinhpath . '); color: black;">
-                                                       <p>Bạn chưa sở hữu công thức này!!!</p>
+                                                       <p class="chuasohuu">Bạn chưa sở hữu công thức này</p>
                                                    </div>
                                                </div>
                                                <div class="col-7">

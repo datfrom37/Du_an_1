@@ -1,40 +1,40 @@
-.banner{
+.banner {
     background-color: aqua;
     height: 500px;
     width: 100%;
 }
 
-.homnayangi .congthuc{
+.homnayangi .congthuc {
     width: 18%;
     float: left;
     margin: 1%;
     background-color: rgb(255, 254, 254);
     border-radius: 10px;
-    box-shadow: 1px 1px 4px  gray;
+    box-shadow: 1px 1px 4px gray;
 }
 
-.homnayangi .congthuc img{
+.homnayangi .congthuc img {
     padding: 4%;
     width: 100%;
     height: 150px;
 }
 
-.homnayangi .congthuc .tieude{
+.homnayangi .congthuc .tieude {
     margin: 0 10px;
 }
 
-.homnayangi .congthuc .mota{
+.homnayangi .congthuc .mota {
     margin: 0 10px;
     font-size: small;
     margin-bottom: 10px;
 }
 
-.monanyeuthich .baiviet{
+.monanyeuthich .baiviet {
     width: 100%;
     background-color: aqua;
 }
 
-.monanyeuthich .baiviet img{
+.monanyeuthich .baiviet img {
     width: 100px;
     height: 100px;
     background-color: rgb(4, 148, 100);
@@ -45,11 +45,19 @@
 
 .rounded-image {
     border-radius: 50%;
-    width: 100px; /* Điều chỉnh kích thước của ảnh */
-    height: 100px; /* Điều chỉnh kích thước của ảnh */
-    object-fit: cover; /* Để ảnh không bị biến dạng */
+    width: 100px;
+    /* Điều chỉnh kích thước của ảnh */
+    height: 100px;
+    /* Điều chỉnh kích thước của ảnh */
+    object-fit: cover;
+    /* Để ảnh không bị biến dạng */
 }
 
+.chuasohuu {
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+}
 
 
 
@@ -63,41 +71,58 @@
 
 .custom-media img {
     max-width: 150px;
-    margin-right: 20px; /* Khoảng cách giữa ảnh và nội dung */
+    margin-right: 20px;
+    /* Khoảng cách giữa ảnh và nội dung */
 }
+
 .custom-media {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Khoảng cách giữa các sản phẩm */
+    margin-bottom: 20px;
+    /* Khoảng cách giữa các sản phẩm */
     background-color: rgb(255, 254, 254);
     border-radius: 10px;
-    box-shadow: 1px 1px 4px  gray;
-    padding: 10px; /* Khoảng cách bên trong sản phẩm */
-    height: 150px; /* Chiều cao cố định cho mỗi sản phẩm */
-    overflow: hidden; /* Ẩn nội dung vượt quá chiều cao */
+    box-shadow: 1px 1px 4px gray;
+    padding: 10px;
+    /* Khoảng cách bên trong sản phẩm */
+    height: 150px;
+    /* Chiều cao cố định cho mỗi sản phẩm */
+    overflow: hidden;
+    /* Ẩn nội dung vượt quá chiều cao */
 }
+
 .truncate-text {
-    width: 90%; /* Độ rộng của phần hiển thị văn bản */
+    width: 90%;
+    /* Độ rộng của phần hiển thị văn bản */
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; /* Số dòng tối đa */
-    white-space: normal; /* Cho phép văn bản xuống dòng */
-    overflow: hidden; /* Ẩn phần văn bản vượt quá độ rộng */
-    text-overflow: ellipsis; /* Hiển thị "..." khi cần */
-  }
-  .truncate-text1 {
-    width: 60vw; /* Độ rộng của phần hiển thị văn bản */
-    white-space: nowrap; /* Ngăn văn bản xuống dòng */
-    overflow: hidden; /* Ẩn phần văn bản vượt quá độ rộng */
-    text-overflow: ellipsis; /* Hiển thị "..." khi văn bản bị ẩn */
-  }
+    -webkit-line-clamp: 2;
+    /* Số dòng tối đa */
+    white-space: normal;
+    /* Cho phép văn bản xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần văn bản vượt quá độ rộng */
+    text-overflow: ellipsis;
+    /* Hiển thị "..." khi cần */
+}
+
+.truncate-text1 {
+    width: 60vw;
+    /* Độ rộng của phần hiển thị văn bản */
+    white-space: nowrap;
+    /* Ngăn văn bản xuống dòng */
+    overflow: hidden;
+    /* Ẩn phần văn bản vượt quá độ rộng */
+    text-overflow: ellipsis;
+    /* Hiển thị "..." khi văn bản bị ẩn */
+}
 
 
 
 
 
 
-  .recipelisting .cmp-recipe-listing-wrapper {
+.recipelisting .cmp-recipe-listing-wrapper {
     padding: 0 1rem 3.75rem;
     position: relative
 }
@@ -111,7 +136,8 @@
     margin-bottom: 2rem
 }
 
-.recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-filter,.recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .total_results {
+.recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-filter,
+.recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .total_results {
     display: none
 }
 
@@ -139,7 +165,7 @@
 
 @media screen and (min-width: 768px) {
     .recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container .cmp-recipe-listing-item {
-        -webkit-box-flex:0;
+        -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(25% - 1rem);
         flex: 0 0 calc(24.5% - 1rem);
         width: 0
@@ -276,7 +302,7 @@
     -webkit-transition: -webkit-transform .5s;
     transition: -webkit-transform .5s;
     transition: transform .5s;
-    transition: transform .5s,-webkit-transform .5s
+    transition: transform .5s, -webkit-transform .5s
 }
 
 .recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container .cmp-recipe-listing-item .cmp-card-wrapper:hover .cmp-recipe-image-wrapper img {
@@ -329,7 +355,7 @@
 }
 
 .recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .load-more-button.hide {
-    display: none!important
+    display: none !important
 }
 
 .recipelisting .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .load-more-button button {
@@ -354,8 +380,8 @@
     max-width: 320px;
     padding: 1rem 2.5rem;
     text-decoration: none;
-    -webkit-transition: background-color .5s,border .5s;
-    transition: background-color .5s,border .5s;
+    -webkit-transition: background-color .5s, border .5s;
+    transition: background-color .5s, border .5s;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content
@@ -476,8 +502,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 32px;
-    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,.15);
-    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     gap: 0;
@@ -547,14 +573,14 @@
 
 @media screen and (min-width: 992px)and (max-width:1060px) {
     .recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container .cmp-recipe-listing-item .cmp-card-wrapper .cmp-recipe-listing-attributes {
-        margin:-4rem 0 0;
+        margin: -4rem 0 0;
         padding: 0 0 1.5rem 1rem
     }
 }
 
 @media screen and (min-width: 320px)and (max-width:359px) {
     .recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container .cmp-recipe-listing-item .cmp-card-wrapper .cmp-recipe-listing-attributes {
-        margin:-4rem 0 0;
+        margin: -4rem 0 0;
         padding: 0 0 1rem 1rem
     }
 }
@@ -568,7 +594,7 @@
 
 @media screen and (min-width: 320px)and (max-width:359px) {
     .recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container .cmp-recipe-listing-item .cmp-card-wrapper .cmp-recipe-listing-attributes li.cmp-recipe-listing-attribute p {
-        font-size:.875rem
+        font-size: .875rem
     }
 }
 
@@ -580,7 +606,7 @@
     -webkit-box-ordinal-group: 5;
     -ms-flex-order: 4;
     align-items: center;
-    border-top: 1px solid rgba(172,192,177,.2);
+    border-top: 1px solid rgba(172, 192, 177, .2);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -652,21 +678,25 @@
     outline-offset: -0.1rem
 }
 
-.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item:first-child,.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item:first-child {
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item:first-child,
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item:first-child {
     margin-left: -100%
 }
 
-.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item:first-child .cmp-card-wrapper .cmp-recipe-image-wrapper,.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item:first-child .cmp-card-wrapper .cmp-recipe-image-wrapper {
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item:first-child .cmp-card-wrapper .cmp-recipe-image-wrapper,
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item:first-child .cmp-card-wrapper .cmp-recipe-image-wrapper {
     -webkit-transform: translateX(0%) translateY(24%) rotate(-90deg);
     transform: translateX(0%) translateY(24%) rotate(-90deg)
 }
 
-.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item:last-child .cmp-card-wrapper .cmp-recipe-image-wrapper,.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item:last-child .cmp-card-wrapper .cmp-recipe-image-wrapper {
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item:last-child .cmp-card-wrapper .cmp-recipe-image-wrapper,
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item:last-child .cmp-card-wrapper .cmp-recipe-image-wrapper {
     -webkit-transform: translateX(25%) translateY(24%) rotate(0);
     transform: translateX(25%) translateY(24%) rotate(0)
 }
 
-.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item .cmp-card-wrapper .cmp-recipe-listing-title a,.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item .cmp-card-wrapper .cmp-recipe-listing-title a {
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed .cmp-recipe-listing-item .cmp-card-wrapper .cmp-recipe-listing-title a,
+.recipelisting.recipe-transform .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover .cmp-recipe-listing-item .cmp-card-wrapper .cmp-recipe-listing-title a {
     color: #fff
 }
 
@@ -674,7 +704,8 @@
     background-color: #c03733
 }
 
-.recipelisting.recipe-transform.recipe-ids-167294-167294 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,.recipelisting.recipe-transform.recipe-ids-167294-167294 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
+.recipelisting.recipe-transform.recipe-ids-167294-167294 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,
+.recipelisting.recipe-transform.recipe-ids-167294-167294 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
     background-color: #fcaf17
 }
 
@@ -682,7 +713,8 @@
     background-color: #169a9c
 }
 
-.recipelisting.recipe-transform.recipe-ids-218859-104885 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,.recipelisting.recipe-transform.recipe-ids-218859-104885 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
+.recipelisting.recipe-transform.recipe-ids-218859-104885 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,
+.recipelisting.recipe-transform.recipe-ids-218859-104885 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
     background-color: #963a69
 }
 
@@ -690,7 +722,8 @@
     background-color: #fbdc89
 }
 
-.recipelisting.recipe-transform.recipe-ids-167299-235711 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,.recipelisting.recipe-transform.recipe-ids-167299-235711 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
+.recipelisting.recipe-transform.recipe-ids-167299-235711 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,
+.recipelisting.recipe-transform.recipe-ids-167299-235711 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
     background-color: #fcaf17
 }
 
@@ -698,7 +731,8 @@
     background-color: #fbdc89
 }
 
-.recipelisting.recipe-transform.recipe-ids-104876-192119 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,.recipelisting.recipe-transform.recipe-ids-104876-192119 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
+.recipelisting.recipe-transform.recipe-ids-104876-192119 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,
+.recipelisting.recipe-transform.recipe-ids-104876-192119 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
     background-color: #fcaf17
 }
 
@@ -706,7 +740,8 @@
     background-color: #702778
 }
 
-.recipelisting.recipe-transform.recipe-ids-104904-230581 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,.recipelisting.recipe-transform.recipe-ids-104904-230581 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
+.recipelisting.recipe-transform.recipe-ids-104904-230581 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,
+.recipelisting.recipe-transform.recipe-ids-104904-230581 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
     background-color: #9ebc5c
 }
 
@@ -714,7 +749,8 @@
     background-color: #c03733
 }
 
-.recipelisting.recipe-transform.recipe-ids-104898-215238 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,.recipelisting.recipe-transform.recipe-ids-104898-215238 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
+.recipelisting.recipe-transform.recipe-ids-104898-215238 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container.transformed,
+.recipelisting.recipe-transform.recipe-ids-104898-215238 .cmp-recipe-listing-wrapper .cmp-recipe-listing-container .cmp-recipe-listing-items-container:hover {
     background-color: #007932
 }
 
@@ -722,7 +758,7 @@
 
 
 
-.xemthem-more{
+.xemthem-more {
     padding-left: 4.6vw;
     padding-top: 2vh;
 }
@@ -734,7 +770,7 @@
 
 /* Tùy chỉnh kiểu dáng cho box thanh toán */
 
-.check-yellow{
+.check-yellow {
     display: flex;
     align-items: center;
     background-color: #FFBD3C;
@@ -747,10 +783,12 @@
     text-align: center;
     font-weight: bold;
 }
-.check-white{
-    padding: 5vh ;
+
+.check-white {
+    padding: 5vh;
     color: black;
 }
+
 .boxmain {
     border-radius: 5px;
     background: var(--White, #FFF);
@@ -760,21 +798,24 @@
     padding: 0;
 }
 
-.tieude-small{
+.tieude-small {
     font-size: 18px;
     margin-top: 1vh;
     margin-bottom: 2vh;
     font-weight: bold;
 }
-.big-cash{
+
+.big-cash {
     font-size: 32px;
     color: #e5a82d;
 }
-.tieude-small-2{
+
+.tieude-small-2 {
     font-size: 16px;
     margin-bottom: 1vh;
     font-weight: bold;
 }
+
 .button {
     display: flex;
     height: 50px;
@@ -789,25 +830,29 @@
     font-weight: bold;
     color: #000;
 }
-.containerThanhtoanpro{
+
+.containerThanhtoanpro {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Màu nền tối */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Màu nền tối */
     justify-content: center;
     align-items: center;
     z-index: 99999;
-  }
-  .popupthanhtoan{
+}
+
+.popupthanhtoan {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  .tieude-medium{
+}
+
+.tieude-medium {
     font-size: 32px;
     margin-bottom: 1vh;
-  }
+}
