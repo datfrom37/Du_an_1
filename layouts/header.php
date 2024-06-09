@@ -25,7 +25,7 @@
                 <div class="main-header-two__top-inner">
                     <div class="main-header-two__logo">
                         <a href="index.php"><img src="../images/Share_Food-removebg-preview.png" alt=""
-                                width="100vw"></a>
+                                width="80vw"></a>
                     </div>
                     <div class="main-header-two__right">
                         <ul class="list-unstyled main-header-two__contact-list">
